@@ -1,0 +1,14 @@
+<!--pages/order/order.wxml-->
+<view>
+  <view>
+  </view>
+  <view><checkbox checked="{{false}}"></checkbox></view>
+</view>
+<view>
+<view wx:for="{{arr}}" wx:key="index">
+{{index}}:{{item}}
+</view>
+<view wx:for="{{people}}" wx:key="index"  wx:for-index="key">
+{{index}}:{{item}}
+</view>
+</view>

@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/order/order",
+    "pages/index/index",
+    "pages/message/message",
+    "pages/logs/logs",
+    "pages/mine/mine"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#4b8bf4",
+    "navigationBarTitleText": "校园跑腿",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#0e110c",
+    "selectedColor": "#3c3f41",
+    "backgroundColor": "#4b8bf4",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "跑腿",
+        "iconPath": "icons/run.png",
+        "selectedIconPath": "icons/run1.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "icons/dingdan.png",
+        "selectedIconPath": "icons/dingdan1.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "icons/message.png",
+        "selectedIconPath": "icons/message1.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "icons/my.png",
+        "selectedIconPath": "icons/my1.png"
+      }
+    ]
+  }
+}
