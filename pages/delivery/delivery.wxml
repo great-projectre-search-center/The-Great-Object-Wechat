@@ -3,40 +3,48 @@
   <MyHead></MyHead>
 </view>
 
-<form class="myformouter">
-<!--最外层的view-->
-  <view class="myform">
-    <!--文字view-->
-    <view class="myword">
-      订单类型(默认)
+<form bindsubmit='sub'>
+  <!--view style="border-bottom:1px solid #a8a8a8;margin-left:30rpx;padding:5rpx;">
+      <text decode="true">订单类型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;代取快递(默认)</text>
+     
+  </view-->
+
+  <view class="tui-picker-content">
+      <view class="tui-picker-name">选择快递公司</view>
+      <picker bindchange="changeCompany"  value="{{companyIndex}}" range="{{companyList}}">
+        <view class="tui-picker-detail">{{companyList[companyIndex]}}</view>
+      </picker>
+  </view>
+  <view class="tui-picker-content">
+      <view class="tui-picker-name">选择快递类型</view>
+      <picker bindchange="changeDelivery"  value="{{deliveryIndex}}" range="{{deliveryList}}">
+        <view class="tui-picker-detail">{{deliveryList[deliveryIndex]}}</view>
+      </picker>
+  </view>
+
+  <view class="con">
+    <view class="con-nr">
+      <text>收件人</text>
+      <input placeholder="收件人" name="shoujianren"></input>
     </view>
-    <!--图片view-->
-    <view class="myimage">
-      <image class="myimage1" src="../../icons/dingdanleixing1.png" mode="widthFix">
-
-      </image>
+    <view class="con-nr">
+      <text>联系方式</text>
+      <input placeholder="联系方式" name="telephone"></input>
+    </view>
+    <view class="con-nr">
+      <text>收件地址</text>
+      <input placeholder="收件地址" name="address" value=""></input>
+    </view>
+    <view class="con-nr">
+      <text>详细地址</text>
+      <input placeholder="详细地址，选填" name="detailedaddress" value=""></input>
     </view>
   </view>
-
-  <!--分割线-->
-  <view class="line"></view>
-
-
-  <!--最外层的view-->
-  <view class="myform">
-    <!--文字view-->
-      收件人：<input></input>
-  </view>
-    <!--分割线-->
-  <view class="line"></view>
-
-
-
-  <!--最外层的view-->
-  <view class="myform">
-    <!--文字view-->
-      收件人：<input></input>
-  </view>
-    <!--分割线-->
-  <view class="line"></view>
+  
+  <button class="sub" form-type='submit'>
+    确定
+  </button>
 </form>
+
+
+

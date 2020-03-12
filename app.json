@@ -1,7 +1,9 @@
 {
   "pages": [
-    "pages/index/index",
+  
     "pages/delivery/delivery",
+    "pages/index/index",
+   
     "pages/food/food",
     "pages/file/file",
     "pages/allhelp/allhelp",
