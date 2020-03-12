@@ -6,9 +6,22 @@ Page({
      */
     data: {
       // 普通选择器列表设置,及初始化
+      checkboxitems:[
+        {value:'汉堡'},
+        {value:'炸鸡'},
+        {value:'米线'},
+        {value:'饺子馄饨'},
+        {value:'盖饭'},
+        {value:'炒饭'},
+      ]
 
 
     },
+    checkboxChange(e){
+      console.log(e.detail.value)
+    },
+
+    
 
     /**
      * 生命周期函数--监听页面加载

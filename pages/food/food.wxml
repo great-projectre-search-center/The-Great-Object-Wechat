@@ -3,5 +3,47 @@
 <view>
   <MyHead></MyHead>
 </view>
+<view>选择食品</view>
+<view>
+  <!--复选框-->
+  <view class="checkboxarea">
+      <checkbox-group bindchange="checkboxChange">
+        <label class="checkbox" wx:for="{{checkboxitems}}" wx:key="index">
+          <checkbox value="{{item.value}}" />{{item.value}}
+        </label>
+      </checkbox-group>
+      <navigator url="../otherfood/otherfood" open-type="navigate">
+        <image class="mynavigatorimage" src="../../icons/qita.png" ></image>
+      </navigator>
+  </view>
+  
+
+  <!--按钮-->
+  <view class="mybutton1">
+    <button class="mybutton">
+    选定
+    </button>
+  </view>
+
+</view>
+
+<form bindsubmit='sub'>
+<view class="con">
+    <view class="con-nr">
+      <text>接收人</text>
+      <input placeholder="接收人" name="接收人"></input>
+    </view>
+    <view class="con-nr">
+      <text>联系方式</text>
+      <input placeholder="联系方式" name="telephone"></input>
+    </view>
+    <view class="con-nr">
+      <text>接收地址</text>
+      <input placeholder="接收地址" name="address" value=""></input>
+    </view>
+  </view>
+</form>
+
+
 
 

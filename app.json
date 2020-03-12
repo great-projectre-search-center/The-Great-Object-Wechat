@@ -1,15 +1,16 @@
 {
   "pages": [
-  
-    "pages/delivery/delivery",
-    "pages/index/index",
+    
    
+    "pages/index/index",
+    "pages/delivery/delivery",
     "pages/food/food",
     "pages/file/file",
     "pages/allhelp/allhelp",
     "pages/order/order",
     "pages/message/message",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/otherfood/otherfood"
   ],
   "window": {
     "backgroundTextStyle": "dark",
