@@ -1,15 +1,18 @@
 {
   "pages": [
-    "pages/order/order",
     "pages/index/index",
+    "pages/delivery/delivery",
+    "pages/food/food",
+    "pages/file/file",
+    "pages/allhelp/allhelp",
+    "pages/order/order",
     "pages/message/message",
-    "pages/logs/logs",
     "pages/mine/mine"
   ],
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#4b8bf4",
-    "navigationBarTitleText": "校园跑腿",
+    "navigationBarTitleText": "跑腿",
     "navigationBarTextStyle": "white",
     "enablePullDownRefresh": true
   },
@@ -44,5 +47,6 @@
         "selectedIconPath": "icons/my1.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap3.json"
 }

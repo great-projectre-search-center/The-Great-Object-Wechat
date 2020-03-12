@@ -1,0 +1,7 @@
+/* components/MyHead/MyHead.wxss */
+.myheadouter{
+  display: flex;
+}
+.myheadinner{
+  flex: 100%;
+}

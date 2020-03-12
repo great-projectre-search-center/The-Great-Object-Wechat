@@ -1,0 +1,4 @@
+<!--components/MyHead/MyHead.wxml-->
+<view class="myheadouter">
+  <image class="myheadinner" mode="widthFix" src="../../icons/tianxiedingdan.png"></image>
+</view>

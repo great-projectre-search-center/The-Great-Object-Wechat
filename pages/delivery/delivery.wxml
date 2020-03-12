@@ -1,0 +1,42 @@
+<!--公共头部组件-->
+<view>
+  <MyHead></MyHead>
+</view>
+
+<form class="myformouter">
+<!--最外层的view-->
+  <view class="myform">
+    <!--文字view-->
+    <view class="myword">
+      订单类型(默认)
+    </view>
+    <!--图片view-->
+    <view class="myimage">
+      <image class="myimage1" src="../../icons/dingdanleixing1.png" mode="widthFix">
+
+      </image>
+    </view>
+  </view>
+
+  <!--分割线-->
+  <view class="line"></view>
+
+
+  <!--最外层的view-->
+  <view class="myform">
+    <!--文字view-->
+      收件人：<input></input>
+  </view>
+    <!--分割线-->
+  <view class="line"></view>
+
+
+
+  <!--最外层的view-->
+  <view class="myform">
+    <!--文字view-->
+      收件人：<input></input>
+  </view>
+    <!--分割线-->
+  <view class="line"></view>
+</form>

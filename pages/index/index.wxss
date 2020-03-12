@@ -1,21 +1,24 @@
-/**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+swiper{
+  width: 100%;
+  height: 150px;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+image{
+  width: 100%;
 }
 
-.userinfo-nickname {
-  color: #aaa;
-}
 
-.usermotto {
-  margin-top: 200px;
+.image_outer{
+  display: flex;  /*拉伸容器*/
+  flex-wrap: wrap;  /*元素换行*/
+  padding: 10rpx;
+  justify-content: space-between; /*水平方向的对齐，再平分空间*/
+}
+.image_inner{
+  width: 48%;
+  margin-bottom: 20rpx;
+}
+.image_inner image{
+  width: 100%;
+  border-radius: 15rpx;  /*图片的边框为圆角*/
 }

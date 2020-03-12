@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText":"跑腿",
+  "usingComponents": {
+
+  }
 }

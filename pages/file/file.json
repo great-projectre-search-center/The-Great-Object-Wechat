@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "文件代办",
+  "usingComponents": {
+    "MyHead": "../../components/MyHead/MyHead"
+  }
+}

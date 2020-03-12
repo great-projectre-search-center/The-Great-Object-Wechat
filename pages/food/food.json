@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "食物代购",
+  "usingComponents": {
+    "MyHead": "../../components/MyHead/MyHead"
+  }
+}

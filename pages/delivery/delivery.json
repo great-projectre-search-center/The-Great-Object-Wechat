@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "代取快递",
+  "usingComponents": {
+    "MyHead": "../../components/MyHead/MyHead"
+  }
+}

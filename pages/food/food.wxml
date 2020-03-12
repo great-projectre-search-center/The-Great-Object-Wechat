@@ -1,0 +1,5 @@
+<!--pages/index-new1/index-new1.wxml-->
+
+<view>
+  <MyHead></MyHead>
+</view>
