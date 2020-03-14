@@ -3,10 +3,10 @@
 <view>
   <MyHead></MyHead>
 </view>
-<view>选择食品</view>
-<view>
+<!--view>选择食品</view-->
+<!--view--->
   <!--复选框-->
-  <view class="checkboxarea">
+  <!--view class="checkboxarea">
       <checkbox-group bindchange="checkboxChange">
         <label class="checkbox" wx:for="{{checkboxitems}}" wx:key="index">
           <checkbox value="{{item.value}}" />{{item.value}}
@@ -15,19 +15,58 @@
       <navigator url="../otherfood/otherfood" open-type="navigate">
         <image class="mynavigatorimage" src="../../icons/qita.png" ></image>
       </navigator>
-  </view>
+  </view-->
   
 
   <!--按钮-->
-  <view class="mybutton1">
+  <!--view class="mybutton1">
     <button class="mybutton">
     选定
     </button>
-  </view>
+  </view-->
 
+<!--/view-->
+
+<view>
+<van-cell 
+  is-link
+  title="选择食品"
+  border="true"
+  link-type="navigateTo"
+  url="../xuanzeshipin/xuanzeshipin"/>
 </view>
 
-<form bindsubmit='sub'>
+<van-cell-group>
+  <van-field
+    value="{{ username }}"
+    required
+    clearable
+    label="收货人"
+    icon="question-o"
+    placeholder="收货人"
+    bind:click-icon="onClickIcon"
+  />
+
+  <van-field
+    value="{{ phone }}"
+    type="number"
+    label="手机号码"
+    placeholder="请输入手机号码"
+    required
+    border="{{ false }}"
+  />
+</van-cell-group>
+
+<!--送达时间-->
+<!--van-datetime-picker
+  type="time"
+  value="{{ currentDate }}"
+  filter="{{ filter }}"
+  item-height="30"
+/-->
+
+
+<!--form bindsubmit='sub'>
 <view class="con">
     <view class="con-nr">
       <text>接收人</text>
@@ -42,7 +81,7 @@
       <input placeholder="接收地址" name="address" value=""></input>
     </view>
   </view>
-</form>
+</form-->
 
 
 

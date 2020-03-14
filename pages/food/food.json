@@ -1,6 +1,9 @@
 {
   "navigationBarTitleText": "食物代购",
   "usingComponents": {
-    "MyHead": "../../components/MyHead/MyHead"
+    "MyHead": "../../components/MyHead/MyHead",
+    "van-cell": "../../miniprogram_npm/vant-weapp/cell",
+    "van-field": "../../miniprogram_npm/vant-weapp/field",
+    "van-datetime-picker": "../../miniprogram_npm/vant-weapp/datetime-picker"
   }
 }

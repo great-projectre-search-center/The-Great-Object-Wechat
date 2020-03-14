@@ -1,7 +1,6 @@
 {
   "pages": [
-    
-   
+
     "pages/index/index",
     "pages/delivery/delivery",
     "pages/food/food",
@@ -10,7 +9,9 @@
     "pages/order/order",
     "pages/message/message",
     "pages/mine/mine",
-    "pages/otherfood/otherfood"
+    "pages/xuanzeshipin/xuanzeshipin"
+ 
+    
   ],
   "window": {
     "backgroundTextStyle": "dark",

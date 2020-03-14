@@ -16,10 +16,10 @@
   height: 100rpx;
 }
 .sub{  /*表单中按钮的属性*/
-  width:500rpx;
+  width:450rpx;
   line-height:85rpx;
   text-align:center;
-  margin:50rpx auto;
+  margin:30rpx auto;
   background-color:#00a2e8;
   border-radius:10rpx;
 }
@@ -48,5 +48,10 @@ page{background-color: #efeff4;}
   overflow: hidden;
   border-radius: 50rpx;
 }
+
+.mycell{
+  padding: 10rpx;
+}
+
 
 

@@ -9,13 +9,24 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
+		"coverView": true,
 		"autoAudits": false,
-		"coverView": true
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"nodeModules": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.10.2",
 	"appid": "wx782027540d902618",
-	"projectname": "The-Great-Object-Wechat",
+	"projectname": "The-Great-Object-Wechat%20jiahui",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

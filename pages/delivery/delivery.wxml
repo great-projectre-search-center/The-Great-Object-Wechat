@@ -3,7 +3,7 @@
   <MyHead></MyHead>
 </view>
 
-<form bindsubmit='sub'>
+<!--form bindsubmit='sub'-->
   <!--view style="border-bottom:1px solid #a8a8a8;margin-left:30rpx;padding:5rpx;">
       <text decode="true">订单类型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;代取快递(默认)</text>
      
@@ -21,8 +21,33 @@
         <view class="tui-picker-detail">{{deliveryList[deliveryIndex]}}</view>
       </picker>
   </view>
+  <view class="mycell">
+    <van-cell-group>
+    <van-field
+      value="{{ username }}"
+      required
+      clearable
+      label="收件人"
+      icon="question-o"
+      placeholder="收件人"
+      bind:click-icon="onClickIcon"
+    />
 
-  <view class="con">
+    <van-field
+      value="{{ phone }}"
+      type="number"
+      label="手机号码"
+      placeholder="请输入手机号码"
+      required
+      border="{{ false }}"
+    />
+  </van-cell-group>
+</view>
+
+
+
+  <!--修改前的输入框-->
+  <!-- <view class="con">
     <view class="con-nr">
       <text>收件人</text>
       <input placeholder="收件人" name="shoujianren"></input>
@@ -39,12 +64,13 @@
       <text>详细地址</text>
       <input placeholder="详细地址，选填" name="detailedaddress" value=""></input>
     </view>
-  </view>
+  </view> -->
   
-  <button class="sub" form-type='submit'>
-    确定
-  </button>
-</form>
+
+<view class="sub">
+  <button class="sub" type="commit">提交</button>
+</view>
+<!--/form-->
 
 
 
