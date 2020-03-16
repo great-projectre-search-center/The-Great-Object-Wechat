@@ -1,0 +1,23 @@
+{
+  "name": "the-great-object-wechat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/great-projectre-search-center/The-Great-Object-Wechat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/great-projectre-search-center/The-Great-Object-Wechat/issues"
+  },
+  "homepage": "https://github.com/great-projectre-search-center/The-Great-Object-Wechat#readme",
+  "dependencies": {
+    "miniprogram-sm-crypto": "^0.1.0",
+    "vant-weapp": "^0.5.27"
+  }
+}

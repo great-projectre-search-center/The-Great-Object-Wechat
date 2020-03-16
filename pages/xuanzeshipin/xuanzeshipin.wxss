@@ -1,0 +1,37 @@
+/* pages/otherfood/otherfood.wxss */
+.mytextarea{
+  border: 1rpx solid #f0f0f0;
+  padding: 10rpx;
+}
+.myword{
+  width: 300rpx;
+  padding: 20rpx;
+  margin-right: 10rpx;
+}
+.mybutton{
+  background-color: #4b8bf4;
+  border-radius: 50rpx;
+}
+.mybutton1{
+  padding: 30rpx;
+}
+
+.mytext{
+  font-family: '';
+  font-size: 50rpx;
+  border-bottom: 10rpx dashed yellow;
+  text-align: center;
+}
+.mycheckbox{
+  font-size: 40rpx;
+}
+.mycheckbox view{
+  padding: 5rpx;
+  font-size: 35rpx;
+}
+.checkboxouter{
+  padding: 20rpx;
+}
+.mytoast{
+  padding: 20rpx;
+}

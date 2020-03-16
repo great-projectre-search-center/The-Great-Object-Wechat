@@ -1,0 +1,12 @@
+
+{
+  "navigationBarTitleText": "选择食品",
+  "usingComponents": {
+    "van-checkbox": "../../miniprogram_npm/vant-weapp/checkbox",
+    "van-checkbox-group": "../../miniprogram_npm/vant-weapp/checkbox-group",
+    "van-dialog": "../../miniprogram_npm/vant-weapp/dialog",
+    "van-col": "../../miniprogram_npm/vant-weapp/col",
+    "van-row": "../../miniprogram_npm/vant-weapp/row",
+    "van-notice-bar": "../../miniprogram_npm/vant-weapp/notice-bar"
+  }
+}
