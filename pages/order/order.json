@@ -3,5 +3,9 @@
   "navigationBarBackgroundColor": "#4b8bf4",
   "navigationBarTitleText": "订单",
   "navigationBarTextStyle": "white",
-  "enablePullDownRefresh": true
-}
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "van-tabs": "../../miniprogram_npm/vant-weapp/tabs",
+    "van-tab": "../../miniprogram_npm/vant-weapp/tab"
+    }
+  }

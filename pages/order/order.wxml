@@ -1,14 +1,6 @@
-<!--pages/order/order.wxml-->
-<view>
-  <view>
-  </view>
-  <view><checkbox checked="{{false}}"></checkbox></view>
-</view>
-<view>
-<view wx:for="{{arr}}" wx:key="index">
-{{index}}:{{item}}
-</view>
-<view wx:for="{{people}}" wx:key="index"  wx:for-index="key">
-{{index}}:{{item}}
-</view>
-</view>
+
+<van-tabs active="a">
+  <van-tab title="全部订单" name="a">内容 1</van-tab>
+  <van-tab title="我的订单" name="b">内容 2</van-tab>
+  <van-tab title="我的帮单" name="c">内容 3</van-tab>
+</van-tabs>

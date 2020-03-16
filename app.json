@@ -16,7 +16,7 @@
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#4b8bf4",
-    "navigationBarTitleText": "跑腿",
+    "navigationBarTitleText": "帮帮团",
     "navigationBarTextStyle": "white",
     "enablePullDownRefresh": true
   },

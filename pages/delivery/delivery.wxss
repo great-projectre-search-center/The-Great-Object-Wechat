@@ -1,11 +1,11 @@
-.con{
-  line-height:100rpx; /*行高*/
-}
-.con view{
-  width:700rpx;
-  margin-left:30rpx;  /*距离左边框的距离*/
-  border-bottom:1px solid #ced6e1;   /*分割线的颜色*/
-}
+/*.con{
+  line-height:100rpx;   行高
+}*/
+/*.con view{
+  width:700rpx;*/
+  /*margin-left:30rpx; */ /*距离左边框的距离*/
+  /*border-bottom:1px solid #ced6e1; */  /*分割线的颜色*/
+/*}*/
 .con view text{
   font-size: 36rpx;  /*文字的大小*/
 }
