@@ -3,5 +3,9 @@
   "navigationBarBackgroundColor": "#4b8bf4",
   "navigationBarTitleText": "我的",
   "navigationBarTextStyle": "white",
-  "enablePullDownRefresh": true
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "van-row": "../../miniprogram_npm/vant-weapp/row",
+    "van-col": "../../miniprogram_npm/vant-weapp/col"
+  }
 }

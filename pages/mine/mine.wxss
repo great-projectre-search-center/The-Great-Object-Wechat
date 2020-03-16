@@ -1,1 +1,19 @@
 /* pages/mine/mine.wxss */
+page{background-color: #efeff4;}
+image{
+  height: 300rpx;
+}
+.text-grey {
+  color: #aaa;
+  size: 10rpx;
+}
+.text-black {
+  color: black;
+  size: 5rpx;
+}
+.line-y-left {
+  height: 5rpx;
+  width: 1rpx;
+  border-left-width: 1rpx;
+  border-left: red;
+}

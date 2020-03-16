@@ -1,3 +1,23 @@
-<!--pages/mine/mine.wxml-->
-<view>hello world</view>
 
+<image mode="widthFix" src="../../icons/touxiang.png"></image>
+
+<!--van-row>
+    <van-col span="7" style="text-align:center">
+      <view class="text-grey" catchtap='navigateTouserfeedmyshare'>分享</view>
+      <view class="text-black" catchtap='navigateTouserfeedmyshare'>{{feed}}</view>
+    </van-col>
+    <van-col span="1" class="line-y-left">
+      |
+    </van-col>
+    <van-col span="8" style="text-align:center">
+      <view class="text-grey" catchtap='navigatetofollowlist'>关注</view>
+      <view class="text-black" catchtap='navigatetofollowlist'>{{follow}}</view>
+    </van-col>
+    <van-col span="1">
+      |
+    </van-col>
+    <van-col span="7" style="text-align:center">
+      <view class="text-grey" catchtap='navigatetofollowerlist'>粉丝</view>
+      <view class="text-black" catchtap='navigatetofollowerlist'>{{followerscount}}</view>
+    </van-col>
+  </van-row-->
