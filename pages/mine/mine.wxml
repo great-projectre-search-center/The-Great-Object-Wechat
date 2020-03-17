@@ -2,10 +2,10 @@
 
 <view wx:if="{{hasUserInfo}}">
   <view class='header' style='text-align:center;margin-bottom:20rpx'>
-    <view> 
+    <view>
       <image src="{{userInfo.avatarUrl}}" mode="cover" class='avatar'></image>
     </view>
- 
+
     <view style='margin-top:20rpx'>
       <text>{{userInfo.nickName}}</text>
     </view>
@@ -40,7 +40,7 @@
   </van-row>
 
   <view style='height:15rpx;border-bottom:1px solid #f4f4f4'></view>   <!--底部分割线-->
-  
+
 
 </view>
 
@@ -52,7 +52,7 @@
 
   <!-- <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button> -->
 
-  
+
 </view>
 
 
