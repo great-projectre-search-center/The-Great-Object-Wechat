@@ -6,6 +6,9 @@
   "enablePullDownRefresh": true,
   "usingComponents": {
     "van-row": "../../miniprogram_npm/vant-weapp/row",
-    "van-col": "../../miniprogram_npm/vant-weapp/col"
+    "van-col": "../../miniprogram_npm/vant-weapp/col",
+    "van-button": "../../miniprogram_npm/vant-weapp/button",
+    "van-cell": "../../miniprogram_npm/vant-weapp/cell",
+    "van-icon": "../../miniprogram_npm/vant-weapp/icon"
   }
 }

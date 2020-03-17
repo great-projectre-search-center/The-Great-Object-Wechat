@@ -1,0 +1,27 @@
+
+.myview1{
+  height: 700rpx;
+  padding: 20rpx;
+  align-items: center;
+}
+.myview2{
+  height: 400rpx;
+  width: 350rpx;
+  
+}
+.myview3{
+  padding: 20rpx;
+  width: 350rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
