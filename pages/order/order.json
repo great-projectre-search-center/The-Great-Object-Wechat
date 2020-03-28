@@ -6,6 +6,8 @@
   "enablePullDownRefresh": true,
   "usingComponents": {
     "van-tabs": "../../miniprogram_npm/vant-weapp/tabs",
-    "van-tab": "../../miniprogram_npm/vant-weapp/tab"
+    "van-tab": "../../miniprogram_npm/vant-weapp/tab",
+    "van-card": "../../miniprogram_npm/vant-weapp/card",
+    "van-button": "../../miniprogram_npm/vant-weapp/button"
     }
   }

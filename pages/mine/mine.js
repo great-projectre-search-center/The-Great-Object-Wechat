@@ -33,7 +33,7 @@ Page({
         url: app.globalData.baseurl + "/me",
         method: "GET",
         success:  (res) =>{
-          that.setData({
+          that.setData({ 
             order: res.data["order"],
             willfinish: res.data["willfinish"],
             finished: res.data["finished"],

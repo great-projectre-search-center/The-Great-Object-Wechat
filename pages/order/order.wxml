@@ -1,6 +1,129 @@
 
-<van-tabs active="a">
-  <van-tab title="全部订单" name="a">内容 1</van-tab>
-  <van-tab title="我的订单" name="b">内容 2</van-tab>
-  <van-tab title="我的帮单" name="c">内容 3</van-tab>
+<van-tabs active="{{ active }}" swipeable="{{swipeable}}" class="mytabs">
+  <van-tab title="全部订单">
+    <van-card num="{{nums1}}" price="10.00" desc="全部订单111111111" title="全部订单1111111111" thumb="{{ imageURL }}" >
+      <view slot="footer">
+        <van-button size="small" round>删除订单</van-button>
+        <van-button size="small" round>确认订单</van-button>
+      </view>
+    </van-card>
+    <!-- 分割线 -->
+    <view class="divLine"></view>
+
+    <van-card num="{{nums2}}" price="10.00" desc="全部订单222222222" title="全部订单222222222222" thumb="{{ imageURL }}">
+      <view slot="footer">
+        <van-button size="small" round>删除订单</van-button>
+        <van-button size="small" round>确认订单</van-button>
+      </view>
+    </van-card>
+    <!-- 分割线 -->
+    <view class="divLine"></view>
+
+    <van-card num="{{nums3}}" price="10.00" desc="全部订单333333333" title="全部订单33333333333" thumb="{{ imageURL }}">
+      <view slot="footer">
+        <van-button size="small" round>删除订单</van-button>
+        <van-button size="small" round>确认订单</van-button>
+      </view>
+    </van-card>
+  </van-tab>
+
+
+  <van-tab title="未接单">
+    <van-card num="{{nums1}}" price="10.00" desc="未接单111111111" title="未接单1111111111" thumb="{{ imageURL }}" >
+      <view slot="footer">
+        <van-button size="small" round>删除订单</van-button>
+        <van-button size="small" round>确认订单</van-button>
+      </view>
+    </van-card>
+    <!-- 分割线 -->
+    <view class="divLine"></view>
+    <van-card num="{{nums2}}" price="10.00" desc="未接单222222222" title="未接单222222222222" thumb="{{ imageURL }}">
+      <view slot="footer">
+        <van-button size="small" round>删除订单</van-button>
+        <van-button size="small" round>确认订单</van-button>
+      </view>
+    </van-card>
+  </van-tab>
+
+
+  <van-tab title="已接单">
+    <van-card num="{{nums1}}" price="10.00" desc="已接单111111111" title="已接单1111111111" thumb="{{ imageURL }}" >
+      <view slot="footer">
+        <van-button size="small" round>删除订单</van-button>
+        <van-button size="small" round>确认订单</van-button>
+      </view>
+    </van-card>
+    <!-- 分割线 -->
+    <view class="divLine"></view>
+    <van-card num="{{nums2}}" price="10.00" desc="已接单222222222" title="已接单222222222222" thumb="{{ imageURL }}">
+      <view slot="footer">
+        <van-button size="small" round>删除订单</van-button>
+        <van-button size="small" round>确认订单</van-button>
+      </view>
+    </van-card>
+  </van-tab>
+  <van-tab title="送货中">
+    <van-card num="{{nums1}}" price="10.00" desc="送货中111111111" title="送货中1111111111" thumb="{{ imageURL }}" >
+      <view slot="footer">
+        <van-button size="small" round>删除订单</van-button>
+        <van-button size="small" round>确认订单</van-button>
+      </view>
+    </van-card>
+    <!-- 分割线 -->
+    <view class="divLine"></view>
+    <van-card num="{{nums2}}" price="10.00" desc="送货中222222222" title="送货中222222222222" thumb="{{ imageURL }}">
+      <view slot="footer">
+        <van-button size="small" round>删除订单</van-button>
+        <van-button size="small" round>确认订单</van-button>
+      </view>
+    </van-card>
+  </van-tab>
+  <van-tab title="已接收">
+    <van-card num="{{nums1}}" price="10.00" desc="已接收111111111" title="已接收1111111111" thumb="{{ imageURL }}" >
+      <view slot="footer">
+        <van-button size="small" round>删除订单</van-button>
+        <van-button size="small" round>确认订单</van-button>
+      </view>
+    </van-card>
+    <!-- 分割线 -->
+    <view class="divLine"></view>
+    <van-card num="{{nums2}}" price="10.00" desc="已接收222222222" title="已接收222222222222" thumb="{{ imageURL }}">
+      <view slot="footer">
+        <van-button size="small" round>删除订单</van-button>
+        <van-button size="small" round>确认订单</van-button>
+      </view>
+    </van-card>
+  </van-tab>
+  <van-tab title="已评价">
+    <van-card num="{{nums1}}" price="10.00" desc="已评价111111111" title="已评价1111111111" thumb="{{ imageURL }}" >
+      <view slot="footer">
+        <van-button size="small" round>删除订单</van-button>
+        <van-button size="small" round>确认订单</van-button>
+      </view>
+    </van-card>
+    <!-- 分割线 -->
+    <view class="divLine"></view>
+    <van-card num="{{nums2}}" price="10.00" desc="已评价222222222" title="已评价222222222222" thumb="{{ imageURL }}">
+      <view slot="footer">
+        <van-button size="small" round>删除订单</van-button>
+        <van-button size="small" round>确认订单</van-button>
+      </view>
+    </van-card>
+  </van-tab>
+  <van-tab title="已取消">
+    <van-card num="{{nums1}}" price="10.00" desc="已取消111111111" title="已取消1111111111" thumb="{{ imageURL }}" >
+      <view slot="footer">
+        <van-button size="small" round>删除订单</van-button>
+        <van-button size="small" round>确认订单</van-button>
+      </view>
+    </van-card>
+    <!-- 分割线 -->
+    <view class="divLine"></view>
+    <van-card num="{{nums2}}" price="10.00" desc="已取消222222222" title="已取消222222222222" thumb="{{ imageURL }}">
+      <view slot="footer">
+        <van-button size="small" round>删除订单</van-button>
+        <van-button size="small" round>确认订单</van-button>
+      </view>
+    </van-card>
+  </van-tab>
 </van-tabs>

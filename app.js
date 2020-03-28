@@ -2,8 +2,6 @@
 
 App({
 
-
-
   globalData: {
 
     hasuserinfo: "",

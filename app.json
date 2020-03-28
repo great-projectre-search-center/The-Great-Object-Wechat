@@ -1,13 +1,13 @@
 {
   "pages": [
     
-    "pages/mine/mine",
+    "pages/order/order",
     "pages/index/index",
     "pages/delivery/delivery",
     "pages/food/food",
     "pages/file/file",
     "pages/allhelp/allhelp",
-    "pages/order/order",
+    
     "pages/message/message",
     "pages/mylogin/mylogin",
     "pages/xuanzeshipin/xuanzeshipin",
@@ -15,7 +15,8 @@
     "pages/myscore/myscore",
     "pages/myservice/myservice",
     "pages/mycenter/mycenter",
-    "pages/aboutapp/aboutapp"
+    "pages/aboutapp/aboutapp",
+    "pages/mine/mine"
  
     
   ],

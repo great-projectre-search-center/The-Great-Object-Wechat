@@ -8,7 +8,7 @@ Page({
     autoplay: true,
     interval: 3000,
     duration: 500,
-    circular: true,
+    circular: true, 
     imageList: [
       {
         url_item:"../delivery/delivery",

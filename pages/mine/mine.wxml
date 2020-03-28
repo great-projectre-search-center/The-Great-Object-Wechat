@@ -9,7 +9,7 @@
     <view style='margin-top:20rpx'>
       <text>{{userInfo.nickName}}</text>
     </view>
-  </view>
+  </view> 
 
   <van-row>
     <van-col span="5" style="text-align:center">
