@@ -1,14 +1,17 @@
 {
   "pages": [
-    
     "pages/order/order",
+     
     "pages/index/index",
     "pages/delivery/delivery",
+    "pages/wusuobuqu/wusuobuqu",
+    "pages/map/map",
     "pages/food/food",
     "pages/file/file",
     "pages/allhelp/allhelp",
-    
+   
     "pages/message/message",
+    "pages/jinjimessage/jinjimessage",
     "pages/mylogin/mylogin",
     "pages/xuanzeshipin/xuanzeshipin",
     "pages/myorder/myorder",
