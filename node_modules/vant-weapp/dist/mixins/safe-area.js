@@ -6,11 +6,11 @@ function getSafeArea() {
         }
         else {
             wx.getSystemInfo({
-                success: ({ model, statusBarHeight }) => {
-                    const deviceType = model.replace(/\s/g, '-');
-                    const iphoneNew = /iphone-x|iPhone11|iPhone12/i.test(deviceType);
+                success: ({ model, screenHeight, statusBarHeight }) => {
+                    const iphoneX = /iphone x/i.test(model);
+                    const iphoneNew = /iPhone11/i.test(model) && screenHeight === 812;
                     cache = {
-                        isIPhoneX: iphoneNew,
+                        isIPhoneX: iphoneX || iphoneNew,
                         statusBarHeight
                     };
                     resolve(cache);
@@ -33,7 +33,7 @@ export const safeArea = ({ safeAreaInsetBottom = true, safeAreaInsetTop = false 
     },
     created() {
         getSafeArea().then(({ isIPhoneX, statusBarHeight }) => {
-            this.set({ isIPhoneX, statusBarHeight });
+            this.setData({ isIPhoneX, statusBarHeight });
         });
     }
 });

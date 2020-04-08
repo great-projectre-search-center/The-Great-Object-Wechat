@@ -1,8 +1,18 @@
 {
-  
   "navigationBarTitleText": "消息",
   
   "usingComponents": {
-    
+    "van-grid": "../../miniprogram_npm/vant-weapp/grid",
+    "van-grid-item": "../../miniprogram_npm/vant-weapp/grid-item",
+    "van-swipe-cell": "../../miniprogram_npm/vant-weapp/swipe-cell",
+    "van-cell-group": "../../miniprogram_npm/vant-weapp/cell-group",
+    "van-card": "../../miniprogram_npm/vant-weapp/card",
+    "van-button": "../../miniprogram_npm/vant-weapp/button",
+    "van-collapse": "../../miniprogram_npm/vant-weapp/collapse",
+    "van-collapse-item": "../../miniprogram_npm/vant-weapp/collapse-item",
+    "van-tabs": "../../miniprogram_npm/vant-weapp/tabs",
+    "van-tab": "../../miniprogram_npm/vant-weapp/tab",
+    "van-icon": "../../miniprogram_npm/vant-weapp/icon"
   }
+  
 }

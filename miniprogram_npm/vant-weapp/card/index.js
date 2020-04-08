@@ -14,7 +14,7 @@ VantComponent({
         tag: String,
         num: String,
         desc: String,
-        thumb: String,
+        thumb: String, 
         title: String,
         price: String,
         centered: Boolean,

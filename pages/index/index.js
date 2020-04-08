@@ -5,6 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
+    active:0,
+    
+    keys:"",
+
     autoplay: true,
     interval: 3000,
     duration: 500,
@@ -29,6 +33,16 @@ Page({
     ]
 
   },
+
+  //点击弹出框
+  onChange(event){  
+    wx.showToast({
+      title: 'title', //待后期改名
+      icon:'none'
+    })
+  },
+
+  
 
   /**
    * 生命周期函数--监听页面加载

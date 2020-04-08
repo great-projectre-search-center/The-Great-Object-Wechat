@@ -3,7 +3,7 @@ Page({
 
     /**
      * 页面的初始数据
-     */
+     */ 
     data: {
       companyList: ['京东快递', '韵达快递', '中通快递', '圆通快递', '申通快递', '百世快递', '天天快递'],
       companyIndex: 0,
@@ -13,7 +13,7 @@ Page({
 
     },
   changeCompany(e) {
-    this.setData({ companyIndex: e.detail.value });
+    this.setData({ companyIndex: e.detail.value }); 
   },
   changeDelivery(e){
     this.setData({ deliveryIndex: e.detail.value});

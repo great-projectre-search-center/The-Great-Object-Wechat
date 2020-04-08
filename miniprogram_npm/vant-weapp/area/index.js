@@ -1,30 +1,17 @@
 import { VantComponent } from '../common/component';
 import { pickerProps } from '../picker/shared';
-const COLUMNSPLACEHOLDERCODE = '000000';
 VantComponent({
     classes: ['active-class', 'toolbar-class', 'column-class'],
-    props: Object.assign({}, pickerProps, { value: String, areaList: {
+    props: Object.assign(Object.assign({}, pickerProps), { value: String, areaList: {
             type: Object,
             value: {}
         }, columnsNum: {
-            type: [String, Number],
+            type: null,
             value: 3
-        }, columnsPlaceholder: {
-            type: Array,
-            observer(val) {
-                this.setData({
-                    typeToColumnsPlaceholder: {
-                        province: val[0] || '',
-                        city: val[1] || '',
-                        county: val[2] || '',
-                    }
-                });
-            }
         } }),
     data: {
         columns: [{ values: [] }, { values: [] }, { values: [] }],
-        displayColumns: [{ values: [] }, { values: [] }, { values: [] }],
-        typeToColumnsPlaceholder: {}
+        displayColumns: [{ values: [] }, { values: [] }, { values: [] }]
     },
     watch: {
         value(value) {
@@ -33,7 +20,7 @@ VantComponent({
         },
         areaList: 'setValues',
         columnsNum(value) {
-            this.set({
+            this.setData({
                 displayColumns: this.data.columns.slice(0, +value)
             });
         }
@@ -54,40 +41,20 @@ VantComponent({
             this.emit('cancel', event.detail);
         },
         onConfirm(event) {
-            const { index } = event.detail;
-            let { value } = event.detail;
-            value = this.parseOutputValues(value);
-            this.emit('confirm', { value, index });
+            this.emit('confirm', event.detail);
         },
         emit(type, detail) {
             detail.values = detail.value;
             delete detail.value;
             this.$emit(type, detail);
         },
-        // parse output columns data
-        parseOutputValues(values) {
-            const { columnsPlaceholder } = this.data;
-            return values.map((value, index) => {
-                // save undefined value
-                if (!value)
-                    return value;
-                value = JSON.parse(JSON.stringify(value));
-                if (!value.code || value.name === columnsPlaceholder[index]) {
-                    value.code = '';
-                    value.name = '';
-                }
-                return value;
-            });
-        },
         onChange(event) {
             const { index, picker, value } = event.detail;
             this.code = value[index].code;
-            let getValues = picker.getValues();
-            getValues = this.parseOutputValues(getValues);
             this.setValues().then(() => {
                 this.$emit('change', {
                     picker,
-                    values: getValues,
+                    values: picker.getValues(),
                     index
                 });
             });
@@ -97,7 +64,6 @@ VantComponent({
             return (areaList && areaList[`${type}_list`]) || {};
         },
         getList(type, code) {
-            const { typeToColumnsPlaceholder } = this.data;
             let result = [];
             if (type !== 'province' && !code) {
                 return result;
@@ -113,14 +79,6 @@ VantComponent({
                     code = '9';
                 }
                 result = result.filter(item => item.code.indexOf(code) === 0);
-            }
-            if (typeToColumnsPlaceholder[type] && result.length) {
-                // set columns placeholder
-                const codeFill = type === 'province' ? '' : type === 'city' ? COLUMNSPLACEHOLDERCODE.slice(2, 4) : COLUMNSPLACEHOLDERCODE.slice(4, 6);
-                result.unshift({
-                    code: `${code}${codeFill}`,
-                    name: typeToColumnsPlaceholder[type]
-                });
             }
             return result;
         },
@@ -141,18 +99,7 @@ VantComponent({
         },
         setValues() {
             const county = this.getConfig('county');
-            let { code } = this;
-            if (!code) {
-                if (this.data.columnsPlaceholder.length) {
-                    code = COLUMNSPLACEHOLDERCODE;
-                }
-                else if (Object.keys(county)[0]) {
-                    code = Object.keys(county)[0];
-                }
-                else {
-                    code = '';
-                }
-            }
+            let code = this.code || Object.keys(county)[0] || '';
             const province = this.getList('province');
             const city = this.getList('city', code.slice(0, 2));
             const picker = this.getPicker();
@@ -204,8 +151,8 @@ VantComponent({
             }
             return area;
         },
-        reset() {
-            this.code = '';
+        reset(code) {
+            this.code = code || '';
             return this.setValues();
         }
     }

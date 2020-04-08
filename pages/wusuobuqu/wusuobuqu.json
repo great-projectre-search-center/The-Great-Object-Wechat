@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "无所不取",
+  "usingComponents": {
+    "MyHead": "../../components/MyHead/MyHead"
+    
+    
+  }
+}

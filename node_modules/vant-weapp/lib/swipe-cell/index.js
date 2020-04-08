@@ -14,7 +14,11 @@ component_1.VantComponent({
             type: Number,
             value: 0
         },
-        asyncClose: Boolean
+        asyncClose: Boolean,
+        name: {
+            type: [Number, String],
+            value: ''
+        }
     },
     mixins: [touch_1.touch],
     data: {
@@ -38,8 +42,8 @@ component_1.VantComponent({
             var transform = "translate3d(" + offset + "px, 0, 0)";
             var transition = this.draging
                 ? 'none'
-                : '.6s cubic-bezier(0.18, 0.89, 0.32, 1)';
-            this.set({
+                : 'transform .6s cubic-bezier(0.18, 0.89, 0.32, 1)';
+            this.setData({
                 wrapperStyle: "\n        -webkit-transform: " + transform + ";\n        -webkit-transition: " + transition + ";\n        transform: " + transform + ";\n        transition: " + transition + ";\n      "
             });
         },
@@ -55,7 +59,7 @@ component_1.VantComponent({
             else {
                 this.swipeMove(0);
             }
-            this.set({ catchMove: false });
+            this.setData({ catchMove: false });
         },
         startDrag: function (event) {
             if (this.data.disabled) {
@@ -74,7 +78,7 @@ component_1.VantComponent({
             this.touchMove(event);
             if (!this.firstDirection) {
                 this.firstDirection = this.direction;
-                this.set({ catchMove: this.firstDirection === 'horizontal' });
+                this.setData({ catchMove: this.firstDirection === 'horizontal' });
             }
             if (this.firstDirection === 'vertical') {
                 return;
@@ -101,7 +105,7 @@ component_1.VantComponent({
                 return;
             }
             if (this.data.asyncClose) {
-                this.$emit('close', { position: position, instance: this });
+                this.$emit('close', { position: position, instance: this, name: this.data.name });
             }
             else {
                 this.swipeMove(0);

@@ -1,6 +1,9 @@
 {
-  "navigationBarTitleText":"跑腿",
+  
   "usingComponents": {
-    
+    "van-tabs": "../../miniprogram_npm/vant-weapp/tabs",
+    "van-tab": "../../miniprogram_npm/vant-weapp/tab",
+    "van-grid": "../../miniprogram_npm/vant-weapp/grid",
+    "van-grid-item": "../../miniprogram_npm/vant-weapp/grid-item"
   }
 }

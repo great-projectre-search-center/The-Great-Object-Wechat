@@ -18,6 +18,8 @@
   "homepage": "https://github.com/great-projectre-search-center/The-Great-Object-Wechat#readme",
   "dependencies": {
     "miniprogram-sm-crypto": "^0.1.0",
-    "vant-weapp": "^0.5.27"
-  }
+    "vant-weapp": "^1.0.0-beta.0"
+  },
+  "devDependencies": {},
+  "keywords": []
 }

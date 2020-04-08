@@ -1,0 +1,58 @@
+<!-- <van-grid column-num="2">
+  <van-grid-item icon="volume" dot="true" text="系统消息" url="../jinjimessage/jinjimessage" />
+  <van-grid-item icon="comment" text="个人消息" info="99+" dot />
+</van-grid> -->
+
+
+<van-tabs bind:click="onClick">
+  <view class="mygrid">
+    <van-tab  title="个人消息">
+      <!-- <van-collapse value="{{ activeName }}" bind:change="onChange" accordion>
+    <van-collapse-item title="后台消息" name="1">
+      欢迎使用跑腿小程序
+    </van-collapse-item>
+    <van-collapse-item title="有赞零售" name="2">
+      网店吸粉获客、会员分层营销、一机多种收款，告别经营低效和客户流失网店吸粉获客、会员分层营销、一机多种收款，告别经营低效和客户流失
+    </van-collapse-item>
+    <van-collapse-item title="有赞美业" name="3">
+      线上拓客，随时预约，贴心顺手的开单收银
+    </van-collapse-item>
+  </van-collapse> -->
+
+      <van-grid column-num="1" gutter="{{10}}">
+        <van-grid-item icon="{{icons[num]}}" text="{{messages[index]}}" wx:for="{{ 4 }}" text-class />
+      </van-grid>
+    </van-tab>
+  </view>
+
+
+
+  <van-tab title="系统消息">
+  <view class="myimage">
+    <image src="../../icons/kongxiaoxi.png"></image>
+  </view>
+  <view class="mytext">
+    <text>还没有消息哦</text>
+  </view>
+  
+  <!-- <view wx:if="{{isloading}}" style='text-align:center;margin-top:50rpx'>
+  <van-loading />
+  <view style='height:20rpx'></view>
+  <view style='color:#e8e8e8'>
+    加载中
+  </view>
+
+</view> -->
+  </van-tab>
+</van-tabs>
+
+
+
+
+
+
+
+
+
+
+

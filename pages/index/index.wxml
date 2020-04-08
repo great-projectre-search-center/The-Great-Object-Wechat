@@ -8,14 +8,139 @@
 </swiper>
 
 <!--点击图样标签-->
-<view class="image_outer">
-  <!--navigator class="imageitem" wx:for="{{imageList}}" wx:key="{{index}}"-->
+<!-- <view class="image_outer">
+  
   <navigator class="image_inner" url="{{item.url_item}}" open-type="navigate" wx:for="{{imageList}}" wx:key="index">
     <image mode="widthFix" src="{{item.src_item}}"></image>
   </navigator>
 
 
-</view>
+</view> -->
+
+
+<van-tabs active="{{ active }}" bind:change="onChange" color="#4b8bf4">
+  
+  <van-tab title="帮我取">
+    <view class="bangwoqu">
+      <van-grid gutter="{{ 10 }}" column-num="3">
+        <view class="class01">
+          <van-grid-item 
+          icon="photo-o" 
+          text="帮取快递"
+          
+          url="/pages/delivery/delivery" 
+          />
+        </view>
+        <view class="class01">
+          <van-grid-item 
+          icon="photo-o"  
+          text="无所不取"
+          wx:for="{{ 1 }}" 
+          wx:key="keys"
+          url="/pages/wusuobuqu/wusuobuqu" 
+          
+          />
+        </view>
+      </van-grid>
+    </view>
+  </van-tab>
+  
+  <van-tab title="帮我买">
+    <view class="bangwoqu">
+      <van-grid gutter="{{ 10 }}" column-num="3">
+        <view class="class01">
+          <van-grid-item icon="photo-o"
+          text="食品"
+          
+          url="/pages/food/food"
+          />
+        </view>
+        <view class="class01">
+          <van-grid-item icon="photo-o"
+          text="饮品"
+         
+          url="/pages/delivery/delivery"
+          />
+        </view>
+        <view class="class01">
+          <van-grid-item icon="photo-o"
+          text="文具"
+          
+          url="/pages/delivery/delivery"
+          />
+        </view>
+        <view class="class01">
+          <van-grid-item icon="photo-o"
+          text="生活用品"
+          
+          url="/pages/delivery/delivery"
+          />
+        </view>
+        <view class="class01">
+          <van-grid-item icon="photo-o"
+          text="文字"
+         
+          url="/pages/delivery/delivery"
+          />
+        </view>
+      </van-grid>
+    </view>
+  </van-tab>
+  
+
+  
+  <van-tab title="帮我办">
+    <view class="bangwoqu">
+      <van-grid gutter="{{ 10 }}" column-num="3">
+        <van-grid-item icon="photo-o" 
+        text="打印文件" 
+        wx:for="{{ 1 }}" 
+        wx:key="keys"
+        url="/pages/delivery/delivery"
+        />
+        <van-grid-item icon="photo-o" 
+        text="文字" 
+        wx:for="{{ 1 }}" 
+        wx:key="keys"
+        url="/pages/delivery/delivery"
+        />
+        <van-grid-item icon="photo-o" 
+        text="文字" 
+        wx:for="{{ 1 }}" 
+        wx:key="keys"
+        url="/pages/delivery/delivery"
+        />
+      </van-grid>
+    </view>
+  </van-tab>
+ 
+
+  <van-tab title="帮帮帮">
+    <view class="bangwoqu">
+      <van-grid gutter="{{ 10 }}" column-num="3">
+        <van-grid-item icon="photo-o" 
+        text="文字" 
+        wx:for="{{ 1 }}" 
+        wx:key="keys"
+        url="/pages/delivery/delivery"
+        />
+        <van-grid-item icon="photo-o" 
+        text="文字" 
+        wx:for="{{ 1 }}" 
+        wx:key="keys"
+        url="/pages/delivery/delivery"
+        />
+        <van-grid-item icon="photo-o" 
+        text="文字" 
+        wx:for="{{ 1 }}" 
+        wx:key="keys"
+        url="/pages/delivery/delivery"
+        />
+      </van-grid>
+    </view>
+  </van-tab>
+</van-tabs>
+
 
 
 

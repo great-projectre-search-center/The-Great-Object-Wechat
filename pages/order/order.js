@@ -6,12 +6,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    // imageURL:"../../icons/shangpin.png"
+    //imageURL:"../../icons/swiper01.jpg",
     nums1:'1',
     nums2:'1',
     nums3:'1',
     active:'0',
     swipeable:'true'
+    
 
   },
 

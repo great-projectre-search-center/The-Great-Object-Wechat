@@ -1,0 +1,26 @@
+page{background-color: #efeff4;}
+
+
+.myimage{
+  margin: 0 auto;
+
+}
+.myimage image{
+  margin: 0 auto;
+  height: 300rpx;
+  width: 450rpx;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  
+}
+.mytext{
+  text-align: center;
+}
+.mygrid{
+  padding-top: 30rpx;
+}
+.van-grid-item__text{
+  font-size: var(--grid-item-text-font-size,15px);
+}
+
