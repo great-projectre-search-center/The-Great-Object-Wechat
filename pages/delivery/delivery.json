@@ -4,6 +4,7 @@
     "MyHead": "../../components/MyHead/MyHead",
     "van-cell": "../../miniprogram_npm/vant-weapp/cell",
     "van-cell-group": "../../miniprogram_npm/vant-weapp/cell-group",
-    "van-field": "../../miniprogram_npm/vant-weapp/field"
+    "van-field": "../../miniprogram_npm/vant-weapp/field",
+    "van-switch-cell":"../../miniprogram_npm/vant-weapp/switch-cell"
   }
 }

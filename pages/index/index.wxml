@@ -25,7 +25,8 @@
       <van-grid gutter="{{ 10 }}" column-num="3">
         <view class="class01">
           <van-grid-item
-          icon="photo-o"
+          
+          icon="class='iconfont icon-kuaidi'"
           text="帮取快递"
 
           url="/pages/delivery/delivery"
@@ -33,7 +34,7 @@
         </view>
         <view class="class01">
           <van-grid-item
-          icon="photo-o"
+          icon="class='iconfont icon-bangzhuzhongxin'"
           text="无所不取"
           wx:for="{{ 1 }}"
           wx:key="keys"
@@ -49,28 +50,32 @@
     <view class="bangwoqu">
       <van-grid gutter="{{ 10 }}" column-num="3">
         <view class="class01">
-          <van-grid-item icon="photo-o"
+          <van-grid-item 
+          icon="class='iconfont icon-FastFood'"
           text="食品"
 
           url="/pages/food/food"
           />
         </view>
         <view class="class01">
-          <van-grid-item icon="photo-o"
+          <van-grid-item 
+          icon="class='iconfont icon-shipinyinliao'"
           text="饮品"
 
           url="/pages/delivery/delivery"
           />
         </view>
         <view class="class01">
-          <van-grid-item icon="photo-o"
+          <van-grid-item 
+          icon="class='iconfont icon-wenju'"
           text="文具"
 
           url="/pages/delivery/delivery"
           />
         </view>
         <view class="class01">
-          <van-grid-item icon="photo-o"
+          <van-grid-item 
+          icon="class='iconfont icon-shenghuoyongpin'"
           text="生活用品"
 
           url="/pages/delivery/delivery"
@@ -92,7 +97,8 @@
   <van-tab title="帮我办">
     <view class="bangwoqu">
       <van-grid gutter="{{ 10 }}" column-num="3">
-        <van-grid-item icon="photo-o"
+        <van-grid-item 
+        icon="class='iconfont icon-dayin'"
         text="打印文件"
         wx:for="{{ 1 }}"
         wx:key="keys"
@@ -115,17 +121,19 @@
   </van-tab>
 
 
-  <van-tab title="帮帮帮">
+  <van-tab title="帮我送">
     <view class="bangwoqu">
       <van-grid gutter="{{ 10 }}" column-num="3">
-        <van-grid-item icon="photo-o"
-        text="文字"
+        <van-grid-item 
+        icon="class='iconfont icon-wenjian'"
+        text="文件"
         wx:for="{{ 1 }}"
         wx:key="keys"
         url="/pages/delivery/delivery"
         />
-        <van-grid-item icon="photo-o"
-        text="文字"
+        <van-grid-item 
+        icon="class='iconfont icon-b2'"
+        text="钥匙"
         wx:for="{{ 1 }}"
         wx:key="keys"
         url="/pages/delivery/delivery"

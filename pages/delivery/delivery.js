@@ -11,6 +11,11 @@ Page({
       deliveryList: ['衣服','鞋子','文件','工具','食品','生活用品','其他'],
       deliveryIndex: 0,
 
+    
+      checked: true
+      
+
+      
     },
   changeCompany(e) {
     this.setData({ companyIndex: e.detail.value }); 
@@ -18,6 +23,11 @@ Page({
   changeDelivery(e){
     this.setData({ deliveryIndex: e.detail.value});
   },
+
+  onChange({ detail }) {
+    this.setData({checked:detail});
+  },
+
 
     /**
      * 生命周期函数--监听页面加载

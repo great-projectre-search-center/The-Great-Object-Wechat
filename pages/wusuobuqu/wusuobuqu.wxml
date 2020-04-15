@@ -1,6 +1,56 @@
-<!--pages/wusuobuqu/wusuobuqu.wxml-->
+<!--公共头部组件-->
 <view>
   <MyHead></MyHead>
 </view>
+ 
+
+
+  <view class="tui-picker-content">
+      <view class="tui-picker-name">选择快递公司</view>
+      <picker bindchange="changeCompany"  value="{{companyIndex}}" range="{{companyList}}">
+        <view class="tui-picker-detail">{{companyList[companyIndex]}}</view>
+      </picker>
+  </view>
+  <view class="tui-picker-content">
+      <view class="tui-picker-name">选择快递类型</view>
+      <picker bindchange="changeDelivery"  value="{{deliveryIndex}}" range="{{deliveryList}}">
+        <view class="tui-picker-detail">{{deliveryList[deliveryIndex]}}</view>
+      </picker>
+  </view>
+  <view class="mycell"> 
+    <van-cell-group>
+    <van-field
+      value="{{ username }}"
+      required
+      clearable
+      label="收件人"
+      icon="question-o"
+      placeholder="收件人"
+      bind:click-icon="onClickIcon"
+    />
+
+    <van-field
+      value="{{ phone }}"
+      type="number"
+      label="手机号码"
+      placeholder="请输入手机号码"
+      required
+      border="{{ false }}"
+    />
+    <van-switch-cell checked="{{checked}}" title="是否接受地址面议" bind:change="onChange" />
+  </van-cell-group>
+</view>
+
+
+
+  
+
+<view class="sub">
+  <button class="sub" type="commit">提交</button>
+</view>
+<!--/form-->
+
+
+
 
 

@@ -32,7 +32,7 @@
 
 
 <view class="mytoast">
-  <!--点击button触发toast-->
+  <!--点击button触发toast--> 
   <button type="primary" bindtap="listenerButton">提交订单</button>
   <!--toast消息框显示3秒，并绑定事件-->
   <toast hidden="{{hiddenToast}}" duration="3000" bindchange="toastHidden" >提交成功</toast>

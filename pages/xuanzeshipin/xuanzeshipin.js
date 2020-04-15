@@ -5,7 +5,7 @@ import Toast from '../../miniprogram_npm/vant-weapp/toast/index'
 Page({
 
   /**
-   * 页面的初始数据
+   * 页面的初始数据 
    */
   data: {
     result1: ['a', 'b', 'c'],

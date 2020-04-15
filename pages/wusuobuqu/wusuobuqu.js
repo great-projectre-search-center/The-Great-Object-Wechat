@@ -1,12 +1,33 @@
-// pages/wusuobuqu/wusuobuqu.js
+// pages/index-new/index-new.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    companyList: ['京东快递', '韵达快递', '中通快递', '圆通快递', '申通快递', '百世快递', '天天快递'],
+    companyIndex: 0,
+
+    deliveryList: ['衣服', '鞋子', '文件', '工具', '食品', '生活用品', '其他'],
+    deliveryIndex: 0,
+
+
+    checked: true
+
+
 
   },
+  changeCompany(e) {
+    this.setData({ companyIndex: e.detail.value });
+  },
+  changeDelivery(e) {
+    this.setData({ deliveryIndex: e.detail.value });
+  },
+
+  onChange({ detail }) {
+    this.setData({ checked: detail });
+  },
+
 
   /**
    * 生命周期函数--监听页面加载
