@@ -8,7 +8,7 @@
       <text decode="true">订单类型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;代取快递(默认)</text>
      
   </view-->
-
+  <form bindsubmit="formSubmit">
   <view class="tui-picker-content">
       <view class="tui-picker-name">选择快递公司</view>
       <picker bindchange="changeCompany"  value="{{companyIndex}}" range="{{companyList}}">
@@ -34,6 +34,7 @@
     />
 
     <van-field
+      bindinput="bindInput"
       value="{{ phone }}"
       type="number"
       label="手机号码"
@@ -72,8 +73,11 @@
   
 
 <view class="sub">
-  <button class="sub" type="commit">提交</button>
+  <button class="sub" type="commit" formType="submit">提交</button>
+  <button formType="submit">提交</button> 
 </view>
+
+</form>
 <!--/form-->
 
 

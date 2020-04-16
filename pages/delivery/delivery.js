@@ -12,11 +12,13 @@ Page({
       deliveryIndex: 0,
 
     
-      checked: true
-      
-
+      checked: true,
+      phone:'',
+      username:''
       
     },
+
+ 
   changeCompany(e) {
     this.setData({ companyIndex: e.detail.value }); 
   },
@@ -28,12 +30,32 @@ Page({
     this.setData({checked:detail});
   },
 
+  bindInput: function (e){
+    this.setData({
+      phone: e.detail
+    })
+    var p = e.detail
+    console.log(p)
+  },
+
+  formSubmit: function (e) {
+    var that = this;
+    var formData = e.detail.value; //获取表单所有input的值  
+    wx.request({
+      url: '',
+      data: formData,
+      header: { 'Content-Type': 'application/json' },
+      success: function (res) {
+        console.log(res.data)
+      }
+    })
+  },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+      
     },
 
     /**
