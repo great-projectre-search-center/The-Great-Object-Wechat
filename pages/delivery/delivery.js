@@ -29,23 +29,35 @@ Page({
   onChange({ detail }) {
     this.setData({checked:detail});
   },
-
-  bindInput: function (e){
+//啰里啰唆取值
+  phoneInput: function (e){
     this.setData({
-      phone: e.detail
+      phone:e.detail
     })
-    var p = e.detail
-    console.log(p)
+    console.log(e.detail)
   },
 
-  formSubmit: function (e) {
-    var that = this;
-    var formData = e.detail.value; //获取表单所有input的值  
+  userInput: function (e) {
+    this.setData({
+      username: e.detail
+    })
+    console.log(e.detail)
+  },
+
+  sub: function (e) {
+    console.log("请求")
     wx.request({
-      url: '',
-      data: formData,
-      header: { 'Content-Type': 'application/json' },
-      success: function (res) {
+      url: 'test.php',
+      data: {
+        username: 'username',
+        phone: 'phone',
+        type1:'',
+        type2: ''
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success(res) {
         console.log(res.data)
       }
     })
