@@ -166,7 +166,7 @@ Page({
   },
   navigateToMyApp: function () {
     wx.navigateTo({
-      url: '../aboutapp/aboutapp',
+      url: '../myMMap/myMMap',
     })
   },
   navigateToMyDir: function () {

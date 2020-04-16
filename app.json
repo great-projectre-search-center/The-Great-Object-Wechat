@@ -3,9 +3,9 @@
     
     
     "pages/index/index",
+    "pages/myMMap/myMMap",
     "pages/delivery/delivery",
     "pages/wusuobuqu/wusuobuqu",
-    "pages/map/map",
     "pages/food/food",
     "pages/file/file",
     "pages/allhelp/allhelp",
@@ -23,9 +23,6 @@
     "pages/addressList/addressList",
     "pages/address/address",
     "pages/feedback/feedback"
-    
- 
-    
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -65,6 +62,11 @@
         "selectedIconPath": "icons/my1.png"
       }
     ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "获取位置"
+    }
   },
   "sitemapLocation": "sitemap3.json"
 }

@@ -1,0 +1,18 @@
+<!--pages/myMMap/myMMap.wxml-->
+<view>
+<map id="map"
+longitude="{{longitude}}"
+latitude="{{latitude}}"
+scale="14"
+markers="{{markers}}"
+bindmarkertap="markertap"
+bindregionchange="regionchange"
+show-location
+style="width: 100%; height: 300px;"
+>
+</map>
+</view>
+
+<view>
+<button type="primary" bindtap="navigate">导航</button>
+</view>
