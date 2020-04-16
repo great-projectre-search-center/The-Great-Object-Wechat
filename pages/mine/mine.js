@@ -154,11 +154,6 @@ Page({
       url: '../myorder/myorder',
     })
   },
-  navigateToMyScore: function () {
-    wx.navigateTo({
-      url: '../myscore/myscore',
-    })
-  },
   navigateToMyService: function () {
     wx.navigateTo({
       url: '../myservice/myservice',
@@ -174,7 +169,16 @@ Page({
       url: '../aboutapp/aboutapp',
     })
   },
-
+  navigateToMyDir: function () {
+    wx.navigateTo({
+      url: '../addressList/addressList',
+    })
+  },
+  navigateToFeedback: function () {
+    wx.navigateTo({
+      url: '../feedback/feedback',
+    })
+  },
 
 
   getUserInfo:function(e){

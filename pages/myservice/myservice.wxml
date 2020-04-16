@@ -1,2 +1,38 @@
 <!--pages/myservice/myservice.wxml-->
-<text>pages/myservice/myservice.wxml</text>
+<view class="root">
+  <view class="card">
+    <view wx:if="{{hasUserInfo}}">
+      <view class='header'>
+        <view>
+          <image  class='avatar' src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        </view>
+        <view class="sorce" font-size="5px">
+          {{leve}}
+        </view>
+        <view class="sorce">
+          {{fen}}
+        </view>
+      </view> 
+    </view>
+  </view>
+</view>
+<van-notice-bar
+  color="#004578"
+  backgroundColor="rgba(0, 217, 255, 0.301)"	
+  left-icon="chat-o"
+  text="{{info}}"
+/>
+<view class='case1'>
+<van-grid column-num="3" gutter="{{ 10 }}">
+  <van-grid-item text="防伪查询" 
+  icon='browsing-history-o'
+  url="/pages/delivery/delivery"/>
+  
+  <van-grid-item text="我的足迹" 
+  icon='replay'
+  url="/pages/delivery/delivery"/>
+  <van-grid-item text="近期活动" 
+  icon='completed'
+  url="/pages/delivery/delivery"/>
+</van-grid>
+</view>

@@ -1,0 +1,4 @@
+<!--pages/feedback/feedback.wxml-->
+<text>点击“反馈”，进行意见反馈</text>
+
+<button open-type='feedback'>反馈</button>

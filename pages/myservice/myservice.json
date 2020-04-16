@@ -1,3 +1,11 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "会员中心",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "van-notice-bar": "../../miniprogram_npm/vant-weapp/notice-bar/index",
+    "van-button": "../../miniprogram_npm/vant-weapp/button/index",
+    "van-icon": "../../miniprogram_npm/vant-weapp/icon/index",
+    "van-grid": "../../miniprogram_npm/vant-weapp/grid/index",
+    "van-grid-item": "../../miniprogram_npm/vant-weapp/grid-item/index"
+  }
 }

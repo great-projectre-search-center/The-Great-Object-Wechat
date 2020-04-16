@@ -1,4 +1,4 @@
-// pages/myscore/myscore.js
+// pages/mykufu/mykefu.js
 Page({
 
   /**

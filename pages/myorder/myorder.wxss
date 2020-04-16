@@ -1,1 +1,10 @@
 /* pages/myorder/myorder.wxss */
+page{background-color: #efeff4;}
+.divLine{
+ background: #ffffff;
+ width: 100%;
+ height: 7rpx;
+}
+.mytabs{
+  font-size: 40rpx;
+}

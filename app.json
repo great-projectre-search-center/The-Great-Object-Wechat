@@ -1,7 +1,7 @@
 {
   "pages": [
     
-     
+    
     "pages/index/index",
     "pages/delivery/delivery",
     "pages/wusuobuqu/wusuobuqu",
@@ -15,11 +15,15 @@
     "pages/mylogin/mylogin",
     "pages/xuanzeshipin/xuanzeshipin",
     "pages/myorder/myorder",
-    "pages/myscore/myscore",
+    "pages/mykufu/mykefu",
     "pages/myservice/myservice",
     "pages/mycenter/mycenter",
     "pages/aboutapp/aboutapp",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/addressList/addressList",
+    "pages/address/address",
+    "pages/feedback/feedback"
+    
  
     
   ],
