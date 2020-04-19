@@ -5,8 +5,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    radio: true,
+    icon: {
+      normal: '../../icons/radio.png',
+      active: '../../icons/radio1.png'
+    }
   
+  },
+  onChange(event) {
+    this.setData({
+      radio: event.detail
+    });
+  },
+  onClick(event) {
+    const { name } = event.currentTarget.dataset;
+    this.setData({
+      radio: name
+    });
   },
 
   

@@ -3,6 +3,9 @@
   "usingComponents": {
     "van-cell-group": "../../miniprogram_npm/vant-weapp/cell-group",
     "van-field": "../../miniprogram_npm/vant-weapp/field",
-    "van-button": "../../miniprogram_npm/vant-weapp/button"
+    "van-button": "../../miniprogram_npm/vant-weapp/button",
+    "van-cell": "../../miniprogram_npm/vant-weapp/cell",
+    "van-radio-group": "../../miniprogram_npm/vant-weapp/radio-group",
+    "van-radio": "../../miniprogram_npm/vant-weapp/radio"
   }
 }

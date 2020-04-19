@@ -1,54 +1,52 @@
+
 <!--轮播图-->
-
-
 <swiper autoplay="{{autoplay}}" interval="{{interval}}" circular="{{circular}}" duration="{{duration}}" indicator-dots indicator-color="#f0f0f0" indicator-active-color="yellow">
   <swiper-item><image src="../../icons/swiper01.jpg"></image></swiper-item>
   <swiper-item><image src="../../icons/swiper02.jpg"></image></swiper-item>
   <swiper-item><image src="../../icons/swiper03.jpg"></image></swiper-item>
 </swiper>
 
-<!--点击图样标签-->
-<!-- <view class="image_outer">
-
-  <navigator class="image_inner" url="{{item.url_item}}" open-type="navigate" wx:for="{{imageList}}" wx:key="index">
-    <image mode="widthFix" src="{{item.src_item}}"></image>
-  </navigator>
-
-
-</view> -->
-
-
-<van-tabs active="{{ active }}" bind:change="onChange" color="#4b8bf4">
-
-  <van-tab title="帮我取">
-    <view class="bangwoqu">
-      <van-grid gutter="{{ 10 }}" column-num="3">
-        <view class="class01">
-          <van-grid-item
-          
-          icon="class='iconfont icon-kuaidi'"
-          text="帮取快递"
-
-          url="/pages/delivery/delivery"
-          />
+<!--两个标签-->
+<van-tabs bind:click="onClick" color="#4b8bf4" animated>
+  <!--帮我标签的内容-->
+  <van-tab title="帮我">
+    <!--文字标签 “帮我取” +宫格组件-->
+    <view class="outer-view">
+      <view class="myborder">
+        <view style="padding:20rpx;20rpx;0rpx;20rpx;">
+          <van-tag mark type="primary" size="medium" plain>帮我取</van-tag>
         </view>
-        <view class="class01">
-          <van-grid-item
-          icon="class='iconfont icon-bangzhuzhongxin'"
-          text="无所不取"
-          wx:for="{{ 1 }}"
-          wx:key="keys"
-          url="/pages/wusuobuqu/wusuobuqu"
+        <van-grid gutter="{{ 10 }}" column-num="4" border="{{false}}">
+          <view class="class01">
+            <van-grid-item
+            
+            icon="class='iconfont icon-kuaidi'"
+            text="帮取快递"
 
-          />
-        </view>
-      </van-grid>
+            url="/pages/delivery/delivery"
+            />
+          </view>
+          <view class="class01">
+            <van-grid-item
+            icon="class='iconfont icon-bangzhuzhongxin'"
+            text="无所不取"
+            wx:for="{{ 1 }}"
+            wx:key="keys"
+            url="/pages/wusuobuqu/wusuobuqu"
+
+            />
+          </view>
+        </van-grid>
+      </view>
     </view>
-  </van-tab>
 
-  <van-tab title="帮我买">
-    <view class="bangwoqu">
-      <van-grid gutter="{{ 10 }}" column-num="3">
+    <!--文字标签 “帮我买” +宫格组件-->
+    <view class="outer-view">
+      <view class="myborder">
+        <view style="padding:20rpx;20rpx;0rpx;20rpx;">
+          <van-tag mark type="primary" size="medium" plain>帮我买</van-tag>
+        </view>
+        <van-grid gutter="{{ 10 }}" column-num="4" border="{{false}}">
         <view class="class01">
           <van-grid-item 
           icon="class='iconfont icon-FastFood'"
@@ -81,77 +79,78 @@
           url="/pages/delivery/delivery"
           />
         </view>
-        <view class="class01">
-          <van-grid-item icon="photo-o"
-          text="文字"
+      </van-grid>
+      </view>
+    </view>
 
-          url="/pages/delivery/delivery"
-          />
+    <!--文字标签 “帮我办” +宫格组件-->
+    <view class="outer-view">
+      <view class="myborder">
+        <view style="padding:20rpx;20rpx;0rpx;20rpx;">
+          <van-tag mark type="primary" size="medium" plain>帮我办</van-tag>
         </view>
+        <van-grid gutter="{{ 10 }}" column-num="4" border="{{false}}">
+          <van-grid-item 
+            icon="class='iconfont icon-dayin'"
+            text="打印文件"
+            wx:for="{{ 1 }}"
+            wx:key="keys"
+            url="/pages/delivery/delivery"
+          />
+          <van-grid-item 
+            icon="class='iconfont icon-jikuaidi'"
+            text="寄快递"
+            wx:for="{{ 1 }}"
+            wx:key="keys"
+            url="/pages/delivery/delivery"
+          />
+          <van-grid-item 
+            icon="photo-o"
+            text="文字"
+            wx:for="{{ 1 }}"
+            wx:key="keys"
+            url="/pages/delivery/delivery"
+          />
       </van-grid>
+      </view>
     </view>
+
+    <!--文字标签 “帮我送” +宫格组件-->
+    <view class="outer-view">
+      <view class="myborder">
+        <view style="padding:20rpx;20rpx;0rpx;20rpx;">
+          <van-tag mark type="primary" size="medium" plain>帮我送</van-tag>
+        </view>
+        <van-grid gutter="{{ 10 }}" column-num="4" border="{{false}}">
+          <van-grid-item 
+            icon="class='iconfont icon-wenjian'"
+            text="文件"
+            wx:for="{{ 1 }}"
+            wx:key="keys"
+            url="/pages/delivery/delivery"
+          />
+          <van-grid-item 
+            icon="class='iconfont icon-b2'"
+            text="钥匙"
+            wx:for="{{ 1 }}"
+            wx:key="keys"
+            url="/pages/delivery/delivery"
+          />
+          <van-grid-item 
+            icon="photo-o"
+            text="文字"
+            wx:for="{{ 1 }}"
+            wx:key="keys"
+            url="/pages/delivery/delivery"
+          />
+      </van-grid>
+      </view>
+    </view>
+
   </van-tab>
-
-
-
-  <van-tab title="帮我办">
-    <view class="bangwoqu">
-      <van-grid gutter="{{ 10 }}" column-num="3">
-        <van-grid-item 
-        icon="class='iconfont icon-dayin'"
-        text="打印文件"
-        wx:for="{{ 1 }}"
-        wx:key="keys"
-        url="/pages/delivery/delivery"
-        />
-        <van-grid-item 
-        icon="class='iconfont icon-jikuaidi'"
-        text="寄快递"
-        wx:for="{{ 1 }}"
-        wx:key="keys"
-        url="/pages/delivery/delivery"
-        />
-        <van-grid-item icon="photo-o"
-        text="文字"
-        wx:for="{{ 1 }}"
-        wx:key="keys"
-        url="/pages/delivery/delivery"
-        />
-      </van-grid>
-    </view>
-  </van-tab>
-
-
-  <van-tab title="帮我送">
-    <view class="bangwoqu">
-      <van-grid gutter="{{ 10 }}" column-num="3">
-        <van-grid-item 
-        icon="class='iconfont icon-wenjian'"
-        text="文件"
-        wx:for="{{ 1 }}"
-        wx:key="keys"
-        url="/pages/delivery/delivery"
-        />
-        <van-grid-item 
-        icon="class='iconfont icon-b2'"
-        text="钥匙"
-        wx:for="{{ 1 }}"
-        wx:key="keys"
-        url="/pages/delivery/delivery"
-        />
-        <van-grid-item icon="photo-o"
-        text="文字"
-        wx:for="{{ 1 }}"
-        wx:key="keys"
-        url="/pages/delivery/delivery"
-        />
-      </van-grid>
-    </view>
+  <!--我帮标签的内容-->
+  <van-tab title="我帮">
+    
   </van-tab>
 </van-tabs>
-
-
-
-
-
 

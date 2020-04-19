@@ -6,3 +6,11 @@ page{background-color: #efeff4;}   /*页面背景色*/
 .mybutton{
   padding: 50rpx;
 }
+.myimage{
+  width: 50rpx;
+  height: 50rpx;
+ 
+}
+.mytext01{
+  padding: 0rpx,20rpx,20rpx,20rpx;
+}

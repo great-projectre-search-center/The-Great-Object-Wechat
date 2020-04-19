@@ -1,6 +1,7 @@
+page{background-color: #efeff4;}
 swiper{
   width: 100%;
-  height: 450rpx;
+  height: 360rpx;
 }
 
 image{
@@ -29,6 +30,25 @@ image{
 
 
 
+.outer-view{
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+.myborder{
+  
+  width: 100%;
+  height: 300rpx;  /*每个框的高度*/
+  border-color: #efeff4;    /*边框的颜色  */
+  border-style: solid;
+  border-width: 4rpx;
+  border-radius: 25rpx;  /*圆角边框*/
+  background-color: white;
+  margin: 10rpx;  /*各边框距最外边的距离*/
+}
+
+
+
 
 @font-face {font-family: "iconfont";
   src: url('iconfont.eot?t=1587204460325'); /* IE9 */
@@ -51,7 +71,7 @@ image{
 .icon-jikuaidi:before {
   content: "\e61e";
   color: #4b8bf4;
-  font-size: 90rpx;
+  font-size: 70rpx;
 }
 
 
@@ -59,54 +79,54 @@ image{
 .icon-FastFood:before {
   content: "\e620";
   color: yellow;
-  font-size: 90rpx;
+  font-size: 70rpx;
   
 }
 /* 钥匙 */
 .icon-b2:before {
   content: "\e644";
   color: #4b8bf4;
-  font-size: 90rpx;
+  font-size: 70rpx;
 }
 /* 取快递 */
 .icon-kuaidi:before {
   content: "\e61c";
   color: #4b8bf4;
-  font-size: 90rpx;
+  font-size: 70rpx;
 }
 
 .icon-bangzhuzhongxin:before {
   content: "\e63f";
   color: #4b8bf4;
-  font-size: 90rpx;
+  font-size: 70rpx;
 }
 /* 文具 */
 .icon-wenju:before {
   content: "\e646";
   color: #4b8bf4;
-  font-size: 90rpx;
+  font-size: 70rpx;
 }
 /* 生活用品 */
 .icon-shenghuoyongpin:before {
   content: "\e6ee";
   color: #4b8bf4;
-  font-size: 90rpx;
+  font-size: 70rpx;
 }
 /* 打印 */
 .icon-dayin:before {
   content: "\e652";
   color: #4b8bf4;
-  font-size: 90rpx;
+  font-size: 70rpx;
 }
 /* 饮料 */
 .icon-shipinyinliao:before {
   content: "\e60c";
   color:yellow;
-  font-size: 90rpx;
+  font-size: 70rpx;
 }
 /* 文件 */
 .icon-wenjian:before {
   content: "\e629";
   color: #4b8bf4;
-  font-size: 90rpx;
+  font-size: 70rpx;
 }

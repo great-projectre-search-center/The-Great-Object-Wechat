@@ -1,6 +1,5 @@
 {
-  "navigationBarTitleText": "无忙不帮",
   "usingComponents": {
-    "MyHead": "../../components/MyHead/MyHead"
+   
   }
 }
