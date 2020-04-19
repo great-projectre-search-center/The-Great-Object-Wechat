@@ -104,8 +104,9 @@
         wx:key="keys"
         url="/pages/delivery/delivery"
         />
-        <van-grid-item icon="photo-o"
-        text="文字"
+        <van-grid-item 
+        icon="class='iconfont icon-jikuaidi'"
+        text="寄快递"
         wx:for="{{ 1 }}"
         wx:key="keys"
         url="/pages/delivery/delivery"

@@ -1,0 +1,8 @@
+/* pages/myfeedback/myfeedback.wxss */
+page{background-color: #efeff4;}   /*页面背景色*/
+.mytext{
+  padding: 20rpx;
+}
+.mybutton{
+  padding: 50rpx;
+}

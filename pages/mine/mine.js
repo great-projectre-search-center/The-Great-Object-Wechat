@@ -154,6 +154,11 @@ Page({
       url: '../myorder/myorder',
     })
   },
+  navigateToMyScore: function () {
+    wx.navigateTo({
+      url: '../myscore/myscore',
+    })
+  },
   navigateToMyService: function () {
     wx.navigateTo({
       url: '../myservice/myservice',

@@ -1,0 +1,7 @@
+/* pages/myfeedback/myfeedback.wxss */
+page{background-color: #efeff4;}   /*页面背景色*/
+.button{
+  padding: 20rpx;
+  text-align: center;
+  line-height: 200rpx;
+}

@@ -2,6 +2,7 @@
   "pages": [
     
     
+    
     "pages/index/index",
     "pages/myMMap/myMMap",
     "pages/delivery/delivery",
@@ -15,6 +16,7 @@
     "pages/mylogin/mylogin",
     "pages/xuanzeshipin/xuanzeshipin",
     "pages/myorder/myorder",
+    "pages/myscore/myscore",
     "pages/mykufu/mykefu",
     "pages/myservice/myservice",
     "pages/mycenter/mycenter",
@@ -22,7 +24,14 @@
     "pages/mine/mine",
     "pages/addressList/addressList",
     "pages/address/address",
-    "pages/feedback/feedback"
+    "pages/feedback/feedback",
+    "pages/myfeedback/myfeedback",
+    "pages/feedbackType/feedbackType",
+    "pages/toPerformance/toPerformance",
+    "pages/toFunction/toFunction",
+    "pages/toBug/toBug"
+    
+    
   ],
   "window": {
     "backgroundTextStyle": "dark",

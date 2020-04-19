@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "反馈类型",
+  "usingComponents": {
+    "van-row": "../../miniprogram_npm/vant-weapp/row",
+    "van-col": "../../miniprogram_npm/vant-weapp/col",
+    "van-button": "../../miniprogram_npm/vant-weapp/button"
+  }
+}

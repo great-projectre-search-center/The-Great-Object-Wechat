@@ -1,0 +1,26 @@
+<!-- <view class="button">
+  <van-row gutter="20">
+    <van-col span="24">
+      <van-button plain type="default" round>性能问题</van-button>
+    </van-col>
+    <van-col span="24">
+      <van-button plain type="default" round>功能建议</van-button>
+    </van-col>
+    <van-col span="24">
+      <van-button plain type="default" round>bug反馈</van-button>
+    </van-col>
+  </van-row>
+</view> -->
+
+
+<view class="button">
+  <view class="button01">
+    <van-button plain type="default" round bind:click="toPerformance" size="normal">性能问题</van-button>
+  </view>
+  <view>
+    <van-button plain type="default" round bind:click="toFunction">功能建议</van-button>
+  </view>
+  <view>
+    <van-button plain type="default" round bind:click="toBug">bug反馈</van-button>
+  </view>
+</view>

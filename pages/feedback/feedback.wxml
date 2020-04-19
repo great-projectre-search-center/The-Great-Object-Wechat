@@ -1,4 +1,41 @@
 <!--pages/feedback/feedback.wxml-->
-<text>点击“反馈”，进行意见反馈</text>
+<!-- <text>点击“反馈”，进行意见反馈</text>
 
-<button open-type='feedback'>反馈</button>
+<button open-type='feedback'>反馈</button> -->
+
+<view class="cell01">
+  <van-cell
+    is-link
+    icon="invition"
+    title="我要反馈"
+    link-type="navigateTo"
+    url="/pages/myfeedback/myfeedback"
+  />
+
+</view>
+
+<view class="cell01"> 
+  <view class="text-cell">
+    <text>常见问题</text>
+  </view>
+  <van-cell
+    is-link
+    title="新手积分"
+    link-type="navigateTo"
+    url="/pages/myfeedback/myfeedback"
+  />
+
+    <van-cell
+    is-link
+    title="反馈2"
+    link-type="navigateTo"
+    url="/pages/myfeedback/myfeedback"
+  />
+
+    <van-cell
+    is-link
+    title="反馈3"
+    link-type="navigateTo"
+    url="/pages/myfeedback/myfeedback"
+  />
+</view>

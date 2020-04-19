@@ -16,7 +16,37 @@ Page({
         { value: '盖饭' },
         { value: '炒饭' },
       ],
-      
+
+
+      show: false,
+      //address:'',//选中的地区
+      address_code: '',//选中的地区编号
+
+
+      areaList: {
+        province_list: {
+          110000: '北京市',
+          120000: '天津市'
+        },
+        city_list: {
+          110100: '北京市',
+          110200: '县',
+          120100: '天津市',
+          120200: '县'
+        },
+        county_list: {
+          110101: '东城区',
+          110102: '西城区',
+          110105: '朝阳区',
+          110106: '丰台区',
+          120101: '和平区',
+          120102: '河东区',
+          120103: '河西区',
+          120104: '南开区',
+          120105: '河北区',
+          // ....
+        },
+      }
       // date:{
       //   currentDate:'08:00',
       //   filter(type,options){
@@ -33,6 +63,35 @@ Page({
     checkboxChange(e){
       console.log(e.detail.value)
     },
+
+
+
+  showPopup() {   //展示选择框
+    this.setData({ show: true });
+
+
+  },
+
+  onCancel() {  //取消时，关闭选择框
+    this.setData({ show: false });
+  },
+
+
+
+  onChange(picker) {   //改变选择      
+
+    let val = picker.getValues();
+    this.message = val;
+    console.log(picker.val);
+  },
+
+  onConfirm(val) {  //点击确定时，将选项赋值到input框
+    this.setData({ show: false });
+    //传值(待改正)
+    // this.address = val[0].name + "-" + val[1].name + "-" + val[2].name;
+    // this.address_code = val[2].code;
+  },
+
 
     // onInput(event){
     //   this.setDate({

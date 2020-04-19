@@ -46,3 +46,7 @@ page{background-color: #efeff4;}
   font-size:32rpx;  /*框内文字左飘*/
   height: 100rpx;
 }
+
+.mycell{
+  padding: 20rpx;
+}

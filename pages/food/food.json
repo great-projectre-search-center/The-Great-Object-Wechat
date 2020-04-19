@@ -4,6 +4,8 @@
     "MyHead": "../../components/MyHead/MyHead",
     "van-cell": "../../miniprogram_npm/vant-weapp/cell",
     "van-field": "../../miniprogram_npm/vant-weapp/field",
-    "van-datetime-picker": "../../miniprogram_npm/vant-weapp/datetime-picker"
+    "van-datetime-picker": "../../miniprogram_npm/vant-weapp/datetime-picker",
+    "van-popup": "../../miniprogram_npm/vant-weapp/popup",
+    "van-area": "../../miniprogram_npm/vant-weapp/area"
   }
 }

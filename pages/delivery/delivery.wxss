@@ -10,7 +10,7 @@
   font-size: 36rpx;  /*文字的大小*/
 }
 .con-nr input{   /*输入框内元素的属性*/
-  width:500rpx;
+  width:500rpx; 
   float:right;
   font-size:32rpx;  /*框内文字左飘*/
   height: 100rpx;
@@ -32,7 +32,7 @@
 /*以下时底部弹出选择框的属性*/
 page{background-color: #efeff4;}
 .tui-picker-content{
-  padding: 10rpx;
+  padding: 20rpx;
   text-align: center;
 }
 .tui-picker-name{
@@ -44,13 +44,13 @@ page{background-color: #efeff4;}
   line-height: 80rpx;
   background-color: #fff;
   font-size: 36rpx;
-  padding: 0,10px;
+  padding: 0,20rpx;
   overflow: hidden;
   border-radius: 50rpx;
 }
 
 .mycell{
-  padding: 10rpx;
+  padding: 20rpx;
 }
 
 

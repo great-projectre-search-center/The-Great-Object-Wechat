@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "意见反馈",
+  "usingComponents": {
+    "van-cell": "../../miniprogram_npm/vant-weapp/cell"
+  }
 }

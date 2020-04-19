@@ -1,6 +1,6 @@
 <!--pages/myorder/myorder.wxml-->
 
-<van-tabs active="{{ active }}" swipeable="{{swipeable}}" class="mytabs">
+<van-tabs active="{{ active }}" swipeable="{{swipeable}}" class="mytabs" animated>
   <van-tab title="全部订单">
   <!-- <navigator> -->
     

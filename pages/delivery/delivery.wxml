@@ -5,7 +5,7 @@
  
 <!--form bindsubmit='sub'-->
   <!--view style="border-bottom:1px solid #a8a8a8;margin-left:30rpx;padding:5rpx;">
-      <text decode="true">订单类型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;代取快递(默认)</text>
+      <text decode="true">订单类型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;代取快递(默认)</text> 
      
   </view-->
   <view class="tui-picker-content">

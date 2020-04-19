@@ -1,0 +1,37 @@
+<view>
+  <view class="mytext">
+    <text>反馈内容</text>
+  </view>
+  <view class="mytext">
+    <van-cell-group>
+      <van-field
+        value="{{ message }}"
+        label="反馈内容"
+        type="textarea"
+        placeholder="请输入反馈内容(可换行)"
+        autosize
+        border="{{ false }}"
+      />
+    </van-cell-group>
+  </view>
+
+  <view class="mytext">
+    <text>联系方式</text>
+  </view>
+  <view class="mytext">
+    <van-cell-group>
+      <van-field
+        value="{{ value }}"
+        placeholder="QQ、微信、邮箱或手机号等联系方式"
+        border="{{ false }}"
+        bind:change="onChange"
+      />
+    </van-cell-group>
+  </view>
+  
+</view>
+
+
+<view class="mybutton">
+  <van-button type="info" size="large" round>提交</van-button>
+</view>

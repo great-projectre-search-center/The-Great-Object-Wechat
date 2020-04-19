@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "我要反馈",
+  "usingComponents": {
+    "van-cell-group": "../../miniprogram_npm/vant-weapp/cell-group",
+    "van-field": "../../miniprogram_npm/vant-weapp/field",
+    "van-button": "../../miniprogram_npm/vant-weapp/button"
+  }
+}
