@@ -1,3 +1,9 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "我的客服",
+  "usingComponents": {
+    "van-cell": "../../miniprogram_npm/vant-weapp/cell",
+    "van-radio-group": "../../miniprogram_npm/vant-weapp/radio-group",
+    "van-cell-group": "../../miniprogram_npm/vant-weapp/cell-group",
+    "van-radio": "../../miniprogram_npm/vant-weapp/radio"
+  }
 }
