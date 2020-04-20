@@ -184,6 +184,11 @@ Page({
       url: '../feedback/feedback',
     })
   },
+  navigateToKufu: function () {
+    wx.navigateTo({
+      url: '../mykufu/mykefu',
+    })
+  },
 
 
   getUserInfo:function(e){
