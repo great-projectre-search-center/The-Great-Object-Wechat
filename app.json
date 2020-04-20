@@ -4,6 +4,7 @@
     
     
     "pages/index/index",
+    "pages/mykufu/mykefu",
     "pages/myMMap/myMMap",
     "pages/delivery/delivery",
     "pages/wusuobuqu/wusuobuqu",
@@ -17,7 +18,7 @@
     "pages/xuanzeshipin/xuanzeshipin",
     "pages/myorder/myorder",
     "pages/myscore/myscore",
-    "pages/mykufu/mykefu",
+    
     "pages/myservice/myservice",
     "pages/mycenter/mycenter",
     "pages/aboutapp/aboutapp",
@@ -29,7 +30,8 @@
     "pages/feedbackType/feedbackType",
     "pages/toPerformance/toPerformance",
     "pages/toFunction/toFunction",
-    "pages/toBug/toBug"
+    "pages/toBug/toBug",
+    "pages/infokefu/infokefu"
     
     
   ],

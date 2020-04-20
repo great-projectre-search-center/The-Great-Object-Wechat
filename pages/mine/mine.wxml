@@ -62,7 +62,7 @@
   <van-cell icon="manager" is-link title="会员中心" catchtap="navigateToMyService"/>
   <van-cell icon="map-marked" is-link title="地址管理" catchtap="navigateToMyDir"/>
   <van-cell icon="award" is-link title="我的积分" catchtap="navigateToMyScore"/>
-  <van-cell icon="service" is-link title="我的客服" />
+  <van-cell icon="service" is-link title="我的客服" catchtap="navigateToKufu"/>
   <van-cell icon="comment-circle" is-link title="意见反馈" catchtap="navigateToFeedback"/>
   <van-cell icon="warning" is-link title="规则中心" catchtap="navigateToMyCenter"/>
   <van-cell icon="info" is-link title="关于软件" catchtap="navigateToMyApp"/>

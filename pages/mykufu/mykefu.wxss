@@ -1,1 +1,7 @@
-/* pages/mykufu/mykefu.wxss */
+page{background-color: #efeff4;}   /*页面背景色*/
+.cell01{
+  padding: 15rpx;
+}
+.text-cell{
+  padding: 10rpx;
+}

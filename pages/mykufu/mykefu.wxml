@@ -1,2 +1,37 @@
 <!--pages/mykufu/mykefu.wxml-->
-<text>pages/mykufu/mykefu.wxml</text>
+<view class="cell01">
+  <van-cell
+    is-link
+    icon="phone-o"
+    title="电话"
+    bind:click="Tel"/>
+</view>
+
+<view class="cell01"> 
+  <view class="text-cell">
+    <text>其他方式</text>
+  </view>
+  <van-cell
+    is-link
+    title="微信"
+    link-type="navigateTo"
+    url="/pages/infokefu/infokefu"
+  />
+
+    <van-cell
+    is-link
+    title="QQ"
+    link-type="navigateTo"
+    url="/pages/infokefu/infokefu"
+  />
+
+    <van-cell
+    is-link
+    title="邮箱"
+    link-type="navigateTo"
+    url="/pages/infokefu/infokefu"
+  />
+</view>
+<!--<button type="default" bindtap="Tel">微信</button>
+<text>四种联系方式 微信、qq、电话、邮箱</text>-->
+
