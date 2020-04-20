@@ -171,9 +171,9 @@ Page({
   },
   navigateToMyApp: function () {
     wx.navigateTo({
-      url: '../myMMap/myMMap',
+      url: '../aboutapp/aboutapp',
     })
-  },
+  },     //
   navigateToMyDir: function () {
     wx.navigateTo({
       url: '../addressList/addressList',

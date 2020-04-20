@@ -21,9 +21,19 @@
             <van-grid-item
             
             icon="class='iconfont icon-kuaidi'"
-            text="帮取快递"
+            text="快递"
 
             url="/pages/delivery/delivery"
+            />
+          </view>
+          <view class="class01">
+            <van-grid-item
+            icon="class='iconfont icon-bangzhuzhongxin'"
+            text="外卖"
+            wx:for="{{ 1 }}"
+            wx:key="keys"
+            url="/pages/wusuobuqu/wusuobuqu"
+
             />
           </view>
           <view class="class01">

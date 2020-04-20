@@ -5,7 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
+    value: 0
+  },
 
+  onChange(event) {
+    this.setData({
+      value: event.detail
+    });
   },
 
   /**

@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    radio: true,
+    radio: "1",
+
     icon: {
       normal: '../../icons/radio.png',
       active: '../../icons/radio1.png'
