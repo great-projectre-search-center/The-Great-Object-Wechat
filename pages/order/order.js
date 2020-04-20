@@ -7,12 +7,12 @@ Page({
    */
   data: {
     //imageURL:"../../icons/swiper01.jpg",
-    nums1:'1',
-    nums2:'1',
-    nums3:'1',
-    active:'0',
-    swipeable:'true'
-    
+    nums1: '1',
+    nums2: '1',
+    nums3: '1',
+    active: '0',
+    swipeable: 'true'
+
 
   },
 

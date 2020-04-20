@@ -1,4 +1,5 @@
 // pages/myfeedback/myfeedback.js
+var app = getApp();
 Page({
 
   /**
@@ -31,7 +32,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      baseurl: app.globalData.baseurl
+    })
 
+    var that = this
+    if (wx.getStorageSync("hasuserinfo") == true) {   //本地缓存中已经授权成功
+      wx.request({
+        url: app.globalData.baseurl + "/me",
+        method: "GET",
+        success: (res) => {
+          that.setData({
+            order: res.data["order"],
+            willfinish: res.data["willfinish"],
+            finished: res.data["finished"],
+            cancel: res.data["cancel"]
+          })
+        },
+        header: {
+          Authorization: wx.getStorageSync("token")
+        }
+      })
+    }
   },
 
   /**
@@ -45,7 +67,51 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    //判断用户是否授权
+    wx.getSetting({
+      success: (res) => {   //如果已经授权成功
+        if (res.authSetting['scope.userInfo']) {
+          console.log("in auth")
+          var that = this
+          //获取用户的信息
+          wx.getUserInfo({
+            //withCredentials: true,
+            //lang: '',
+            success: (res) => {
+              console.log(res)
 
+              that.setData({
+                userInfo: res.userInfo,
+                hasUserInfo: true
+              })
+            },
+
+          })
+        } else {
+          console.log("donot have user info")
+        }
+      },
+
+    })
+
+    var that = this
+    if (wx.getStorageSync("hasuserinfo") == true) {   //授权成功后准备登陆
+      wx.request({   //发送请求
+        url: app.globalData.baseurl + "/me",
+        method: "GET",   //请求登陆
+        success: (res) => {   //登陆成功
+          that.setData({
+            order: res.data["order"],
+            willfinish: res.data["willfinish"],
+            finished: res.data["finished"],
+            cancel: res.data["cancel"]
+          })
+        },
+        header: {
+          Authorization: wx.getStorageSync("token")
+        }
+      })
+    }
   },
 
   /**
@@ -81,5 +147,30 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  getUserInfo: function (e) {
+    console.log(e)
+    app.globalData.userInfo = e.detail.userInfo
+    //获取用户信息，标记用户信息获取成功 true
+    var that = this
+    that.setData({
+      userInfo: e.detail.userInfo,
+      hasUserInfo: true
+    })
+
+    wx.request({
+      url: app.globalData.baseurl + "/auth/uploadWxUserinfo",
+      method: "POST",
+      header: {
+        Authorization: wx.getStorageSync("token")
+      },
+      data: {
+        userinfo: e.detail.userInfo
+      },
+      success: (e) => {
+        wx.setStorageSync("hasuserinfo", true)
+      }
+    })
   }
 })
