@@ -1,18 +1,18 @@
 
 <van-tabs active="{{ active }}" swipeable="{{swipeable}}" class="mytabs" animated>
   <van-tab title="全部订单">
-  
-    
+
+
     <view class="outer-view">
       <!--订单框-->
       <view class="myborder">
         <!--订单1-->
         <view class="mycard">
           <navigator url="../wusuobuqu/wusuobuqu">
-            <van-card 
-              num="{{nums1}}" 
-              price="10.00" 
-              desc="全部订单111111111" 
+            <van-card
+              num="{{nums1}}"
+              price="10.00"
+              desc="全部订单111111111"
               title="全部订单1111111111"   >
             </van-card>
           </navigator>
@@ -22,7 +22,7 @@
           <van-button size="small" round>取消订单</van-button>
           <van-button size="small" round>确认订单</van-button>
         </view>
-      </view> 
+      </view>
     </view>
 
     <view class="outer-view">
@@ -30,11 +30,11 @@
           <!--订单2-->
           <view class="mycard">
             <navigator url="../wusuobuqu/wusuobuqu">
-              <van-card 
-                num="{{nums2}}" 
-                price="10.00" 
-                desc="全部订单222222222" 
-                title="全部订单222222222222" 
+              <van-card
+                num="{{nums2}}"
+                price="10.00"
+                desc="全部订单222222222"
+                title="全部订单222222222222"
                 thumb="{{ imageURL }}">
               </van-card>
             </navigator>
@@ -44,20 +44,20 @@
             <van-button size="small" round>取消订单</van-button>
             <van-button size="small" round>确认订单</van-button>
           </view>
-      </view> 
+      </view>
     </view>
-   
+
 
     <view class="outer-view">
       <view class="myborder">
           <!--订单3-->
           <view class="mycard">
             <navigator url="../wusuobuqu/wusuobuqu">
-              <van-card 
-                num="{{nums3}}" 
-                price="10.00" 
-                desc="全部订单33333333" 
-                title="全部订单33333333333333" 
+              <van-card
+                num="{{nums3}}"
+                price="10.00"
+                desc="全部订单33333333"
+                title="全部订单33333333333333"
                 thumb="{{ imageURL }}">
               </van-card>
             </navigator>
@@ -67,9 +67,9 @@
             <van-button size="small" round>取消订单</van-button>
             <van-button size="small" round>确认订单</van-button>
           </view>
-      </view> 
+      </view>
     </view>
-   
+
 
   </van-tab>
 
@@ -81,10 +81,10 @@
         <!--订单1-->
         <view class="mycard">
           <navigator url="../wusuobuqu/wusuobuqu">
-            <van-card 
-              num="{{nums1}}" 
-              price="10.00" 
-              desc="未接单111111111" 
+            <van-card
+              num="{{nums1}}"
+              price="10.00"
+              desc="未接单111111111"
               title="未接单1111111111"   >
             </van-card>
           </navigator>
@@ -94,7 +94,7 @@
           <van-button size="small" round>取消订单</van-button>
           <van-button size="small" round>确认订单</van-button>
         </view>
-      </view> 
+      </view>
     </view>
 
     <view class="outer-view">
@@ -102,11 +102,11 @@
           <!--订单2-->
           <view class="mycard">
             <navigator url="../wusuobuqu/wusuobuqu">
-              <van-card 
-                num="{{nums2}}" 
-                price="10.00" 
-                desc="未接单222222222" 
-                title="未接单222222222222" 
+              <van-card
+                num="{{nums2}}"
+                price="10.00"
+                desc="未接单222222222"
+                title="未接单222222222222"
                 thumb="{{ imageURL }}">
               </van-card>
             </navigator>
@@ -116,7 +116,7 @@
             <van-button size="small" round>取消订单</van-button>
             <van-button size="small" round>确认订单</van-button>
           </view>
-      </view> 
+      </view>
     </view>
   </van-tab>
 
@@ -128,10 +128,10 @@
         <!--订单1-->
         <view class="mycard">
           <navigator url="../wusuobuqu/wusuobuqu">
-            <van-card 
-              num="{{nums1}}" 
-              price="10.00" 
-              desc="已接单111111111" 
+            <van-card
+              num="{{nums1}}"
+              price="10.00"
+              desc="已接单111111111"
               title="已接单1111111111"   >
             </van-card>
           </navigator>
@@ -141,7 +141,7 @@
           <van-button size="small" round>取消订单</van-button>
           <van-button size="small" round>确认订单</van-button>
         </view>
-      </view> 
+      </view>
     </view>
 
     <view class="outer-view">
@@ -149,11 +149,11 @@
           <!--订单2-->
           <view class="mycard">
             <navigator url="../wusuobuqu/wusuobuqu">
-              <van-card 
-                num="{{nums2}}" 
-                price="10.00" 
-                desc="已接单222222222" 
-                title="已接单222222222222" 
+              <van-card
+                num="{{nums2}}"
+                price="10.00"
+                desc="已接单222222222"
+                title="已接单222222222222"
                 thumb="{{ imageURL }}">
               </van-card>
             </navigator>
@@ -163,7 +163,7 @@
             <van-button size="small" round>取消订单</van-button>
             <van-button size="small" round>确认订单</van-button>
           </view>
-      </view> 
+      </view>
     </view>
   </van-tab>
 
@@ -175,10 +175,10 @@
         <!--订单1-->
         <view class="mycard">
           <navigator url="../wusuobuqu/wusuobuqu">
-            <van-card 
-              num="{{nums1}}" 
-              price="10.00" 
-              desc="送货中111111111" 
+            <van-card
+              num="{{nums1}}"
+              price="10.00"
+              desc="送货中111111111"
               title="送货中1111111111"   >
             </van-card>
           </navigator>
@@ -188,7 +188,7 @@
           <van-button size="small" round>取消订单</van-button>
           <van-button size="small" round>确认订单</van-button>
         </view>
-      </view> 
+      </view>
     </view>
 
     <view class="outer-view">
@@ -196,11 +196,11 @@
           <!--订单2-->
           <view class="mycard">
             <navigator url="../wusuobuqu/wusuobuqu">
-              <van-card 
-                num="{{nums2}}" 
-                price="10.00" 
-                desc="送货中222222222" 
-                title="送货中222222222222" 
+              <van-card
+                num="{{nums2}}"
+                price="10.00"
+                desc="送货中222222222"
+                title="送货中222222222222"
                 thumb="{{ imageURL }}">
               </van-card>
             </navigator>
@@ -210,7 +210,7 @@
             <van-button size="small" round>取消订单</van-button>
             <van-button size="small" round>确认订单</van-button>
           </view>
-      </view> 
+      </view>
     </view>
   </van-tab>
 
@@ -222,10 +222,10 @@
         <!--订单1-->
         <view class="mycard">
           <navigator url="../wusuobuqu/wusuobuqu">
-            <van-card 
-              num="{{nums1}}" 
-              price="10.00" 
-              desc="已接收111111111" 
+            <van-card
+              num="{{nums1}}"
+              price="10.00"
+              desc="已接收111111111"
               title="已接收1111111111"   >
             </van-card>
           </navigator>
@@ -235,7 +235,7 @@
           <van-button size="small" round>取消订单</van-button>
           <van-button size="small" round>确认订单</van-button>
         </view>
-      </view> 
+      </view>
     </view>
 
     <view class="outer-view">
@@ -243,11 +243,11 @@
           <!--订单2-->
           <view class="mycard">
             <navigator url="../wusuobuqu/wusuobuqu">
-              <van-card 
-                num="{{nums2}}" 
-                price="10.00" 
-                desc="已接收222222222" 
-                title="已接收222222222222" 
+              <van-card
+                num="{{nums2}}"
+                price="10.00"
+                desc="已接收222222222"
+                title="已接收222222222222"
                 thumb="{{ imageURL }}">
               </van-card>
             </navigator>
@@ -257,7 +257,7 @@
             <van-button size="small" round>取消订单</van-button>
             <van-button size="small" round>确认订单</van-button>
           </view>
-      </view> 
+      </view>
     </view>
   </van-tab>
 
@@ -269,10 +269,10 @@
         <!--订单1-->
         <view class="mycard">
           <navigator url="../wusuobuqu/wusuobuqu">
-            <van-card 
-              num="{{nums1}}" 
-              price="10.00" 
-              desc="已批评111111111" 
+            <van-card
+              num="{{nums1}}"
+              price="10.00"
+              desc="已批评111111111"
               title="已评价1111111111"   >
             </van-card>
           </navigator>
@@ -282,7 +282,7 @@
           <van-button size="small" round>取消订单</van-button>
           <van-button size="small" round>确认订单</van-button>
         </view>
-      </view> 
+      </view>
     </view>
 
     <view class="outer-view">
@@ -290,11 +290,11 @@
           <!--订单2-->
           <view class="mycard">
             <navigator url="../wusuobuqu/wusuobuqu">
-              <van-card 
-                num="{{nums2}}" 
-                price="10.00" 
-                desc="已评价222222222" 
-                title="已评价222222222222" 
+              <van-card
+                num="{{nums2}}"
+                price="10.00"
+                desc="已评价222222222"
+                title="已评价222222222222"
                 thumb="{{ imageURL }}">
               </van-card>
             </navigator>
@@ -304,7 +304,7 @@
             <van-button size="small" round>取消订单</van-button>
             <van-button size="small" round>确认订单</van-button>
           </view>
-      </view> 
+      </view>
     </view>
   </van-tab>
 
@@ -316,10 +316,10 @@
         <!--订单1-->
         <view class="mycard">
           <navigator url="../wusuobuqu/wusuobuqu">
-            <van-card 
-              num="{{nums1}}" 
-              price="10.00" 
-              desc="已取消111111111" 
+            <van-card
+              num="{{nums1}}"
+              price="10.00"
+              desc="已取消111111111"
               title="已取消1111111111"   >
             </van-card>
           </navigator>
@@ -329,7 +329,7 @@
           <van-button size="small" round>取消订单</van-button>
           <van-button size="small" round>确认订单</van-button>
         </view>
-      </view> 
+      </view>
     </view>
 
     <view class="outer-view">
@@ -337,11 +337,11 @@
           <!--订单2-->
           <view class="mycard">
             <navigator url="../wusuobuqu/wusuobuqu">
-              <van-card 
-                num="{{nums2}}" 
-                price="10.00" 
-                desc="已取消222222222" 
-                title="已取消222222222222" 
+              <van-card
+                num="{{nums2}}"
+                price="10.00"
+                desc="已取消222222222"
+                title="已取消222222222222"
                 thumb="{{ imageURL }}">
               </van-card>
             </navigator>
@@ -351,7 +351,7 @@
             <van-button size="small" round>取消订单</van-button>
             <van-button size="small" round>确认订单</van-button>
           </view>
-      </view> 
+      </view>
     </view>
   </van-tab>
 </van-tabs>

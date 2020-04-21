@@ -28,15 +28,9 @@
     "pages/feedback/feedback",
     "pages/myfeedback/myfeedback",
     "pages/feedbackType/feedbackType",
-    "pages/toPerformance/toPerformance",
-    "pages/toFunction/toFunction",
-<<<<<<< HEAD
-    "pages/toBug/toBug"
     
-=======
-    "pages/toBug/toBug",
     "pages/infokefu/infokefu"
->>>>>>> Lib
+
     
     
   ],
