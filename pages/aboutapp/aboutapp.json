@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "关于软件",
+  "usingComponents": {
+    "van-rate": "../../miniprogram_npm/vant-weapp/rate"
+  }
 }

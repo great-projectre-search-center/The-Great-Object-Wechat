@@ -1,1 +1,6 @@
-/* pages/mycenter/mycenter.wxss */
+.mycell{
+  padding: 20rpx;
+}
+.text01{
+  color: #767676;
+}

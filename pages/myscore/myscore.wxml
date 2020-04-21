@@ -1,2 +1,27 @@
 <!--pages/myscore/myscore.wxml-->
-<text>pages/myscore/myscore.wxml</text>
+<view class="topBody">
+<text style="color:#F8F8FF;font-size: 25rpx;">可用积分</text>
+<text style="color:#FFFFFF;font-size: 50rpx;">{{soc}}</text>
+</view>
+<van-tabs bind:click="onClick" color="#4b8bf4">
+  <van-tab title="积分记录">
+    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
+    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
+    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
+    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
+    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
+    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
+    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
+    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
+    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
+    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
+    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
+    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
+    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
+    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
+    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
+  </van-tab>
+  <van-tab title="兑换记录">
+  暂时没有开通
+  </van-tab>
+</van-tabs>

@@ -3,7 +3,7 @@
 
 <button open-type='feedback'>反馈</button> -->
 
-<view>
+<view class="text-cell">
   <van-cell
     is-link
     icon="invition"
@@ -16,7 +16,7 @@
 
 
 
-<view> 
+<view class="text-cell"> 
   <view class="text-cell">
     <text>常见问题</text>
   </view>

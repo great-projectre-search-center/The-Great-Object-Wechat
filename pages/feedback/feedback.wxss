@@ -5,5 +5,5 @@ page{background-color: #efeff4;}   /*页面背景色*/
   padding: 15rpx;
 }
 .text-cell{
-  padding: 10rpx;
+  padding: 20rpx;
 }

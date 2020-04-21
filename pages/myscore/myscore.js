@@ -1,10 +1,14 @@
 // pages/myscore/myscore.js
+
+//载入页面调用函数更新显示内容！！！！
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    soc:1014
 
   },
 

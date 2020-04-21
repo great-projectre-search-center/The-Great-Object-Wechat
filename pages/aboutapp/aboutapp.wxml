@@ -1,2 +1,20 @@
-<!--pages/aboutapp/aboutapp.wxml-->
-<text>pages/aboutapp/aboutapp.wxml</text>
+<view style='text-align:center;margin-top:200rpx'>
+  <image src='../../icons/background01.jpg' class='img-300'>
+  </image>
+</view>
+<view style='text-align:center;margin-top:100rpx'>
+  <text style='color:#000000'>帮跑跑</text>
+</view>
+<view style='text-align:center;margin-top:30rpx'>
+  <text style='color:#aaaaaa'>Team：Great Project</text>
+</view>
+<view style='text-align:center;margin-top:30rpx'>
+  <text style='color:#aaaaaa'>哈哈哈哈哈哈</text>
+</view>
+<view style='text-align:center;margin-top:30rpx'>
+  <text style='color:#aaaaaa'>Developed by KTG</text>
+</view>
+<view style='text-align:center;margin-top:30rpx;padding:40rpx;'>
+  <view>评价软件</view>
+  <van-rate value="{{ value }}" bind:change="onChange" />
+</view>

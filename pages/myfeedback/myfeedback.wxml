@@ -3,49 +3,52 @@
     <text>选择反馈类型</text>
   </view>
   <view class="mytext">
-  <van-radio-group value="{{ radio }}" bind:change="onChange">
-    <van-cell-group>
-      <van-cell
-        title="性能问题"
-        clickable
-        data-name="1"
-        bind:click="onClick"
-      >
-        <van-radio use-icon-slot value="{{ radio }}" name="1">
-          <view class="myimages">
-            <image class="myimage" slot="icon" src="{{ radio === '1' ? icon.active : icon.normal }}" />
-          </view>
-        </van-radio>
-      </van-cell>
+    <!--单选框-->
+    <van-radio-group value="{{ radio }}" bind:change="onChange">
+      <van-cell-group>
 
-      <van-cell
-        title="功能建议"
-        clickable
-        data-name="2"
-        bind:click="onClick"
-      >
-        <van-radio use-icon-slot value="{{ radio }}" name="2">
-          <view class="myimages">
-            <image class="myimage" slot="icon" src="{{ radio === '2' ? icon.active : icon.normal }}" />
-          </view>
-        </van-radio>
-      </van-cell>
+        <van-cell
+          title="性能问题"
+          clickable
+          data-name="1"
+          bind:click="onClick"
+        >
+          <van-radio use-icon-slot value="{{ radio }}" name="1">
+            <view class="myimages">
+              <image class="myimage" slot="icon" src="{{ radio === '1' ? icon.active : icon.normal }}" />
+            </view>
+          </van-radio>
+        </van-cell>
 
-      <van-cell
-        title="bug反馈"
-        clickable
-        data-name="3"
-        bind:click="onClick"
-      >
-        <van-radio use-icon-slot value="{{ radio }}" name="3">
-          <view class="myimages">
-            <image class="myimage" slot="icon" src="{{ radio === '3' ? icon.active : icon.normal }}" />
-          </view>
-        </van-radio>
-      </van-cell>
-    </van-cell-group>
-  </van-radio-group>
+        <van-cell
+          title="功能建议"
+          clickable
+          data-name="2"
+          bind:click="onClick"
+        >
+          <van-radio use-icon-slot value="{{ radio }}" name="2">
+            <view class="myimages">
+              <image class="myimage" slot="icon" src="{{ radio === '2' ? icon.active : icon.normal }}" />
+            </view>
+          </van-radio>
+        </van-cell>
+
+        <van-cell
+          title="bug反馈"
+          clickable
+          data-name="3"
+          bind:click="onClick"
+        >
+          <van-radio use-icon-slot value="{{ radio }}" name="3">
+            <view class="myimages">
+              <image class="myimage" slot="icon" src="{{ radio === '3' ? icon.active : icon.normal }}" />
+            </view>
+          </van-radio>
+        </van-cell>
+      </van-cell-group>
+    </van-radio-group>
   </view>
+  
 </view>
 
 
@@ -65,7 +68,9 @@
       />
     </van-cell-group>
   </view>
+</view>
 
+<view>
   <view class="mytext">
     <text>联系方式</text>
   </view>
@@ -75,11 +80,9 @@
         value="{{ value }}"
         placeholder="QQ、微信、邮箱或手机号等联系方式"
         border="{{ false }}"
-        bind:change="onChange"
       />
     </van-cell-group>
   </view>
-  
 </view>
 
 

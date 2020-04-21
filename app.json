@@ -1,7 +1,7 @@
 {
   "pages": [
     
-    
+   
     
     "pages/index/index",
     "pages/mykufu/mykefu",
@@ -28,10 +28,9 @@
     "pages/feedback/feedback",
     "pages/myfeedback/myfeedback",
     "pages/feedbackType/feedbackType",
-    "pages/toPerformance/toPerformance",
-    "pages/toFunction/toFunction",
-    "pages/toBug/toBug",
+    
     "pages/infokefu/infokefu"
+
     
     
   ],

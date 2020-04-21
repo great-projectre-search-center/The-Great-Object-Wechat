@@ -1,154 +1,357 @@
 
 <van-tabs active="{{ active }}" swipeable="{{swipeable}}" class="mytabs" animated>
   <van-tab title="全部订单">
-  
-    <view class="myorder">
-      <van-card num="{{nums1}}" price="10.00" desc="全部订单111111111" title="全部订单1111111111"   >
-        <view slot="footer">
-          <van-button size="small" round>取消订单</van-button>
-          <van-button size="small" round>确认订单</van-button>
-        </view>
-      </van-card>
-    
-  
-      <!-- 分割线 -->
-      <view class="divLine"></view>
 
-      <van-card num="{{nums2}}" price="10.00" desc="全部订单222222222" title="全部订单222222222222" thumb="{{ imageURL }}">
-        <view slot="footer">
-          <van-button size="small" round>取消订单</van-button>
-          <van-button size="small" round>确认订单</van-button>
-        </view>
-      </van-card>
-      <!-- 分割线 -->
-      <view class="divLine"></view>
 
-      <van-card num="{{nums3}}" price="10.00" desc="全部订单333333333" title="全部订单33333333333" thumb="{{ imageURL }}">
-        <view slot="footer">
+    <view class="outer-view">
+      <!--订单框-->
+      <view class="myborder">
+        <!--订单1-->
+        <view class="mycard">
+          <navigator url="../wusuobuqu/wusuobuqu">
+            <van-card
+              num="{{nums1}}"
+              price="10.00"
+              desc="全部订单111111111"
+              title="全部订单1111111111"   >
+            </van-card>
+          </navigator>
+        </view>
+        <!--按钮-->
+        <view slot="footer" class="mybutton">
           <van-button size="small" round>取消订单</van-button>
           <van-button size="small" round>确认订单</van-button>
         </view>
-      </van-card>
+      </view>
     </view>
+
+    <view class="outer-view">
+      <view class="myborder">
+          <!--订单2-->
+          <view class="mycard">
+            <navigator url="../wusuobuqu/wusuobuqu">
+              <van-card
+                num="{{nums2}}"
+                price="10.00"
+                desc="全部订单222222222"
+                title="全部订单222222222222"
+                thumb="{{ imageURL }}">
+              </van-card>
+            </navigator>
+          </view>
+          <!--按钮-->
+          <view slot="footer" class="mybutton">
+            <van-button size="small" round>取消订单</van-button>
+            <van-button size="small" round>确认订单</van-button>
+          </view>
+      </view>
+    </view>
+
+
+    <view class="outer-view">
+      <view class="myborder">
+          <!--订单3-->
+          <view class="mycard">
+            <navigator url="../wusuobuqu/wusuobuqu">
+              <van-card
+                num="{{nums3}}"
+                price="10.00"
+                desc="全部订单33333333"
+                title="全部订单33333333333333"
+                thumb="{{ imageURL }}">
+              </van-card>
+            </navigator>
+          </view>
+          <!--按钮-->
+          <view slot="footer" class="mybutton">
+            <van-button size="small" round>取消订单</van-button>
+            <van-button size="small" round>确认订单</van-button>
+          </view>
+      </view>
+    </view>
+
+
   </van-tab>
 
 
   <van-tab title="未接单">
-    <view class="myorder">
-      <van-card num="{{nums1}}" price="10.00" desc="未接单111111111" title="未接单1111111111" thumb="{{ imageURL }}" >
-        <view slot="footer">
+    <view class="outer-view">
+      <!--订单框-->
+      <view class="myborder">
+        <!--订单1-->
+        <view class="mycard">
+          <navigator url="../wusuobuqu/wusuobuqu">
+            <van-card
+              num="{{nums1}}"
+              price="10.00"
+              desc="未接单111111111"
+              title="未接单1111111111"   >
+            </van-card>
+          </navigator>
+        </view>
+        <!--按钮-->
+        <view slot="footer" class="mybutton">
           <van-button size="small" round>取消订单</van-button>
           <van-button size="small" round>确认订单</van-button>
         </view>
-      </van-card>
-      <!-- 分割线 -->
-      <view class="divLine"></view>
-      <van-card num="{{nums2}}" price="10.00" desc="未接单222222222" title="未接单222222222222" thumb="{{ imageURL }}">
-        <view slot="footer">
-          <van-button size="small" round>取消订单</van-button>
-          <van-button size="small" round>确认订单</van-button>
-        </view>
-      </van-card>
+      </view>
+    </view>
+
+    <view class="outer-view">
+      <view class="myborder">
+          <!--订单2-->
+          <view class="mycard">
+            <navigator url="../wusuobuqu/wusuobuqu">
+              <van-card
+                num="{{nums2}}"
+                price="10.00"
+                desc="未接单222222222"
+                title="未接单222222222222"
+                thumb="{{ imageURL }}">
+              </van-card>
+            </navigator>
+          </view>
+          <!--按钮-->
+          <view slot="footer" class="mybutton">
+            <van-button size="small" round>取消订单</van-button>
+            <van-button size="small" round>确认订单</van-button>
+          </view>
+      </view>
     </view>
   </van-tab>
 
 
   <van-tab title="已接单">
-    <view class="myorder">
-    <van-card num="{{nums1}}" price="10.00" desc="已接单111111111" title="已接单1111111111" thumb="{{ imageURL }}" >
-      <view slot="footer">
-        <van-button size="small" round>取消订单</van-button>
-        <van-button size="small" round>确认订单</van-button>
+    <view class="outer-view">
+      <!--订单框-->
+      <view class="myborder">
+        <!--订单1-->
+        <view class="mycard">
+          <navigator url="../wusuobuqu/wusuobuqu">
+            <van-card
+              num="{{nums1}}"
+              price="10.00"
+              desc="已接单111111111"
+              title="已接单1111111111"   >
+            </van-card>
+          </navigator>
+        </view>
+        <!--按钮-->
+        <view slot="footer" class="mybutton">
+          <van-button size="small" round>取消订单</van-button>
+          <van-button size="small" round>确认订单</van-button>
+        </view>
       </view>
-    </van-card>
-    <!-- 分割线 -->
-    <view class="divLine"></view>
-    <van-card num="{{nums2}}" price="10.00" desc="已接单222222222" title="已接单222222222222" thumb="{{ imageURL }}">
-      <view slot="footer">
-        <van-button size="small" round>取消订单</van-button>
-        <van-button size="small" round>确认订单</van-button>
+    </view>
+
+    <view class="outer-view">
+      <view class="myborder">
+          <!--订单2-->
+          <view class="mycard">
+            <navigator url="../wusuobuqu/wusuobuqu">
+              <van-card
+                num="{{nums2}}"
+                price="10.00"
+                desc="已接单222222222"
+                title="已接单222222222222"
+                thumb="{{ imageURL }}">
+              </van-card>
+            </navigator>
+          </view>
+          <!--按钮-->
+          <view slot="footer" class="mybutton">
+            <van-button size="small" round>取消订单</van-button>
+            <van-button size="small" round>确认订单</van-button>
+          </view>
       </view>
-    </van-card>
     </view>
   </van-tab>
 
 
   <van-tab title="送货中">
-    <view class="myorder">
-      <van-card num="{{nums1}}" price="10.00" desc="送货中111111111" title="送货中1111111111" thumb="{{ imageURL }}" >
-        <view slot="footer">
+    <view class="outer-view">
+      <!--订单框-->
+      <view class="myborder">
+        <!--订单1-->
+        <view class="mycard">
+          <navigator url="../wusuobuqu/wusuobuqu">
+            <van-card
+              num="{{nums1}}"
+              price="10.00"
+              desc="送货中111111111"
+              title="送货中1111111111"   >
+            </van-card>
+          </navigator>
+        </view>
+        <!--按钮-->
+        <view slot="footer" class="mybutton">
           <van-button size="small" round>取消订单</van-button>
           <van-button size="small" round>确认订单</van-button>
         </view>
-      </van-card>
-      <!-- 分割线 -->
-      <view class="divLine"></view>
-      <van-card num="{{nums2}}" price="10.00" desc="送货中222222222" title="送货中222222222222" thumb="{{ imageURL }}">
-        <view slot="footer">
-          <van-button size="small" round>取消订单</van-button>
-          <van-button size="small" round>确认订单</van-button>
-        </view>
-      </van-card>
+      </view>
+    </view>
+
+    <view class="outer-view">
+      <view class="myborder">
+          <!--订单2-->
+          <view class="mycard">
+            <navigator url="../wusuobuqu/wusuobuqu">
+              <van-card
+                num="{{nums2}}"
+                price="10.00"
+                desc="送货中222222222"
+                title="送货中222222222222"
+                thumb="{{ imageURL }}">
+              </van-card>
+            </navigator>
+          </view>
+          <!--按钮-->
+          <view slot="footer" class="mybutton">
+            <van-button size="small" round>取消订单</van-button>
+            <van-button size="small" round>确认订单</van-button>
+          </view>
+      </view>
     </view>
   </van-tab>
 
 
   <van-tab title="已接收">
-    <view class="myorder">
-      <van-card num="{{nums1}}" price="10.00" desc="已接收111111111" title="已接收1111111111" thumb="{{ imageURL }}" >
-        <view slot="footer">
+    <view class="outer-view">
+      <!--订单框-->
+      <view class="myborder">
+        <!--订单1-->
+        <view class="mycard">
+          <navigator url="../wusuobuqu/wusuobuqu">
+            <van-card
+              num="{{nums1}}"
+              price="10.00"
+              desc="已接收111111111"
+              title="已接收1111111111"   >
+            </van-card>
+          </navigator>
+        </view>
+        <!--按钮-->
+        <view slot="footer" class="mybutton">
           <van-button size="small" round>取消订单</van-button>
           <van-button size="small" round>确认订单</van-button>
         </view>
-      </van-card>
-      <!-- 分割线 -->
-      <view class="divLine"></view>
-      <van-card num="{{nums2}}" price="10.00" desc="已接收222222222" title="已接收222222222222" thumb="{{ imageURL }}">
-        <view slot="footer">
-          <van-button size="small" round>取消订单</van-button>
-          <van-button size="small" round>确认订单</van-button>
-        </view>
-      </van-card>
+      </view>
+    </view>
+
+    <view class="outer-view">
+      <view class="myborder">
+          <!--订单2-->
+          <view class="mycard">
+            <navigator url="../wusuobuqu/wusuobuqu">
+              <van-card
+                num="{{nums2}}"
+                price="10.00"
+                desc="已接收222222222"
+                title="已接收222222222222"
+                thumb="{{ imageURL }}">
+              </van-card>
+            </navigator>
+          </view>
+          <!--按钮-->
+          <view slot="footer" class="mybutton">
+            <van-button size="small" round>取消订单</van-button>
+            <van-button size="small" round>确认订单</van-button>
+          </view>
+      </view>
     </view>
   </van-tab>
 
 
   <van-tab title="已评价">
-    <view class="myorder">
-      <van-card num="{{nums1}}" price="10.00" desc="已评价111111111" title="已评价1111111111" thumb="{{ imageURL }}" >
-        <view slot="footer">
+    <view class="outer-view">
+      <!--订单框-->
+      <view class="myborder">
+        <!--订单1-->
+        <view class="mycard">
+          <navigator url="../wusuobuqu/wusuobuqu">
+            <van-card
+              num="{{nums1}}"
+              price="10.00"
+              desc="已批评111111111"
+              title="已评价1111111111"   >
+            </van-card>
+          </navigator>
+        </view>
+        <!--按钮-->
+        <view slot="footer" class="mybutton">
           <van-button size="small" round>取消订单</van-button>
           <van-button size="small" round>确认订单</van-button>
         </view>
-      </van-card>
-      <!-- 分割线 -->
-      <view class="divLine"></view>
-      <van-card num="{{nums2}}" price="10.00" desc="已评价222222222" title="已评价222222222222" thumb="{{ imageURL }}">
-        <view slot="footer">
-          <van-button size="small" round>取消订单</van-button>
-          <van-button size="small" round>确认订单</van-button>
-        </view>
-      </van-card>
+      </view>
+    </view>
+
+    <view class="outer-view">
+      <view class="myborder">
+          <!--订单2-->
+          <view class="mycard">
+            <navigator url="../wusuobuqu/wusuobuqu">
+              <van-card
+                num="{{nums2}}"
+                price="10.00"
+                desc="已评价222222222"
+                title="已评价222222222222"
+                thumb="{{ imageURL }}">
+              </van-card>
+            </navigator>
+          </view>
+          <!--按钮-->
+          <view slot="footer" class="mybutton">
+            <van-button size="small" round>取消订单</van-button>
+            <van-button size="small" round>确认订单</van-button>
+          </view>
+      </view>
     </view>
   </van-tab>
 
 
   <van-tab title="已取消">
-    <view class="myorder">
-      <van-card num="{{nums1}}" price="10.00" desc="已取消111111111" title="已取消1111111111" thumb="{{ imageURL }}" >
-        <view slot="footer">
+    <view class="outer-view">
+      <!--订单框-->
+      <view class="myborder">
+        <!--订单1-->
+        <view class="mycard">
+          <navigator url="../wusuobuqu/wusuobuqu">
+            <van-card
+              num="{{nums1}}"
+              price="10.00"
+              desc="已取消111111111"
+              title="已取消1111111111"   >
+            </van-card>
+          </navigator>
+        </view>
+        <!--按钮-->
+        <view slot="footer" class="mybutton">
           <van-button size="small" round>取消订单</van-button>
           <van-button size="small" round>确认订单</van-button>
         </view>
-      </van-card>
-      <!-- 分割线 -->
-      <view class="divLine"></view>
-      <van-card num="{{nums2}}" price="10.00" desc="已取消222222222" title="已取消222222222222" thumb="{{ imageURL }}">
-        <view slot="footer">
-          <van-button size="small" round>取消订单</van-button>
-          <van-button size="small" round>确认订单</van-button>
-        </view>
-      </van-card>
+      </view>
+    </view>
+
+    <view class="outer-view">
+      <view class="myborder">
+          <!--订单2-->
+          <view class="mycard">
+            <navigator url="../wusuobuqu/wusuobuqu">
+              <van-card
+                num="{{nums2}}"
+                price="10.00"
+                desc="已取消222222222"
+                title="已取消222222222222"
+                thumb="{{ imageURL }}">
+              </van-card>
+            </navigator>
+          </view>
+          <!--按钮-->
+          <view slot="footer" class="mybutton">
+            <van-button size="small" round>取消订单</van-button>
+            <van-button size="small" round>确认订单</van-button>
+          </view>
+      </view>
     </view>
   </van-tab>
 </van-tabs>
