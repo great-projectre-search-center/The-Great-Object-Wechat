@@ -1,7 +1,7 @@
-<image src='../../icons/touxiang.png' class='header' style='z-index:-100;position: fixed;left: 0rpx;top:0px'></image>
+<!-- <image src='../../icons/touxiang.png' class='header' style='z-index:-100;position: fixed;left: 0rpx;top:0px'></image> -->
 
 <view wx:if="{{hasUserInfo}}">
-  <view class='header' style='text-align:center;margin-bottom:20rpx'>
+  <view class='header' style="text-align:center;margin-bottom:20rpx;background-image:url('../../icons/touxiang.png')">
     <view>
       <image src="{{userInfo.avatarUrl}}" mode="cover" class='avatar'></image>
     </view>
