@@ -80,7 +80,6 @@
         value="{{ value }}"
         placeholder="QQ、微信、邮箱或手机号等联系方式"
         border="{{ false }}"
-        
       />
     </van-cell-group>
   </view>
