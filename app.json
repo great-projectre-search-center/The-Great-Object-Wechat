@@ -2,8 +2,9 @@
   "pages": [
     
    
-    
+    "pages/findway/findway",
     "pages/index/index",
+   
     "pages/mykufu/mykefu",
     "pages/myMMap/myMMap",
     "pages/delivery/delivery",
@@ -75,7 +76,13 @@
   },
   "permission": {
     "scope.userLocation": {
-      "desc": "获取位置"
+      "desc": "你的位置信息将用于小程序定位"
+    }
+  },
+  "plugins": {
+    "routePlan": {
+      "version": "1.0.3",
+      "provider": "wx50b5593e81dd937a"
     }
   },
   "sitemapLocation": "sitemap3.json"
