@@ -116,10 +116,10 @@
           />
           <van-grid-item 
             icon="photo-o"
-            text="文字"
+            text="位置测试"
             wx:for="{{ 1 }}"
             wx:key="keys"
-            url="/pages/delivery/delivery"
+            url="/pages/findway/findway"
           />
       </van-grid>
       </view>

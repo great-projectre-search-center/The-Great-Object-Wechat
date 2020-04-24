@@ -2,9 +2,9 @@
   "pages": [
     
    
-    "pages/findway/findway",
+    
     "pages/index/index",
-   
+    "pages/findway/findway",
     "pages/mykufu/mykefu",
     "pages/myMMap/myMMap",
     "pages/delivery/delivery",
