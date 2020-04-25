@@ -10,42 +10,10 @@
       <text>{{userInfo.nickName}}</text>
     </view>
   </view> 
-
-  <van-row>
-    <van-col span="5" style="text-align:center">
-      <view class="text-grey" catchtap='navigateTouserfeedmyshare'>待接单</view>
-      <view class="text-black" catchtap='navigateTouserfeedmyshare'>{{order}}</view>
-    </van-col>
-    <van-col span="1" class="line-y-left">
-      |
-    </van-col>
-    <van-col span="5.5" style="text-align:center">
-      <view class="text-grey" catchtap='navigatetofollowlist'>待完成</view>
-      <view class="text-black" catchtap='navigatetofollowlist'>{{willfinish}}</view>
-    </van-col>
-    <van-col span="1">
-      |
-    </van-col>
-    <van-col span="5.5" style="text-align:center">
-      <view class="text-grey" catchtap='navigatetofollowerlist'>已完成</view>
-      <view class="text-black" catchtap='navigatetofollowerlist'>{{finished}}</view>
-    </van-col>
-    <van-col span="1" class="line-y-left">
-      |
-    </van-col>
-    <van-col span="5" style="text-align:center">
-      <view class="text-grey" catchtap='navigatetofollowerlist'>已取消</view>
-      <view class="text-black" catchtap='navigatetofollowerlist'>{{cancel}} </view>
-    </van-col>
-  </van-row>
-
-  <view style='height:15rpx;border-bottom:1px solid #f4f4f4'></view>   <!--底部分割线-->
-
-
 </view>
 
 <!--如果没有登陆，授权登陆-->
-<view wx:else style='text-align:center;margin-bottom:20rpx' class="header">
+<view wx:else style="text-align:center;margin-bottom:10rpx;background-image:url('../../icons/touxiang.png')" class="header">
   <view style='height:100rpx'></view>
 
   <van-button round open-type="getUserInfo" bindgetuserinfo="getUserInfo" type="default"> 登录</van-button>   <!--登录的按钮，按钮的类型是回调函数，获取用户的信息，函数在js中-->
@@ -58,8 +26,7 @@
 
 
 <view>
-  <van-cell icon="todo-list" is-link title="我的全部订单" catchtap="navigateToMyOrder"/>
-  <van-cell icon="manager" is-link title="会员中心" catchtap="navigateToMyService"/>
+  <!-- <van-cell icon="manager" is-link title="会员中心" catchtap="navigateToMyService"/> -->
   <van-cell icon="map-marked" is-link title="地址管理" catchtap="navigateToMyDir"/>
   <van-cell icon="award" is-link title="我的积分" catchtap="navigateToMyScore"/>
   <van-cell icon="service" is-link title="我的客服" catchtap="navigateToKufu"/>
