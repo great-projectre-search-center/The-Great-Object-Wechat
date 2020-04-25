@@ -11,6 +11,7 @@
           <navigator url="../wusuobuqu/wusuobuqu">
             <van-card
               num="{{nums1}}"
+              tag="我的接单"
               price="10.00"
               desc="全部订单111111111"
               title="全部订单1111111111"   >
@@ -19,8 +20,12 @@
         </view>
         <!--按钮-->
         <view slot="footer" class="mybutton">
+        <!-- 如果未接单 -->
           <van-button size="small" round>取消订单</van-button>
+        <!-- 如果已接单 -->
           <van-button size="small" round>确认订单</van-button>
+        <!-- 如果已确认 -->
+        <!-- <van-button size="small" round>评价订单</van-button> -->
         </view>
       </view>
     </view>

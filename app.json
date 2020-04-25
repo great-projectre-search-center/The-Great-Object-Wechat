@@ -1,8 +1,5 @@
 {
   "pages": [
-    
-   
-    
     "pages/index/index",
     "pages/findway/findway",
     "pages/mykufu/mykefu",
@@ -19,7 +16,6 @@
     "pages/xuanzeshipin/xuanzeshipin",
     "pages/myorder/myorder",
     "pages/myscore/myscore",
-    
     "pages/myservice/myservice",
     "pages/mycenter/mycenter",
     "pages/aboutapp/aboutapp",
@@ -29,11 +25,7 @@
     "pages/feedback/feedback",
     "pages/myfeedback/myfeedback",
     "pages/feedbackType/feedbackType",
-    
     "pages/infokefu/infokefu"
-
-    
-    
   ],
   "window": {
     "backgroundTextStyle": "dark",

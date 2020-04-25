@@ -11,14 +11,7 @@
         class="van-card__img thumb-class"
       />
       <slot name="thumb" />
-      <van-tag
-        wx:if="{{ tag }}"
-        mark
-        type="danger"
-        custom-class="van-card__tag"
-      >
-        {{ tag }}
-      </van-tag>
+
     </view>
 
     <view class="van-card__content">
@@ -29,7 +22,14 @@
       <slot wx:else name="desc" />
 
       <slot name="tags" />
-
+      <van-tag
+              wx:if="{{ tag }}"
+              mark
+              type="danger"
+              custom-class="van-card__tag"
+      >
+        {{ tag }}
+      </van-tag>
       <view class="van-card__bottom">
         <view wx:if="{{ price || price === 0 }}" class="van-card__price price-class">{{ currency }} {{ price }}</view>
         <view wx:if="{{ originPrice || originPrice === 0 }}" class="van-card__origin-price origin-price-class">{{ currency }} {{ originPrice }}</view>

@@ -17,15 +17,15 @@
           <van-tag mark type="primary" size="medium" plain>帮我取</van-tag>
         </view>
         <van-grid gutter="{{ 10 }}" column-num="4" border="{{false}}">
+          <!-- 快递 -->
           <view class="class01">
             <van-grid-item
-            
             icon="class='iconfont icon-kuaidi'"
             text="快递"
-
             url="/pages/delivery/delivery"
             />
           </view>
+          <!-- 外卖 -->
           <view class="class01">
             <van-grid-item
             icon="class='iconfont icon-waimai'"
@@ -36,14 +36,14 @@
 
             />
           </view>
+          <!-- 其它 -->
           <view class="class01">
             <van-grid-item
             icon="class='iconfont icon-bangzhuzhongxin'"
-            text="无所不取"
+            text="其它"
             wx:for="{{ 1 }}"
             wx:key="keys"
             url="/pages/wusuobuqu/wusuobuqu"
-
             />
           </view>
         </van-grid>
@@ -57,35 +57,35 @@
           <van-tag mark type="primary" size="medium" plain>帮我买</van-tag>
         </view>
         <van-grid gutter="{{ 10 }}" column-num="4" border="{{false}}">
+        <!-- 食品 -->
         <view class="class01">
           <van-grid-item 
           icon="class='iconfont icon-FastFood'"
           text="食品"
-
           url="/pages/food/food"
           />
         </view>
+        <!-- 饮品 -->
         <view class="class01">
           <van-grid-item 
           icon="class='iconfont icon-shipinyinliao'"
           text="饮品"
-
           url="/pages/delivery/delivery"
           />
         </view>
+        <!-- 文具 -->
         <view class="class01">
           <van-grid-item 
           icon="class='iconfont icon-wenju'"
           text="文具"
-
           url="/pages/delivery/delivery"
           />
         </view>
+        <!-- 其它 -->
         <view class="class01">
           <van-grid-item 
-          icon="class='iconfont icon-shenghuoyongpin'"
-          text="生活用品"
-
+          icon="class='iconfont icon-bangzhuzhongxin'"
+          text="其它"
           url="/pages/delivery/delivery"
           />
         </view>
@@ -100,6 +100,7 @@
           <van-tag mark type="primary" size="medium" plain>帮我办</van-tag>
         </view>
         <van-grid gutter="{{ 10 }}" column-num="4" border="{{false}}">
+          <!-- 打印文件 -->
           <van-grid-item 
             icon="class='iconfont icon-dayin'"
             text="打印文件"
@@ -107,6 +108,7 @@
             wx:key="keys"
             url="/pages/delivery/delivery"
           />
+          <!-- 寄快递 -->
           <van-grid-item 
             icon="class='iconfont icon-jikuaidi'"
             text="寄快递"
@@ -114,9 +116,10 @@
             wx:key="keys"
             url="/pages/delivery/delivery"
           />
+          <!-- 其它 -->
           <van-grid-item 
-            icon="photo-o"
-            text="位置测试"
+            icon="class='iconfont icon-bangzhuzhongxin'"
+            text="其它"
             wx:for="{{ 1 }}"
             wx:key="keys"
             url="/pages/findway/findway"
@@ -132,6 +135,7 @@
           <van-tag mark type="primary" size="medium" plain>帮我送</van-tag>
         </view>
         <van-grid gutter="{{ 10 }}" column-num="4" border="{{false}}">
+          <!-- 文件 -->
           <van-grid-item 
             icon="class='iconfont icon-wenjian'"
             text="文件"
@@ -139,16 +143,18 @@
             wx:key="keys"
             url="/pages/delivery/delivery"
           />
+          <!-- 课本 -->
           <van-grid-item 
-            icon="class='iconfont icon-b2'"
-            text="钥匙"
+            icon="class='iconfont icon-kebenguanli'"
+            text="课本"
             wx:for="{{ 1 }}"
             wx:key="keys"
             url="/pages/delivery/delivery"
           />
+          <!-- 其它 -->
           <van-grid-item 
-            icon="class='iconfont icon-kebenguanli'"
-            text="课本"
+            icon="class='iconfont icon-bangzhuzhongxin'"
+            text="其它"
             wx:for="{{ 1 }}"
             wx:key="keys"
             url="/pages/delivery/delivery"
@@ -157,6 +163,27 @@
       </view>
     </view>
 
+    
+    <!--其它页面开发过程中测试用-->
+    <view class="outer-view">
+      <view class="myborder">
+        <view style="padding:20rpx;20rpx;0rpx;20rpx;">
+          <van-tag mark type="primary" size="medium" plain>测试Test测试Test测试</van-tag>
+        </view>
+        <van-grid gutter="{{ 10 }}" column-num="4" border="{{false}}">
+          <!-- 位置测试 -->
+          <van-grid-item 
+            icon="class='iconfont icon-bangzhuzhongxin'"
+            text="位置测试"
+            wx:for="{{ 1 }}"
+            wx:key="keys"
+            url="/pages/findway/findway"
+          />
+      </van-grid>
+      </view>
+    </view>
+
+    
   </van-tab>
   <!--我帮标签的内容-->
   <van-tab title="我帮">
