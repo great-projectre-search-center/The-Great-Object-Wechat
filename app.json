@@ -2,6 +2,7 @@
   "pages": [
     
     "pages/index/index",
+    "pages/MapPointSelection/MapPointSelection",
     "pages/myscore/myscore",
     "pages/Exchangeorder/Exchangeorder",
     "pages/findway/findway",
@@ -18,7 +19,6 @@
     "pages/mylogin/mylogin",
     "pages/xuanzeshipin/xuanzeshipin",
     "pages/myorder/myorder",
-    
     "pages/myservice/myservice",
     "pages/mycenter/mycenter",
     "pages/aboutapp/aboutapp",
