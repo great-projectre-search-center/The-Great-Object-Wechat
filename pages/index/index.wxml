@@ -179,6 +179,15 @@
             wx:key="keys"
             url="/pages/findway/findway"
           />
+
+          <!-- 选点测试 -->
+          <van-grid-item 
+            icon="class='iconfont icon-bangzhuzhongxin'"
+            text="选点测试"
+            wx:for="{{ 1 }}"
+            wx:key="keys"
+            url="/pages/MapPointSelection/MapPointSelection"
+          />
       </van-grid>
       </view>
     </view>
