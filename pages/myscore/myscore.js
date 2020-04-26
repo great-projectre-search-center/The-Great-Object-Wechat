@@ -12,6 +12,12 @@ Page({
 
   },
 
+  lumpadder:function(){
+    wx.navigateTo({
+      url: '../Exchangeorder/Exchangeorder',
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

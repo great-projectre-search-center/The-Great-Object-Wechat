@@ -1,6 +1,9 @@
 {
   "pages": [
+    
     "pages/index/index",
+    "pages/myscore/myscore",
+    "pages/Exchangeorder/Exchangeorder",
     "pages/findway/findway",
     "pages/mykufu/mykefu",
     "pages/myMMap/myMMap",
@@ -15,7 +18,7 @@
     "pages/mylogin/mylogin",
     "pages/xuanzeshipin/xuanzeshipin",
     "pages/myorder/myorder",
-    "pages/myscore/myscore",
+    
     "pages/myservice/myservice",
     "pages/mycenter/mycenter",
     "pages/aboutapp/aboutapp",

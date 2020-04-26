@@ -188,6 +188,42 @@
   <!--我帮标签的内容-->
   <van-tab title="我帮">
     
+
+<view class="bar"></view>
+<van-tabs bind:click="onClick" color="#4b8bf4" type="card" class="bar">
+<view class="bar"></view>
+
+  <van-tab title="类型">
+  <van-card
+      currency="积分+"
+      price="10"
+      desc="从海港区到乐购,帮我去乐购星巴克买一杯咖啡！"
+      title="买咖啡">
+  <view slot="footer">
+    <van-button size="mini" bindtap="">帮定了</van-button>
+  </view>
+</van-card>
+
+<van-card
+      currency="积分+"
+      price="2"
+      desc="从海港区到海港区"
+      title="拿快递">
+  <view slot="footer">
+    <van-button size="mini" bindtap="">帮定了</van-button>
+  </view>
+</van-card>
+
+  </van-tab>
+  <!--我帮标签的内容-->
+  <van-tab title="日期">
+  <view class="taskCard">任务卡片</view>
+  <view class="taskCard">任务卡片</view>
+  </van-tab>
+  <van-tab title="积分">
+  <view class="taskCard">任务卡片</view>
+  </van-tab>
+</van-tabs>
   </van-tab>
 </van-tabs>
 

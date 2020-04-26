@@ -1,0 +1,42 @@
+<!--pages/Exchangeorder/Exchangeorder.wxml-->
+
+ 
+  <view class="tui-picker-content">
+      <view class="tui-picker-name">收获地址选择</view>
+      <picker bindchange="changeadd"  value="{{addIndex}}" range="{{addList}}">
+        <view class="tui-picker-detail">{{addList[addIndex]}}</view>
+      </picker>
+  </view>
+  <view class="mycell"> 
+    <van-cell-group>
+    <van-field
+      bindinput="userInput"
+      value="{{ username }}"
+      required
+      clearable
+      label="收件人"
+      icon="question-o"
+      placeholder="收件人"
+      bind:click-icon="onClickIcon"
+    />
+
+    <van-field
+      bindinput="phoneInput"
+      value="{{ phone }}"
+      type="number"
+      label="手机号码"
+      placeholder="请输入手机号码"
+      required
+      border="{{ true }}"
+    />
+  </van-cell-group>
+</view>
+<view class="sub">
+  <button class="sub" type="commit" bindtap="sub">确认</button>
+</view>
+
+<!--/form-->
+
+
+
+

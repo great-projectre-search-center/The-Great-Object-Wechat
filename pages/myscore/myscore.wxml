@@ -5,23 +5,25 @@
 </view>
 <van-tabs bind:click="onClick" color="#4b8bf4">
   <van-tab title="积分记录">
-    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
-    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
-    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
-    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
-    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
-    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
-    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
-    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
-    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
-    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
-    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
-    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
-    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
-    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
-    <van-panel title="您获得积分：1" desc="帮XX取了一次快递" status="+1"></van-panel>
+    <van-panel title="您获得积分：1" desc="帮X1取了一次快递" status="+1"></van-panel>
+    <van-panel title="您获得积分：1" desc="帮X2取了一次快递" status="+2"></van-panel>
+    <van-panel title="您获得积分：1" desc="帮X3取了一次快递" status="+1"></van-panel>
+
+    
   </van-tab>
-  <van-tab title="兑换记录">
-  暂时没有开通
+  <van-tab title="兑换商城">
+    <van-card
+      currency="积分"
+      price="10"
+      desc="小朋友的问号"
+      title="礼品"
+      thumb="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587871265161&di=7a42e798a830befd8a89ab5f339e4d1d&imgtype=0&src=http%3A%2F%2Fimg1.doubanio.com%2Fview%2Fgroup_topic%2Fl%2Fpublic%2Fp154240208.jpg"
+    >
+  <view slot="footer">
+    <van-button size="mini" bindtap="lumpadder">兑换</van-button>
+  </view>
+</van-card>
+
+
   </van-tab>
 </van-tabs>

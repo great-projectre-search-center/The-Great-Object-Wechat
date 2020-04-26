@@ -145,8 +145,18 @@ image{
   font-size: 70rpx;
 }
 
+/*我帮bar间隙*/
+.bar{
+  width: 100%;
+  height: 8px;
+}
 
-
+.taskCard{
+  margin-top: 10px;
+  width: 100%;
+  height: 120px;
+  background-color: white;
+}
 
 
 
