@@ -186,7 +186,7 @@ Page({
   },
   navigateToKufu: function () {
     wx.navigateTo({
-      url: '../mykufu/mykefu',
+      url: '../mykefu/mykefu',
     })
   },
 

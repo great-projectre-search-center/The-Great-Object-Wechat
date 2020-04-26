@@ -9,12 +9,8 @@
   <text style='color:#aaaaaa'>Team：Great Project</text>
 </view>
 <view style='text-align:center;margin-top:30rpx'>
-  <text style='color:#aaaaaa'>哈哈哈哈哈哈</text>
+  <text style='color:#aaaaaa'>Member：ZZZXXXCCCWXY999，zyjiahui，libin257217，jingfeng999</text>
 </view>
 <view style='text-align:center;margin-top:30rpx'>
   <text style='color:#aaaaaa'>Developed by KTG</text>
-</view>
-<view style='text-align:center;margin-top:30rpx;padding:40rpx;'>
-  <view>评价软件</view>
-  <van-rate value="{{ value }}" bind:change="onChange" />
 </view>

@@ -1,0 +1,22 @@
+<!--pages/mykefu/mykefu.wxml-->
+<view class="cell01">
+  <van-cell
+    is-link
+    icon="phone-o"
+    title="电话"
+    bind:click="Tel"/>
+</view>
+
+<view class="cell01"> 
+  <view class="text-cell">
+    <text>其他方式</text>
+  </view>
+  <van-cell-group>
+    <van-cell title="微信" value="hedonggongsi" />
+    <van-cell title="QQ" value="578571263" />
+    <van-cell title="Email" value="zzzxxxcccwxy999@gmail.com" />
+  </van-cell-group>
+</view>
+<!--<button type="default" bindtap="Tel">微信</button>
+<text>四种联系方式 微信、qq、电话、邮箱</text>-->
+
