@@ -38,6 +38,7 @@ page{background-color: #efeff4;}
 .tui-picker-name{
   height: 80rpx;
   line-height: 80rpx;
+  text-align: left;
 }
 .tui-picker-detail{
   height: 80rpx;
@@ -50,7 +51,7 @@ page{background-color: #efeff4;}
 }
 
 .mycell{
-  padding: 20rpx;
+  padding: 15rpx;
 }
 
 

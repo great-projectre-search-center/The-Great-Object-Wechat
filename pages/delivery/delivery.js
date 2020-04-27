@@ -30,14 +30,33 @@ Page({
     this.setData({checked:detail});
   },
 //啰里啰唆取值
-  phoneInput: function (e){
+  biaotiInput: function (e) {  //输入标题
+    this.setData({
+      biaoti: e.detail
+    })
+    console.log(e.detail)
+  },
+  danhaoInput: function (e) {  //输入单号
+    this.setData({
+      danhao: e.detail
+    })
+    console.log(e.detail)
+  },
+  phoneInput: function (e){  //输入手机号
     this.setData({
       phone:e.detail
     })
     console.log(e.detail)
   },
 
-  userInput: function (e) {
+  beizhuInput: function (e) {  //输入备注
+    this.setData({
+      beizhu: e.detail
+    })
+    console.log(e.detail)
+  },
+
+  userInput: function (e) {  //输入收件人
     this.setData({
       username: e.detail
     })

@@ -1,5 +1,7 @@
 {
   "pages": [
+
+    "pages/delivery/delivery",
     
     "pages/index/index",
     "pages/MapPointSelection/MapPointSelection",
@@ -8,12 +10,13 @@
     "pages/findway/findway",
     "pages/mykefu/mykefu",
     "pages/myMMap/myMMap",
-    "pages/delivery/delivery",
+   
     "pages/wusuobuqu/wusuobuqu",
     "pages/food/food",
     "pages/file/file",
     "pages/allhelp/allhelp",
     "pages/order/order",
+    "pages/orderDetail01/orderDetail01",
     "pages/message/message",
     "pages/jinjimessage/jinjimessage",
     "pages/mylogin/mylogin",

@@ -1,0 +1,43 @@
+<view class="border01">
+  <view class="detail01">
+    <van-cell-group>
+      <van-cell icon="location" title="配送地址" value="用户A" label="秦皇岛市海洋学院综合楼405" border="{{ false }}" />
+    </van-cell-group>
+  </view>
+</view>
+<!--订单信息-->
+<view class="border01">
+  <view class="detail01">
+    <van-cell-group>
+      <van-cell title="订单编号：" value="12345678999999999" border="{{ false }}" center="{{true}}" />
+      <van-cell title="下单时间：" value="2020-05-01" border="{{ false }}" center="{{true}}" />
+      <van-cell
+  is-link
+  title="单元格"
+  link-type="navigateTo"
+  url="/pages/dashboard/index"
+  border="{{false}}"
+/>
+      <van-cell title="积分：" value="+2" border="{{ false }}" center="{{true}}" />
+      <van-cell title="订单编号：" value="12345678999999999" border="{{ false }}" center="{{true}}" />
+    </van-cell-group>
+  </view>
+</view>
+
+<view class="border01">
+  <view class="detail01">
+    <van-cell-group>
+      <van-cell title="联系收件人：" value="12345677889" border="{{ false }}" center="{{true}}" />
+      <van-cell title="有效期至：" value="2020-05-10" border="{{ false }}" center="{{true}}" />
+      <van-cell
+  is-link
+  title="单元格"
+  link-type="navigateTo"
+  url="/pages/dashboard/index"
+  border="{{false}}"
+/>
+      
+    </van-cell-group>
+  </view>
+</view>
+

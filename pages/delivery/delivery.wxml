@@ -8,68 +8,107 @@
       <text decode="true">订单类型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;代取快递(默认)</text> 
      
   </view-->
-  <view class="tui-picker-content">
-      <view class="tui-picker-name">选择快递公司</view>
-      <picker bindchange="changeCompany"  value="{{companyIndex}}" range="{{companyList}}">
-        <view class="tui-picker-detail">{{companyList[companyIndex]}}</view>
-      </picker>
-  </view>
-  <view class="tui-picker-content">
+  <view class="mycell">
+    <van-cell-group>
+      <van-field
+        bindinput="biaotiInput"
+        value="{{ biaoti }}"
+        label="订单标题"
+        placeholder="订单标题"
+        bind:click-icon="onClickIcon"
+        border="{{false}}"
+      />
+      <view class="tui-picker-content">
+        <view class="tui-picker-name">选择快递公司</view>
+          <picker bindchange="changeCompany"  value="{{companyIndex}}" range="{{companyList}}">
+            <view class="tui-picker-detail">{{companyList[companyIndex]}}</view>
+          </picker>
+      </view>
+    </van-cell-group>
+  
+  
+  <!-- <view class="tui-picker-content">
       <view class="tui-picker-name">选择快递类型</view>
       <picker bindchange="changeDelivery"  value="{{deliveryIndex}}" range="{{deliveryList}}">
         <view class="tui-picker-detail">{{deliveryList[deliveryIndex]}}</view>
       </picker>
-  </view>
-  <view class="mycell"> 
+  </view> -->
+  
     <van-cell-group>
+    <van-field
+      bindinput="danhaoInput"
+      value="{{ danhao }}"
+      label="快递单号"
+      placeholder="填写快递单号"
+      bind:click-icon="onClickIcon"
+      border="{{ false }}"
+    />
+
+     <van-cell
+    is-link
+    title="预估价值"
+    link-type="navigateTo"
+    url="/pages/dashboard/index"
+    border="{{ false }}"
+    />
+
     <van-field
       bindinput="userInput"
       value="{{ username }}"
-      required
-      clearable
       label="收件人"
-      icon="question-o"
       placeholder="收件人"
       bind:click-icon="onClickIcon"
+      border="{{ false }}"
     />
 
     <van-field
       bindinput="phoneInput"
       value="{{ phone }}"
       type="number"
-      label="手机号码"
-      placeholder="请输入手机号码"
-      required
-      border="{{ true }}"
+      label="联系方式"
+      placeholder="请输入联系方式"
+      border="{{ false }}"
     />
-    <van-switch-cell checked="{{checked}}" title="是否接受地址面议" bind:change="onChange" />
+
     
   </van-cell-group>
+</view>
 
-  
+<view class="mycell">
+  <van-cell
+    is-link
+    title="送达位置"
+    link-type="navigateTo"
+    url="/pages/dashboard/index"
+    border="{{ false }}"
+    />
+
+    <van-cell
+    is-link
+    title="代理点位置"
+    link-type="navigateTo"
+    url="/pages/dashboard/index"
+    border="{{ false }}"
+    />
+    
+</view>
+
+<view class="mycell">
+  <van-field
+    bindinput="beizhuInput"
+    value="{{ beizhu }}"
+    type="text"
+    label="备注"
+    placeholder="请输入备注"
+    border="{{ false }}"
+  />
+
+  <van-cell title="积分" value="+2" />
+
 </view>
 
 
 
-  <!--修改前的输入框-->
-  <!-- <view class="con">
-    <view class="con-nr">
-      <text>收件人</text>
-      <input placeholder="收件人" name="shoujianren"></input>
-    </view>
-    <view class="con-nr">
-      <text>联系方式</text>
-      <input placeholder="联系方式" name="telephone"></input>
-    </view>
-    <view class="con-nr">
-      <text>收件地址</text>
-      <input placeholder="收件地址" name="address" value=""></input>
-    </view>
-    <view class="con-nr">
-      <text>详细地址</text>
-      <input placeholder="详细地址，选填" name="detailedaddress" value=""></input>
-    </view>
-  </view> -->
   
 
 <view class="sub">

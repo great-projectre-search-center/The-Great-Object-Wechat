@@ -1,0 +1,13 @@
+page{background-color: #efeff4;}
+
+.detail01{
+  padding: 20rpx;  /*文字距边框的距离*/
+  
+}
+.border01{
+  border-style: solid;
+  border-radius: 25rpx;
+  margin: 20rpx;
+  background-color: #ffffff;
+  border-color: white; 
+}

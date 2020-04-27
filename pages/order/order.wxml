@@ -8,13 +8,14 @@
       <view class="myborder">
         <!--订单1-->
         <view class="mycard">
-          <navigator url="../wusuobuqu/wusuobuqu">
+          <navigator url="../orderDetail01/orderDetail01">
             <van-card
               num="{{nums1}}"
               tag="我的接单"
-              price="10.00"
-              desc="全部订单111111111"
-              title="全部订单1111111111"   >
+              
+              desc="###########"
+              title="我帮###取快递"   
+              >
             </van-card>
           </navigator>
         </view>
