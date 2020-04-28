@@ -22,7 +22,7 @@
             <van-grid-item
             icon="class='iconfont icon-kuaidi'"
             text="快递"
-            url="/pages/delivery/delivery"
+            url="/pages/take01/take01"
             />
           </view>
           <!-- 外卖 -->
@@ -32,7 +32,7 @@
             text="外卖"
             wx:for="{{ 1 }}"
             wx:key="keys"
-            url="/pages/delivery/delivery"
+            url="/pages/take02/take02"
 
             />
           </view>
@@ -43,7 +43,7 @@
             text="其它"
             wx:for="{{ 1 }}"
             wx:key="keys"
-            url="/pages/delivery/delivery"
+            url="/pages/take03/take03"
             />
           </view>
         </van-grid>
@@ -62,7 +62,7 @@
           <van-grid-item 
           icon="class='iconfont icon-FastFood'"
           text="食品"
-          url="/pages/food/food"
+          url="/pages/buy01/buy01"
           />
         </view>
         <!-- 饮品 -->
@@ -70,7 +70,7 @@
           <van-grid-item 
           icon="class='iconfont icon-shipinyinliao'"
           text="饮品"
-          url="/pages/delivery/delivery"
+          url="/pages/buy02/buy02"
           />
         </view>
         <!-- 文具 -->
@@ -78,7 +78,7 @@
           <van-grid-item 
           icon="class='iconfont icon-wenju'"
           text="文具"
-          url="/pages/delivery/delivery"
+          url="/pages/buy02/buy02"
           />
         </view>
         <!-- 其它 -->
@@ -86,7 +86,7 @@
           <van-grid-item 
           icon="class='iconfont icon-bangzhuzhongxin'"
           text="其它"
-          url="/pages/delivery/delivery"
+          url="/pages/buy03/buy03"
           />
         </view>
       </van-grid>
@@ -106,7 +106,7 @@
             text="打印文件"
             wx:for="{{ 1 }}"
             wx:key="keys"
-            url="/pages/delivery/delivery"
+            url="/pages/transact01/transact01"
           />
           <!-- 寄快递 -->
           <van-grid-item 
@@ -114,7 +114,7 @@
             text="寄快递"
             wx:for="{{ 1 }}"
             wx:key="keys"
-            url="/pages/delivery/delivery"
+            url="/pages/transact02/transact02"
           />
           <!-- 其它 -->
           <van-grid-item 
@@ -122,7 +122,7 @@
             text="其它"
             wx:for="{{ 1 }}"
             wx:key="keys"
-            url="/pages/findway/findway"
+            url="/pages/transact03/transact03"
           />
       </van-grid>
       </view>
@@ -141,7 +141,7 @@
             text="文件"
             wx:for="{{ 1 }}"
             wx:key="keys"
-            url="/pages/delivery/delivery"
+            url="/pages/send01/send01"
           />
           <!-- 课本 -->
           <van-grid-item 
@@ -149,7 +149,7 @@
             text="课本"
             wx:for="{{ 1 }}"
             wx:key="keys"
-            url="/pages/delivery/delivery"
+            url="/pages/send02/send02"
           />
           <!-- 其它 -->
           <van-grid-item 
@@ -157,7 +157,7 @@
             text="其它"
             wx:for="{{ 1 }}"
             wx:key="keys"
-            url="/pages/delivery/delivery"
+            url="/pages/send03/send03"
           />
       </van-grid>
       </view>

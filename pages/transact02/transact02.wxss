@@ -1,0 +1,61 @@
+/*.con{
+  line-height:100rpx;   行高
+}*/
+/*.con view{
+  width:700rpx;*/
+  /*margin-left:30rpx; */ /*距离左边框的距离*/
+  /*border-bottom:1px solid #ced6e1; */  /*分割线的颜色*/
+/*}*/
+.con view text{
+  font-size: 36rpx;  /*文字的大小*/
+}
+.con-nr input{   /*输入框内元素的属性*/
+  width:500rpx; 
+  float:right;
+  font-size:32rpx;  /*框内文字左飘*/
+  height: 100rpx;
+}
+.sub{  /*表单中按钮的属性*/
+  width:450rpx;
+  line-height:85rpx;
+  text-align:center;
+  margin:30rpx auto;
+  background-color:#00a2e8;
+  border-radius:10rpx;
+}
+.myimage{
+  width: 100px;
+  padding: 10rpx,auto;
+}
+
+.mycell{
+  padding: 15rpx;
+}
+
+/*以下时底部弹出选择框的属性*/
+page{background-color: #efeff4;}
+.section {
+ display: flex;
+ flex-direction: column;
+ padding: 30rpx;
+ color: #333;
+}
+.border01{
+  background-color: white;
+}
+.picker{
+  float: left;
+  font-size: 28rpx;
+}
+.xuanze{
+  padding-right: 20rpx;
+  display: flex;
+  flex-direction: row-reverse;
+  color: #999999;
+}
+
+
+
+
+
+
