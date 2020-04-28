@@ -1,9 +1,7 @@
 {
   "pages": [
-
-    
-    
     "pages/index/index",
+    "pages/AddressSelection/AddressSelection",
     "pages/address/address",
     "pages/MapPointSelection/MapPointSelection",
     "pages/myscore/myscore",
@@ -28,13 +26,10 @@
     "pages/aboutapp/aboutapp",
     "pages/mine/mine",
     "pages/addressList/addressList",
-
     "pages/feedback/feedback",
     "pages/myfeedback/myfeedback",
     "pages/feedbackType/feedbackType",
     "pages/infokefu/infokefu",
-
-
     "pages/test/test"
   ],
   "window": {

@@ -1,0 +1,12 @@
+<!--pages/AddressSelection/AddressSelection.wxml-->
+<view class="text-cell">
+  <van-cell 
+    id="第一个地址"
+    center title="{{nameAndphone}}" 
+    label="{{adder}}" 
+    bind:click="returnAdder"
+  />
+
+
+</view>
+

@@ -78,7 +78,7 @@
     is-link
     title="送达位置"
     link-type="navigateTo"
-    url="/pages/MapPointSelection/MapPointSelection"
+    bind:click="gotoAdd"
     
   />
 

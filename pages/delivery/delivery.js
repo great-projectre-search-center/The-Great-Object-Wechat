@@ -31,6 +31,8 @@ Page({
     })
   },
 
+  
+
  
 
 //啰里啰唆取值
@@ -66,7 +68,25 @@ Page({
     })
     console.log(e.detail)
   },
-
+  gotoAdd: function () {
+    wx.showModal({
+      title: '注意',
+      content: '是否使用已有地址',
+      success: function (res) {
+        if (res.confirm) {
+          //已有地址
+          wx.navigateTo({
+            url: '../../pages/AddressSelection/AddressSelection'
+          })
+        } else {
+          //选点
+          wx.navigateTo({
+            url: '../../pages/MapPointSelection/MapPointSelection'
+          })
+        }
+      }
+    })
+  },
   sub: function (e) {
     console.log("请求")
     wx.request({
