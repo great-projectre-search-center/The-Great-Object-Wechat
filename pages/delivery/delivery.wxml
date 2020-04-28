@@ -78,7 +78,7 @@
     is-link
     title="送达位置"
     link-type="navigateTo"
-    url="/pages/test/test"
+    url="/pages/MapPointSelection/MapPointSelection"
     
   />
 
@@ -86,7 +86,7 @@
     is-link
     title="代理点位置"
     link-type="navigateTo"
-    url="/pages/dashboard/index"
+    url="/pages/MapPointSelection/MapPointSelection"
     
   />
     

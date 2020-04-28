@@ -4,6 +4,7 @@
     
     
     "pages/index/index",
+    "pages/address/address",
     "pages/MapPointSelection/MapPointSelection",
     "pages/myscore/myscore",
     "pages/Exchangeorder/Exchangeorder",
@@ -27,7 +28,7 @@
     "pages/aboutapp/aboutapp",
     "pages/mine/mine",
     "pages/addressList/addressList",
-    "pages/address/address",
+
     "pages/feedback/feedback",
     "pages/myfeedback/myfeedback",
     "pages/feedbackType/feedbackType",

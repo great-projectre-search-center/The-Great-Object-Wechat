@@ -1,4 +1,9 @@
 {
   "navigationBarTitleText": "添加收货地址",
-  "usingComponents": {}
+  "usingComponents": {
+    "van-cell": "../../miniprogram_npm/vant-weapp/cell",
+    "van-cell-group": "../../miniprogram_npm/vant-weapp/cell-group",
+    "van-field": "../../miniprogram_npm/vant-weapp/field",
+    "van-switch-cell": "../../miniprogram_npm/vant-weapp/switch-cell"
+  }
 }

@@ -174,6 +174,7 @@ Page({
   },
 
   saveAddress: function (e) {
+    console.log("e" + e.detail)
     var consignee = e.detail.value.consignee;
     var mobile = e.detail.value.mobile;
     var transportDay = e.detail.value.transportDay;
@@ -194,6 +195,7 @@ Page({
     }
     arr.push(addressList);
     wx.setStorageSync('addressList', arr);
+    //学习跨页面传值！！！
     wx.navigateBack({
 
     })
