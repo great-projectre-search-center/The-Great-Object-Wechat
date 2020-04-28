@@ -5,30 +5,34 @@ Page({
      * 页面的初始数据
      */ 
     data: {
-      companyList: ['京东快递', '韵达快递', '中通快递', '圆通快递', '申通快递', '百世快递', '天天快递'],
-      companyIndex: 0,
-
-      deliveryList: ['衣服','鞋子','文件','工具','食品','生活用品','其他'],
-      deliveryIndex: 0,
-
+      arraycompany: ['京东快递', '中通快递', '申通快递', '韵达快递','圆通快递','天天快递','邮政','百世快递'],
+      index: 0,
+      arrayvalue: ['1-50', '51-100', '101-150', '151-200', '201-300', '301-500', '>500'],
+      value: 0,
+      date: '2016-09-01',
+      time: '12:01',
     
       checked: true,
       phone:'',
       username:''
       
     },
+  //选择快递公司的点击事件
+  bindDeliveryChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      index: e.detail.value
+    })
+  },
+  //选择预估价值的点击事件
+  bindValueChange: function (e) {
+    this.setData({
+      value: e.detail.value
+    })
+  },
 
  
-  changeCompany(e) {
-    this.setData({ companyIndex: e.detail.value }); 
-  },
-  changeDelivery(e){
-    this.setData({ deliveryIndex: e.detail.value});
-  },
 
-  onChange({ detail }) {
-    this.setData({checked:detail});
-  },
 //啰里啰唆取值
   biaotiInput: function (e) {  //输入标题
     this.setData({

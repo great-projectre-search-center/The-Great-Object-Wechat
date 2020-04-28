@@ -3,11 +3,7 @@
   <MyHead></MyHead>
 </view>
  
-<!--form bindsubmit='sub'-->
-  <!--view style="border-bottom:1px solid #a8a8a8;margin-left:30rpx;padding:5rpx;">
-      <text decode="true">订单类型&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;代取快递(默认)</text> 
-     
-  </view-->
+
   <view class="mycell">
     <van-cell-group>
       <van-field
@@ -16,24 +12,22 @@
         label="订单标题"
         placeholder="订单标题"
         bind:click-icon="onClickIcon"
-        border="{{false}}"
+        
       />
-      <view class="tui-picker-content">
-        <view class="tui-picker-name">选择快递公司</view>
-          <picker bindchange="changeCompany"  value="{{companyIndex}}" range="{{companyList}}">
-            <view class="tui-picker-detail">{{companyList[companyIndex]}}</view>
+      <view class="border01">
+        <view class="section">
+          <picker bindchange="bindDeliveryChange" value="{{index}}" range="{{arraycompany}}">
+            <view class="picker">
+            选择快递公司：
+            </view>
+            <view class="xuanze">{{arraycompany[index]}}</view>
           </picker>
+        </view>
       </view>
     </van-cell-group>
+  </view>
   
-  
-  <!-- <view class="tui-picker-content">
-      <view class="tui-picker-name">选择快递类型</view>
-      <picker bindchange="changeDelivery"  value="{{deliveryIndex}}" range="{{deliveryList}}">
-        <view class="tui-picker-detail">{{deliveryList[deliveryIndex]}}</view>
-      </picker>
-  </view> -->
-  
+  <view class="mycell">
     <van-cell-group>
     <van-field
       bindinput="danhaoInput"
@@ -41,55 +35,60 @@
       label="快递单号"
       placeholder="填写快递单号"
       bind:click-icon="onClickIcon"
-      border="{{ false }}"
+      
     />
 
-     <van-cell
-    is-link
-    title="预估价值"
-    link-type="navigateTo"
-    url="/pages/dashboard/index"
-    border="{{ false }}"
-    />
+    <view class="border01">
+      <view class="section">
+        <picker bindchange="bindValueChange" value="{{value}}" range="{{arrayvalue}}">
+          <view class="picker">
+          预估价值：
+          </view>
+          <view class="xuanze">{{arrayvalue[value]}}</view>
+        </picker>
+      </view>
+    </view>
 
-    <van-field
-      bindinput="userInput"
-      value="{{ username }}"
-      label="收件人"
-      placeholder="收件人"
-      bind:click-icon="onClickIcon"
-      border="{{ false }}"
-    />
-
-    <van-field
-      bindinput="phoneInput"
-      value="{{ phone }}"
-      type="number"
-      label="联系方式"
-      placeholder="请输入联系方式"
-      border="{{ false }}"
-    />
-
+    
     
   </van-cell-group>
 </view>
 
 <view class="mycell">
+
+  <van-field
+    bindinput="userInput"
+    value="{{ username }}"
+    label="收件人"
+    placeholder="收件人"
+    bind:click-icon="onClickIcon"
+    
+  />
+
+  <van-field
+    bindinput="phoneInput"
+    value="{{ phone }}"
+    type="number"
+    label="联系方式"
+    placeholder="请输入联系方式"
+    
+  />
+
   <van-cell
     is-link
     title="送达位置"
     link-type="navigateTo"
-    url="/pages/dashboard/index"
-    border="{{ false }}"
-    />
+    url="/pages/test/test"
+    
+  />
 
     <van-cell
     is-link
     title="代理点位置"
     link-type="navigateTo"
     url="/pages/dashboard/index"
-    border="{{ false }}"
-    />
+    
+  />
     
 </view>
 
@@ -100,14 +99,12 @@
     type="text"
     label="备注"
     placeholder="请输入备注"
-    border="{{ false }}"
+    
   />
 
   <van-cell title="积分" value="+2" />
 
 </view>
-
-
 
   
 
