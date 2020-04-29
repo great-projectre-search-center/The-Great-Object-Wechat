@@ -14,16 +14,13 @@
         bind:click-icon="onClickIcon"
         
       />
-      <view class="border01">
-        <view class="section">
-          <picker bindchange="bindDeliveryChange" value="{{index}}" range="{{arraycompany}}">
-            <view class="picker">
-            选择快递公司：
-            </view>
-            <view class="xuanze">{{arraycompany[index]}}</view>
-          </picker>
-        </view>
-      </view>
+      <van-field
+      bindinput="danhaoInput"
+      value="{{ danhao }}"
+      label="商家名称"
+      placeholder="填写您购买的商家名称"
+      bind:click-icon="onClickIcon"
+    />
     </van-cell-group>
   </view>
   
