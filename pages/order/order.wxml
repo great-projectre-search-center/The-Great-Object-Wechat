@@ -284,10 +284,10 @@
           </navigator>
         </view>
         <!--按钮-->
-        <view slot="footer" class="mybutton">
+        <!-- <view slot="footer" class="mybutton">
           <van-button size="small" round>取消订单</van-button>
           <van-button size="small" round>确认订单</van-button>
-        </view>
+        </view> -->
       </view>
     </view>
 
@@ -306,10 +306,10 @@
             </navigator>
           </view>
           <!--按钮-->
-          <view slot="footer" class="mybutton">
+          <!-- <view slot="footer" class="mybutton">
             <van-button size="small" round>取消订单</van-button>
             <van-button size="small" round>确认订单</van-button>
-          </view>
+          </view> -->
       </view>
     </view>
   </van-tab>

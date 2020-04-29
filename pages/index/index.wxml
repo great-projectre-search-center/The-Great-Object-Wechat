@@ -116,6 +116,14 @@
             wx:key="keys"
             url="/pages/transact02/transact02"
           />
+          <!--借书-->
+          <van-grid-item 
+            icon="class='iconfont icon-bangzhuzhongxin'"
+            text="借书"
+            wx:for="{{ 1 }}"
+            wx:key="keys"
+            url="/pages/transact03/transact03"
+          />
           <!-- 其它 -->
           <van-grid-item 
             icon="class='iconfont icon-bangzhuzhongxin'"
@@ -124,6 +132,7 @@
             wx:key="keys"
             url="/pages/transact03/transact03"
           />
+
       </van-grid>
       </view>
     </view>
@@ -147,6 +156,15 @@
           <van-grid-item 
             icon="class='iconfont icon-kebenguanli'"
             text="课本"
+            wx:for="{{ 1 }}"
+            wx:key="keys"
+            url="/pages/send02/send02"
+          />
+
+          <!-- 花 -->
+          <van-grid-item 
+            icon="class='iconfont icon-kebenguanli'"
+            text="花"
             wx:for="{{ 1 }}"
             wx:key="keys"
             url="/pages/send02/send02"

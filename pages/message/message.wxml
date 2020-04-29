@@ -6,7 +6,7 @@
 
 <van-tabs bind:click="onClick">
   <view class="mygrid">
-    <van-tab  title="个人消息">
+    <van-tab  title="个人消息" info="4">
       <!-- <van-collapse value="{{ activeName }}" bind:change="onChange" accordion>
     <van-collapse-item title="后台消息" name="1">
       欢迎使用跑腿小程序
