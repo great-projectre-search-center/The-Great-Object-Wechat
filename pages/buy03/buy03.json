@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "文具",
+  "navigationBarTitleText": "帮买文具",
   "usingComponents": {
     "MyHead": "../../components/MyHead/MyHead",
     "van-cell": "../../miniprogram_npm/vant-weapp/cell",

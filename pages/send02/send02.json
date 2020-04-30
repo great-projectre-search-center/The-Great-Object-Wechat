@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "帮取快递",
+  "navigationBarTitleText": "帮送课本",
   "usingComponents": {
     "MyHead": "../../components/MyHead/MyHead",
     "van-cell": "../../miniprogram_npm/vant-weapp/cell",

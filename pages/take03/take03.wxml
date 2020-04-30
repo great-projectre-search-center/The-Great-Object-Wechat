@@ -9,7 +9,7 @@
       <van-field
         bindinput="biaotiInput"
         value="{{ biaoti }}"
-        label="订单标题"
+        label="订单标题："
         placeholder="订单标题"
         bind:click-icon="onClickIcon"
         
@@ -17,7 +17,7 @@
       <van-field
       bindinput="danhaoInput"
       value="{{ danhao }}"
-      label="物品类型"
+      label="物品类型："
       placeholder="填写物品类型"
       bind:click-icon="onClickIcon"
       
@@ -30,7 +30,7 @@
     <van-field
       bindinput="danhaoInput"
       value="{{ danhao }}"
-      label="物品名称"
+      label="物品名称："
       placeholder="填写物品名称"
       bind:click-icon="onClickIcon"
       
@@ -40,7 +40,7 @@
       <view class="section">
         <picker bindchange="bindValueChange" value="{{value}}" range="{{arrayvalue}}">
           <view class="picker">
-          预估价值：
+          预估价值
           </view>
           <view class="xuanze">{{arrayvalue[value]}}</view>
         </picker>
@@ -57,7 +57,7 @@
   <van-field
     bindinput="userInput"
     value="{{ username }}"
-    label="收货人"
+    label="收货人："
     placeholder="收货人"
     bind:click-icon="onClickIcon"
     
@@ -67,7 +67,7 @@
     bindinput="phoneInput"
     value="{{ phone }}"
     type="number"
-    label="联系方式"
+    label="联系方式："
     placeholder="请输入联系方式"
     
   />
@@ -95,7 +95,7 @@
     bindinput="beizhuInput"
     value="{{ beizhu }}"
     type="text"
-    label="备注"
+    label="备注："
     placeholder="请输入备注"
     
   />

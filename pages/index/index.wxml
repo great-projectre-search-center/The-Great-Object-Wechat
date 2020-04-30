@@ -78,7 +78,7 @@
           <van-grid-item 
           icon="class='iconfont icon-wenju'"
           text="文具"
-          url="/pages/buy02/buy02"
+          url="/pages/buy03/buy03"
           />
         </view>
         <!-- 其它 -->
@@ -86,7 +86,7 @@
           <van-grid-item 
           icon="class='iconfont icon-bangzhuzhongxin'"
           text="其它"
-          url="/pages/buy03/buy03"
+          url="/pages/buy04/buy04"
           />
         </view>
       </van-grid>
@@ -116,14 +116,7 @@
             wx:key="keys"
             url="/pages/transact02/transact02"
           />
-          <!--借书-->
-          <van-grid-item 
-            icon="class='iconfont icon-bangzhuzhongxin'"
-            text="借书"
-            wx:for="{{ 1 }}"
-            wx:key="keys"
-            url="/pages/transact03/transact03"
-          />
+
           <!-- 其它 -->
           <van-grid-item 
             icon="class='iconfont icon-bangzhuzhongxin'"
@@ -161,14 +154,6 @@
             url="/pages/send02/send02"
           />
 
-          <!-- 花 -->
-          <van-grid-item 
-            icon="class='iconfont icon-kebenguanli'"
-            text="花"
-            wx:for="{{ 1 }}"
-            wx:key="keys"
-            url="/pages/send02/send02"
-          />
           <!-- 其它 -->
           <van-grid-item 
             icon="class='iconfont icon-bangzhuzhongxin'"
