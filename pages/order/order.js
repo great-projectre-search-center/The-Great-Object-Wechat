@@ -7,6 +7,11 @@ Page({
    */
   data: {
     //imageURL:"../../icons/swiper01.jpg",
+    baseurl:"",
+    userInfo:{},
+    hasUserInfo:false,
+    order:[],
+    
     nums1: '1',
     nums2: '1',
     nums3: '1',
@@ -84,11 +89,11 @@ Page({
     var that = this
     if (wx.getStorageSync("hasuserinfo") == true) {   //授权成功后准备登陆
       wx.request({   //发送请求
-        url: app.globalData.baseurl + "/me",
+        url: app.globalData.baseurl + "/order/list_idstatus"+"?openId="+openid+"&status="+status+"&pageIndex="+pageIndex+"&pageSize"+pageSize,
         method: "GET",   //请求登陆
         success: (res) => {   //登陆成功
           that.setData({
-            nums: res.data["nums"]
+            order:res.data
           })
         },
         header: {
@@ -97,6 +102,20 @@ Page({
       })
     }
 
+    if (wx.getStorageSync("hasuserinfo") == true) {   //授权成功后准备登陆
+      wx.request({   //发送请求
+        url: app.globalData.baseurl + "/order/list_status"+"?openId="+openid+"&pageIndex="+pageIndex+"&pageSize"+pageSize,
+        method: "GET",   //请求登陆
+        success: (res) => {   //登陆成功
+          that.setData({
+            order:res.data
+          })
+        },
+        header: {
+          Authorization: wx.getStorageSync("token")
+        }
+      })
+    }
   },
 
   /**
