@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/messageDetails/messageDetails",
     "pages/AddressSelection/AddressSelection",
     "pages/address/address",
     "pages/MapPointSelection/MapPointSelection",

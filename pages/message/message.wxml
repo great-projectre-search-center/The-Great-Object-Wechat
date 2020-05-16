@@ -20,7 +20,7 @@
   </van-collapse> -->
 
       <van-grid column-num="1" gutter="{{10}}">
-        <van-grid-item icon="{{icons[num]}}" text="{{messages[index]}}" wx:for="{{ 4 }}" text-class />
+        <van-grid-item icon="{{icons[num]}}" text="{{messages[index]}}" wx:for="{{ 4 }}" url="/pages/messageDetails/messageDetails"/>
       </van-grid>
     </van-tab>
   </view>

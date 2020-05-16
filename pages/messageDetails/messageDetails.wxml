@@ -1,0 +1,20 @@
+<!--pages/messageDetails/messageDetails.wxml-->
+
+<!-- 标题 -->
+<view class="head">
+{{textHead}}
+</view>
+
+
+
+<!-- 内容 -->
+<view class="body">
+  <view>{{textDetail}}</view>
+</view>
+
+
+<!-- 底部 -->
+<view style="position:fixed;bottom:0;width:100%;">
+    <button class="btn">回复</button>
+    <button class="btn">删除</button>
+</view>
