@@ -20,6 +20,45 @@ Page({
     cityIndex: 0, //城市
     countyIndex: 0, //区县
   },
+  addNew:function(){
+    var that=this
+    wx.request({
+      url: app.globalData.baseurl+'/address/addNew',
+      data:{
+        address:[],
+        uid:[],
+        usernmae:[],
+      },
+      method:'POST',
+      header:{
+        Authorization:wx.getStorageSync('token')
+      },
+      success:function(res){
+          if(res.data.isOk==true){
+            wx.showToast({
+              title: '添加成功',
+              icon: 'success',
+              duration: 2000,
+              success: function() {
+                that.setData({
+                  bookname: "",
+                  bookcontent: "",
+                  bookcomment: ""
+                })
+                setTimeout(function() {
+                  that.navigateTouserfeedmyshare()
+                }, 2000)
+              }
+            })
+          }else {
+            wx.showToast({
+              title: '添加失败',
+              duration: 2000
+            })
+          }
+      },
+    })
+  },
 
 
   /**

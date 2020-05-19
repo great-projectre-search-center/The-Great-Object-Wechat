@@ -6,6 +6,88 @@ Page({
   data: {
     addressList: []
   },
+  listAddress: function() {
+    var that = this
+    wx.request({
+      url: app.globalData.baseurl + '/address',
+      data: {
+        uid : app.globalData.userInfo
+      },
+      method: "GET",
+      header: {
+        Authorization: wx.getStorageSync("token")
+      },
+      success: function(res) {
+        that.setData({
+            addressList:this.data
+          })
+        }
+      })
+  },
+  deleteAddress: function() {
+    var that = this
+    wx.request({
+      url: app.globalData.baseurl + '/'+addressList[0].aid+'/delete',
+      data: {
+        uid : app.globalData.userInfo,
+        username : app.globalData.userInfo
+      },
+      method: "DELETE",
+      header: {
+        Authorization: wx.getStorageSync("token")
+      },
+      success: function(res) {
+        if(res.data.isOk==true){
+          wx.showToast({
+            title: '删除成功',
+            icon: 'success',
+            duration: 2000,
+            success: function() {
+              that.setData({
+                bookname: "",
+                bookcontent: "",
+                bookcomment: ""
+              })
+              setTimeout(function() {
+                that.navigateTouserfeedmyshare()
+              }, 2000)
+            }
+          })
+        }else {
+          wx.showToast({
+            title: '发布失败',
+            duration: 2000
+          })
+        }
+      }
+  })
+},
+  getUserInfo: function(e) {
+    app.globalData.userInfo = e.detail.userInfo
+
+    this.setData({
+      userInfo: e.detail.userInfo,
+      hasUserInfo: true
+    })
+    var that = this
+
+    wx.request({
+      url: app.globalData.baseurl + "/auth/uploadWxUserinfo",
+      method: "POST",
+      header: {
+        Authorization: wx.getStorageSync("token")
+      },
+      data: {
+        userinfo: e.detail.userInfo
+      },
+      success: res => {
+        that.setData({
+          loginbtn: false
+        })
+        wx.setStorageSync("hasuserinfo", true)
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -17,7 +99,6 @@ Page({
       addressList: arr
     });
   },
-
   /**
    * 生命周期函数--监听页面显示
    */
