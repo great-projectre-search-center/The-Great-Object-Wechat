@@ -17,5 +17,5 @@
   </view>
 </scroll-view>
 <view class="add-address" bindtap="addAddress">
-  <image class="add-img"  src="../../images/add.png"></image>新增地址
+  <image class="add-img"  src="../../icons/add.png"></image>新增地址
 </view>
