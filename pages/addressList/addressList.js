@@ -42,16 +42,6 @@ Page({
             title: '删除成功',
             icon: 'success',
             duration: 2000,
-            success: function() {
-              that.setData({
-                bookname: "",
-                bookcontent: "",
-                bookcomment: ""
-              })
-              setTimeout(function() {
-                that.navigateTouserfeedmyshare()
-              }, 2000)
-            }
           })
         }else {
           wx.showToast({

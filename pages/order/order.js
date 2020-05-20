@@ -20,6 +20,43 @@ Page({
 
 
   },
+  list_status:function(){
+    var that=this
+    wx.request({
+      url: app.globalData.baseurl+'/order/list_status',
+      data:{
+        id:userInfo.openid,
+        pageIndex:1,
+        pageSize:10
+      },
+      method:'GET',
+      header:{
+        Authorization:wx.getStorageSync('token')
+      },
+      success:function(res){
+          order=order.concat(res.data)
+      },
+    })
+  },
+  list_idstatus:function(){
+    var that=this
+    wx.request({
+      url: app.globalData.baseurl+'/order/list_idstatus',
+      data:{
+        id:userInfo.openid,
+        status:1,
+        pageIndex:1,
+        pageSize:10
+      },
+      method:'GET',
+      header:{
+        Authorization:wx.getStorageSync('token')
+      },
+      success:function(res){
+          order=order.concat(res.data)
+      },
+    })
+  },
   
   /**
    * 生命周期函数--监听页面加载
@@ -47,6 +84,7 @@ Page({
       })
     }
   },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

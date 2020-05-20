@@ -32,8 +32,35 @@ Page({
         src_item: "../../icons/wumangbubang.png"
       }
     ]
-
     
+  },
+  accept:function(){
+    var that=this
+    wx.request({
+      url: app.globalData.baseurl+'/order/accept',
+      data:{
+        orderId:0,
+        accepterId:userInfo.orderId
+      },
+      method:'POST',
+      header:{
+        Authorization:wx.getStorageSync('token')
+      },
+      success:function(res){
+        if(res.data.isOk==true){
+          wx.showToast({
+            title: '接单成功',
+            icon: 'success',
+            duration: 2000,
+          })
+        }else {
+          wx.showToast({
+            title: '接单失败',
+            duration: 2000
+          })
+        }
+      },
+    })
   },
 
   //点击弹出框

@@ -5,18 +5,74 @@ Page({
      * 页面的初始数据
      */ 
     data: {
+      biaoti,
       arraycompany: ['京东快递', '顺丰快递','中通快递', '申通快递', '韵达快递','圆通快递','天天快递','邮政','百世快递'],
       index: 0,
+      danhao,
       arrayvalue: ['1-50', '51-100', '101-150', '151-200', '201-300', '301-500', '>500'],
       value: 0,
+      username:'',
+      phone:'',
+      beizhu,
       date: '2016-09-01',
       time: '12:01',
     
       checked: true,
-      phone:'',
-      username:''
+     
+      
+      
       
     },
+    create:function(){
+      var that=this
+      var order
+      order.title;
+      order.catalog;
+      order.creater_Id;
+      order.creater_Name;
+      order.creater_Tel;
+      order.creater_Longitude;
+      order.creater_Latitude;
+      order.shops_Longtitude;
+      order.shops_Latitude;
+      order.accepter_Id;
+      order.create_Date;
+      order.accept_Date;
+      order.public_field1;
+      order.public_field2;
+      order.estimated_Worth;
+      order.remark;
+      order.aid;
+      order.reward;
+      order.status;
+      wx.request({
+        url: app.globalData.baseurl+'/order/edit',
+        data:{
+          order:that.order
+        },
+        method:'POST',
+        header:{
+          Authorization:wx.getStorageSync('token')
+        },
+        success:function(res){
+          if(res.data.isOk==true){
+            wx.showToast({
+              title: '创建订单成功',
+              icon: 'success',
+              duration: 2000,
+            })
+          }else {
+            wx.showToast({
+              title: '添加失败',
+              duration: 2000
+            })
+          }
+        },
+      })
+    },
+
+
+
   //选择快递公司的点击事件
   bindDeliveryChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -87,24 +143,7 @@ Page({
       }
     })
   },
-  sub: function (e) {
-    console.log("请求")
-    wx.request({
-      url: 'test.php',
-      data: {
-        username: 'username',
-        phone: 'phone',
-        type1:'',
-        type2: ''
-      },
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success(res) {
-        console.log(res.data)
-      }
-    })
-  },
+  
 
     /**
      * 生命周期函数--监听页面加载
