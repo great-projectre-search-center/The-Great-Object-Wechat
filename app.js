@@ -6,6 +6,8 @@ App({
 
     hasuserinfo: "",
 
+    openid: "",
+
     userInfo: null,
 
     //baseurl: "https://api.zxcwxy999.com" //change this
@@ -73,6 +75,10 @@ App({
               wx.setStorageSync("token", res.data.token)
 
               wx.setStorageSync("hasuserinfo", res.data.hasuserinfo)
+
+              wx.setStorageSync("openid",res.data.openid)
+
+              thatt.globalData.openid=res.data.openid
 
               thatt.globalData.hasuserinfo = res.data.hasuserinfo
 
