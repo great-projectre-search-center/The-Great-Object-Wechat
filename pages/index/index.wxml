@@ -1,9 +1,9 @@
 
 <!--轮播图-->
 <swiper autoplay="{{autoplay}}" interval="{{interval}}" circular="{{circular}}" duration="{{duration}}" indicator-dots indicator-color="#f0f0f0" indicator-active-color="yellow">
-  <swiper-item><image src="../../icons/swiper01.jpg"></image></swiper-item>
-  <swiper-item><image src="../../icons/swiper02.jpg"></image></swiper-item>
-  <swiper-item><image src="../../icons/swiper03.jpg"></image></swiper-item>
+  <navigator url="../clickSwiper/clickSwiper"><swiper-item><image src="../../icons/swiper1.jpg"></image></swiper-item></navigator>
+  <swiper-item><image src="../../icons/swiper2.jpg"></image></swiper-item>
+  <swiper-item><image src="../../icons/swiper3.jpg"></image></swiper-item>
 </swiper>
 
 <!--两个标签-->
