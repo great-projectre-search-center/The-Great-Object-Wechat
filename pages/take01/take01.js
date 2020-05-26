@@ -1,4 +1,3 @@
-// pages/index-new/index-new.js
 Page({
 
     /**

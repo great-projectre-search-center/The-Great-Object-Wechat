@@ -8,11 +8,14 @@ App({
 
     openid: "",
 
+
     userInfo: null,
 
     //baseurl: "https://api.zxcwxy999.com" //change this
 
-    baseurl: "http://127.0.0.1:8080" //change this
+     baseurl: "http://127.0.0.1:8080" //change this
+
+    //baseurl: "https://xcx.zxcwxy999.xyz/" //change this
 
   },
 
