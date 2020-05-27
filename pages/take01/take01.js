@@ -5,15 +5,15 @@ Page({
      * 页面的初始数据
      */ 
     data: {
-      biaoti,
+      biaoti:"",
       arraycompany: ['京东快递', '顺丰快递','中通快递', '申通快递', '韵达快递','圆通快递','天天快递','邮政','百世快递'],
       index: 0,
-      danhao,
+      danhao:"",
       arrayvalue: ['1-50', '51-100', '101-150', '151-200', '201-300', '301-500', '>500'],
       value: 0,
       username:'',
       phone:'',
-      beizhu,
+      beizhu:"",
       date: '2016-09-01',
       time: '12:01',
     
