@@ -202,7 +202,11 @@ Page({
     })
   },
 
+
+  
+  /*提交  submit*/
   saveAddress: function (e) {
+
     console.log("e" + e.detail)
     var consignee = e.detail.value.consignee;
     var mobile = e.detail.value.mobile;
@@ -213,7 +217,37 @@ Page({
     var address = e.detail.value.address;
 
     console.log(transportDay + "," + provinceName + "," + cityName + "," + countyName + "," + address); //输出该文本 
+    
 
+    //===========================
+
+    const app = getApp();
+    console.log("======地址新增======");
+    console.log('address: '+provinceName+'|'+cityName + '|' + countyName + '|' + address);
+    console.log('uid: '+app.globalData.openid);
+    console.log('username: '+consignee);
+    console.log("======地址新增======");
+
+    //添加地址
+    wx.request({
+      url: "https://xcx.zxcwxy999.xyz/"+'/address/addNew', 
+      method:'POST',
+      data: {
+        address:cityName + ',' + countyName + ',' + address,//Address 是个啥类型
+        uid:app.globalData.openid,
+        username:consignee
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success (res) {
+        console.log(res.data)
+      }
+    })
+    
+    //===========================
+
+    //跨页面传值！！！
     var arr = wx.getStorageSync('addressList') || [];
     console.log("arr,{}", arr);
     addressList = {
@@ -224,7 +258,7 @@ Page({
     }
     arr.push(addressList);
     wx.setStorageSync('addressList', arr);
-    //学习跨页面传值！！！
+    
     wx.navigateBack({
 
     })

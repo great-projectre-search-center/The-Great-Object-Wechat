@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/clickSwiper/clickSwiper",
     "pages/messageDetails/messageDetails",
     "pages/AddressSelection/AddressSelection",
     "pages/address/address",
