@@ -8,12 +8,49 @@ Page({
     activeName:'0',
     messages:["***帮您寄送了一件快递","###帮您打印了一份材料","您帮&&&送了一份午饭","@@@送您鲜花"],
     index:'0',
-
+    systemmessages:[],
     icons:["manager","manager-o","user-o","contact"],
     num:'0'
 
     
 
+  },
+  getnotification:function(){
+    var that=this
+    wx.request({
+      url: app.globalData.baseurl+'/notification/'+app.globalData.openid+'/getnotification',
+      data:{
+        
+      },
+      method:'GET',
+      header:{
+        Authorization:wx.getStorageSync('token')
+      },
+      success:function(res){
+          that.setData({
+            messages=res.data
+          })
+      },
+    })
+  },
+  getsystemnotification:function(){
+    var that=this
+    wx.request({
+      url: app.globalData.baseurl+'/notification/'+app.globalData.openid+'/systemnotification',
+      data:{
+        
+      },
+      method:'GET',
+      header:{
+        Authorization:wx.getStorageSync('token')
+      },
+      success:function(res){
+        that.setData({
+          systemmessages=res.data
+        })
+          
+      },
+    })
   },
 
   onChange(event) {

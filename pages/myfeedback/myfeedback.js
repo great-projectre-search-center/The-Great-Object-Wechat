@@ -14,6 +14,18 @@ Page({
     }
   
   },
+  feedback:function(){
+    var that=this
+    wx.request({
+      url: app/globalData.baseurl+'/feedback',
+      method:"Post",
+      success:function(res){
+        wx.showToast({
+          title: '反馈成功',
+        })
+      }
+    })
+  },
   onChange(event) {
     this.setData({
       radio: event.detail
