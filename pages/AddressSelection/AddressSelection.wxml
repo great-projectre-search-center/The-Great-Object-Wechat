@@ -2,11 +2,10 @@
 <view class="text-cell">
   <van-cell 
     id="第一个地址"
-    center title="{{nameAndphone}}" 
-    label="{{adder}}" 
+    center title="{{nameAndphone1}}" 
+    label="{{adder1}}" 
     bind:click="returnAdder"
   />
-
-
+  
 </view>
 
