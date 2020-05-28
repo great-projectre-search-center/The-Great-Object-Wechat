@@ -20,12 +20,13 @@ Page({
 
 
   },
+  //根据id分页查询全部订单信息
   list_status:function(){
     var that=this
     wx.request({
       url: app.globalData.baseurl+'/order/list_status',
       data:{
-        id:userInfo.openid,
+        id:app.globalData.openid,
         pageIndex:1,
         pageSize:10
       },
@@ -38,12 +39,33 @@ Page({
       },
     })
   },
+  // 根据订单状态和id分页查询全部订单信息
   list_idstatus:function(){
     var that=this
     wx.request({
       url: app.globalData.baseurl+'/order/list_idstatus',
       data:{
-        id:userInfo.openid,
+        id:app.globalData.openid,
+        status:1,
+        pageIndex:1,
+        pageSize:10
+      },
+      method:'GET',
+      header:{
+        Authorization:wx.getStorageSync('token')
+      },
+      success:function(res){
+          order=order.concat(res.data)
+      },
+    })
+  },
+  // 修改状态为已接收
+  list_idstatus:function(){
+    var that=this
+    wx.request({
+      url: app.globalData.baseurl+'/order/list_idstatus',
+      data:{
+        id:app.globalData.openid,
         status:1,
         pageIndex:1,
         pageSize:10

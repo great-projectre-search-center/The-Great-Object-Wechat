@@ -7,13 +7,12 @@ Page({
    */
   data: {
     active:0,
-    
     keys:"",
-
     autoplay: true,
     interval: 3000,
     duration: 500,
     circular: true, 
+    list_orders:[],
     imageList: [
       {
         url_item:"../delivery/delivery",
@@ -34,6 +33,31 @@ Page({
     ]
     
   },
+  /*
+    列出所有未接收订单
+  */
+ list:function(){
+  var that=this
+  wx.request({
+    url: app.globalData.baseurl+'/order/list_status0',
+    data:{
+      pageIndex:0,
+      pageSize:10
+    },
+    method:'GET',
+    header:{
+      Authorization:wx.getStorageSync('token')
+    },
+    success:function(res){
+      that.setData({
+        list_orders:res.data
+      })
+    },
+  })
+ },
+  /*
+    接收订单
+  */
   accept:function(){
     var that=this
     wx.request({
