@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    soc:1014
+    soc:1014  //获取当前积分
 
   },
 
@@ -22,6 +22,26 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    
+    //在加载时获取积分
+    /*
+    wx.request({
+      url: 'https://xcx.zxcwxy999.xyz/'+'订单管理',
+      method: 'POST',
+      //data:'',    //参数为键值对字符串
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res.data)
+        that.setData({
+          soc: res.data
+        })
+      }
+ 
+    })
+    */
+   
 
   },
 

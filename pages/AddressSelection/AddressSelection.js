@@ -1,18 +1,21 @@
 // pages/AddressSelection/AddressSelection.js
 /*
+
 - 首先在后端读addressList
 - 渲染到页面nameAndphone+adder
 - 选择哪一个点击
 - 带参数返回
+
 */
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    nameAndphone:"李彬"+" "+"176033607032",
-    adder:"河北XXXXXXXXXXXXXXX",
+    nameAndphone1:"李彬"+" "+'176033607032',
+    adder1:'河北XXXXXXXXXXXXXXX',
     addressList: []
   },
 
