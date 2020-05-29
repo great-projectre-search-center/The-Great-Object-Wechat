@@ -10,7 +10,10 @@ Page({
     baseurl:"",
     userInfo:{},
     hasUserInfo:false,
-    order:[],
+    order1:[],
+    order2:[],
+    order3:[],
+    order4:[],
     
     nums1: '1',
     nums2: '1',
