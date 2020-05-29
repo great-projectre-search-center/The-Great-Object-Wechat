@@ -35,9 +35,9 @@ Page({
       },
       success:function(res){
           that.setData({
-            textHead=res.data.title,
-            textDetail=res.data.message,
-            time=res.data.createTime
+            textHead:res.data.title,
+            textDetail:res.data.message,
+            time:res.data.createTime
           })
       },
     })

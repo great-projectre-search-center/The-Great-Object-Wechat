@@ -28,7 +28,7 @@ Page({
       },
       success:function(res){
           that.setData({
-            messages=res.data
+            messages:res.data
           })
       },
     })
@@ -46,7 +46,7 @@ Page({
       },
       success:function(res){
         that.setData({
-          systemmessages=res.data
+          systemmessages:res.data
         })
           
       },
