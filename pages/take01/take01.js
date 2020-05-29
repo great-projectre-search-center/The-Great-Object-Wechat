@@ -17,33 +17,36 @@ Page({
       time: '12:01',
     
       checked: true,
+      openid:""
+      // openid: app.globalData.openid,
      
       
       
       
     },
-    create:function(){
+    create:function(e){
       var that=this
-      var order
-      order.title;
-      order.catalog;
-      order.creater_Id;
-      order.creater_Name;
-      order.creater_Tel;
-      order.creater_Longitude;
-      order.creater_Latitude;
-      order.shops_Longtitude;
-      order.shops_Latitude;
-      order.accepter_Id;
-      order.create_Date;
-      order.accept_Date;
-      order.public_field1;
-      order.public_field2;
-      order.estimated_Worth;
-      order.remark;
-      order.aid;
-      order.reward;
-      order.status;
+      var order={
+        title:this.biaoti,
+        catalog:"帮我取",
+        creater_Id:this.openid,
+        creater_Name:this.username,
+        creater_Tel:this.phone,
+        creater_Longtitude:"",
+        creater_Latitude:"",
+        accepter_Id:"",
+        create_Date:Date.now,
+        accept_Date:"",
+        public_field1:this.arraycompany[this.index],
+        public_field2:this.danhao,
+        estimated_Worth:50*(this.value+1),
+        remark:beizhu,
+        aid:"",
+        reward:10,
+        status:0,
+        created_User:this.openid,
+      }
+      console.log(order)
       wx.request({
         url: app.globalData.baseurl+'/order/edit',
         data:{

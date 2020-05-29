@@ -12,7 +12,18 @@ Page({
     interval: 3000,
     duration: 500,
     circular: true, 
-    list_orders:[],
+    list_orders:[
+      {
+      reward:5,
+      catalog:"帮我买",
+      title:"买咖啡"
+      },
+      {
+        reward:2,
+        catalog:"帮我取",
+        title:"拿快递"
+        },
+  ],
     imageList: [
       {
         url_item:"../delivery/delivery",
@@ -58,13 +69,13 @@ Page({
   /*
     接收订单
   */
-  accept:function(){
+  accept:function(e){
     var that=this
     wx.request({
       url: app.globalData.baseurl+'/order/accept',
       data:{
-        orderId:0,
-        accepterId:userInfo.orderId
+        orderId:e.currentTarget.dataset.oid,
+        accepterId:app.globalData.openid
       },
       method:'POST',
       header:{
