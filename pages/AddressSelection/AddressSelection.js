@@ -1,24 +1,14 @@
 // pages/AddressSelection/AddressSelection.js
 /*
 
-
-
 - 首先在后端读addressList
 - 渲染到页面nameAndphone+adder
 - 选择哪一个点击
 - 带参数返回
 
-var pages = getCurrentPages(); // 获取页面栈
- 
-var currPage = pages[pages.length - 1]; // 当前页面
- 
-var prevPage = pages[pages.length - 2]; // 上一个页面
- 
-prevPage.setData({
-  mydata: {a:1, b:2} // 假数据
- 
-})
 
+地图选点转跳传参还没写
+然后addressList的具体格式还不清楚
 
 */
 
@@ -68,7 +58,7 @@ Page({
     //得到索引，然后返回
     console.log(addresschoseId)
     //转跳页面把值带过去
-    
+
   },
 
   /**
