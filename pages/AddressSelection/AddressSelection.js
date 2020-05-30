@@ -1,10 +1,24 @@
 // pages/AddressSelection/AddressSelection.js
 /*
 
+
+
 - 首先在后端读addressList
 - 渲染到页面nameAndphone+adder
 - 选择哪一个点击
 - 带参数返回
+
+var pages = getCurrentPages(); // 获取页面栈
+ 
+var currPage = pages[pages.length - 1]; // 当前页面
+ 
+var prevPage = pages[pages.length - 2]; // 上一个页面
+ 
+prevPage.setData({
+  mydata: {a:1, b:2} // 假数据
+ 
+})
+
 
 */
 
@@ -15,17 +29,46 @@ Page({
    */
   data: {
     nameAndphone1:"李彬"+" "+'176033607032',
-    adder1:'河北XXXXXXXXXXXXXXX',
-    addressList: []
+    adder1:'河北省 秦皇岛市 海港区 河北大街',
+    addresschoseId:0,
+    //演示
+    addressList: [
+      {
+            id: 11,
+            value: '张三',
+            phone:'176033670333',
+            address:'河北省 秦皇岛市 海港区 河北大街'
+      }, {
+            id: 12,
+            value: '李四',
+            phone:'176033670333',
+            address:'河北省 秦皇岛市 海港区 河北大街'
+      }, {
+            id: 13,
+            value: '王五',phone:'176033670333',
+            address:'河北省 秦皇岛市 海港区 河北大街'
+      }
+    ]
   },
 
   returnAdder:function(e){
-    //得到索引，然后返回
-    console.log(e)
-    //转跳页面把值带过去
-    wx.navigateBack({
 
+    var pages = getCurrentPages();   //当前页面
+    var prevPage = pages[pages.length - 2];   //上一页面
+    prevPage.setData({
+           //直接给上一个页面赋值
+          addresschoseId: e.currentTarget,
+    });
+ 
+    wx.navigateBack({
+         delta: 1
     })
+
+
+    //得到索引，然后返回
+    console.log(addresschoseId)
+    //转跳页面把值带过去
+    
   },
 
   /**

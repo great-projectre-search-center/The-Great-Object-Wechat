@@ -1,11 +1,17 @@
 <!--pages/AddressSelection/AddressSelection.wxml-->
 <view class="text-cell">
-  <van-cell 
+  <!-- <van-cell 
     id="第一个地址"
     center title="{{nameAndphone1}}" 
     label="{{adder1}}" 
     bind:click="returnAdder"
-  />
+  /> -->
+
+  <view class="cel" bindtap="returnAdder" wx:for='{{addressList}}' id='{{item.id}}'>
+    <view>{{item.value}} {{item.phone}}</view>
+    <view>{{item.address}}</view>
+  </view>
+
   
 </view>
 
