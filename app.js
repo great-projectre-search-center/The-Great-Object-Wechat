@@ -2,7 +2,7 @@
 App({
   globalData: {
     hasuserinfo: "",
-    openid: "",
+    openid: "88",
     userInfo: null,
      baseurl: "http://127.0.0.1:8080" //change this
     //baseurl: "https://xcx.zxcwxy999.xyz/" //change this

@@ -27,7 +27,7 @@ VantComponent({
         },
         currency: {
             type: String,
-            value: '¥'
+            value: '积分'
         }
     },
     methods: {

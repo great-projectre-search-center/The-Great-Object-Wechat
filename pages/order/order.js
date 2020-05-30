@@ -10,10 +10,59 @@ Page({
     baseurl:"",
     userInfo:{},
     hasUserInfo:false,
-    order1:[],
-    order2:[],
-    order3:[],
-    order4:[],
+    order1:[
+      {
+        oid:"0",
+        title:"去一个快递谢谢",
+        catalog:"帮我取",
+        creater_Id:"1",
+        creater_Name:"2",
+        creater_Tel:"3",
+        creater_Longitude:"4",
+        reward:"+"+"5",
+        accepter_id:"000",
+      }
+    ],
+    order2:[
+      {
+        oid:"0",
+        title:"去一个快递谢谢",
+        catalog:"帮我取",
+        creater_Id:"1",
+        creater_Name:"2",
+        creater_Tel:"3",
+        creater_Longitude:"4",
+        reward:"+"+"5",
+        accepter_id:"0",
+      }
+    ],
+    order3:[
+      {
+        oid:"0",
+        title:"去一个快递谢谢",
+        catalog:"帮我取",
+        creater_Id:"1",
+        creater_Name:"2",
+        creater_Tel:"3",
+        creater_Longitude:"4",
+        reward:"+"+"5",
+        accepter_id:"0",
+      }
+    ],
+    order4:[
+      {
+        oid:"0",
+        title:"去一个快递谢谢",
+        catalog:"帮我取",
+        creater_Id:"1",
+        creater_Name:"2",
+        creater_Tel:"3",
+        creater_Longitude:"4",
+        reward:"+"+"5",
+        accepter_id:"0",
+      }
+    ],
+    
     
     nums1: '1',
     nums2: '1',

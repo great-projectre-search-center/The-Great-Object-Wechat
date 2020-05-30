@@ -1,7 +1,6 @@
-
 <van-tabs active="{{ active }}" swipeable="{{swipeable}}" class="mytabs" animated>
   <van-tab title="全部订单">
-    <view wx:for="{{order1}}">
+    <view wx:for="{{order2}}">
 
 
       <view class="outer-view">
@@ -12,17 +11,18 @@
             <navigator url="../orderDetail01/orderDetail01">
               <view wx:if="{{item.accepter_id}}=={{app.globalData.openid}}">
               <van-card
-                num="{{nums1}}"
+                num="1"
+                price="{{item.reward}}"
                 tag="我的接单"
-                desc="{{tiem.catalog}}"
+                desc="{{item.catalog}}"
                 title="{{item.title}}"   
                 >
               </van-card>
             </view>
             <view wx:else>
               <van-card
-                num="{{nums1}}"
-                desc="{{tiem.catalog}}"
+                num="{{item.reward}}"
+                desc="{{item.catalog}}"
                 title="{{item.title}}"   
                 >
               </van-card>
@@ -59,17 +59,18 @@
             <navigator url="../orderDetail01/orderDetail01">
               <view wx:if="{{item.accepter_id}}=={{app.globalData.openid}}">
               <van-card
-                num="{{nums1}}"
+                num="1"
+                price="{{item.reward}}"
                 tag="我的接单"
-                desc="{{tiem.catalog}}"
+                desc="{{item.catalog}}"
                 title="{{item.title}}"   
                 >
               </van-card>
             </view>
             <view wx:else>
               <van-card
-                num="{{nums1}}"
-                desc="{{tiem.catalog}}"
+                num="{{item.reward}}"
+                desc="{{item.catalog}}"
                 title="{{item.title}}"   
                 >
               </van-card>
@@ -105,17 +106,18 @@
             <navigator url="../orderDetail01/orderDetail01">
               <view wx:if="{{item.accepter_id}}=={{app.globalData.openid}}">
               <van-card
-                num="{{nums1}}"
+                num="1"
+                price="{{item.reward}}"
                 tag="我的接单"
-                desc="{{tiem.catalog}}"
+                desc="{{item.catalog}}"
                 title="{{item.title}}"   
                 >
               </van-card>
             </view>
             <view wx:else>
               <van-card
-                num="{{nums1}}"
-                desc="{{tiem.catalog}}"
+                num="{{item.reward}}"
+                desc="{{item.catalog}}"
                 title="{{item.title}}"   
                 >
               </van-card>
@@ -151,17 +153,18 @@
             <navigator url="../orderDetail01/orderDetail01">
               <view wx:if="{{item.accepter_id}}=={{app.globalData.openid}}">
               <van-card
-                num="{{nums1}}"
+                num="1"
+                price="{{item.reward}}"
                 tag="我的接单"
-                desc="{{tiem.catalog}}"
+                desc="{{item.catalog}}"
                 title="{{item.title}}"   
                 >
               </van-card>
             </view>
             <view wx:else>
               <van-card
-                num="{{nums1}}"
-                desc="{{tiem.catalog}}"
+                num="{{item.reward}}"
+                desc="{{item.catalog}}"
                 title="{{item.title}}"   
                 >
               </van-card>
@@ -333,3 +336,4 @@
     </view>
   </van-tab> -->
 <!-- </van-tabs> -->
+
