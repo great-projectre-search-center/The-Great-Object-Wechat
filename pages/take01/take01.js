@@ -1,9 +1,13 @@
+
 Page({
+
+  
 
     /**
      * 页面的初始数据
      */ 
     data: {
+      addressId:0,
       biaoti:"",
       arraycompany: ['京东快递', '顺丰快递','中通快递', '申通快递', '韵达快递','圆通快递','天天快递','邮政','百世快递'],
       index: 0,
@@ -165,6 +169,19 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
+
+      //获取地址ID然后保存到this.data.addressId
+      let pages = getCurrentPages();
+      let currPage = pages[pages.length - 1];
+      if (currPage.data.addresschose) {
+          this.setData({  
+              //将携带的参数赋值
+              addressId: currPage.data.addresschoseId,
+              //addressBack: true
+        });
+      console.log(this.data.addressId, '地址ID')
+ 
+    }
 
     },
 

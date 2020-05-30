@@ -6,3 +6,8 @@ page{background-color: #efeff4;}   /*页面背景色*/
 .text-cell{
   padding-top: 20rpx;
 }
+.cel{
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ffff;
+}
