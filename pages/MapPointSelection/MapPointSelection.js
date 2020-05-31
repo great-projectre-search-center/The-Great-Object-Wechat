@@ -1,6 +1,7 @@
 // pages/MapPointSelection/MapPointSelection.js
 //../../libs/qqmap-wx-jssdk.js
 //LQXBZ-ZSFWG-AGDQ3-IXFEB-ULEOV-QHBH7
+var app = getApp();
 var QQMapWX = require('../../libs/qqmap-wx-jssdk.js');
 var qqmapsdk;
 Page({

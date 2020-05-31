@@ -11,7 +11,7 @@
 然后addressList的具体格式还不清楚
 
 */
-
+var app = getApp();
 Page({
 
   /**

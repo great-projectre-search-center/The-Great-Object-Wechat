@@ -1,4 +1,5 @@
 // pages/clickSwiper/clickSwiper.js
+var app = getApp();
 Page({
 
   /**

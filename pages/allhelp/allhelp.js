@@ -1,4 +1,5 @@
 // pages/order/order.js
+var app = getApp();
 Page({
 
   /**

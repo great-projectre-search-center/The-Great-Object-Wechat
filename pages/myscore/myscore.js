@@ -1,7 +1,7 @@
 // pages/myscore/myscore.js
 
 //载入页面调用函数更新显示内容！！！！
-
+var app = getApp();
 Page({
 
   /**

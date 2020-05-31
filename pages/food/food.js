@@ -1,6 +1,6 @@
 // pages/index-new1/index-new1.js
 
-
+var app = getApp();
 Page({
 
     /**

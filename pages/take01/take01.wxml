@@ -109,7 +109,7 @@
   
 
 <view class="sub">
-  <button class="sub" type="commit" bindtap="create" data-title="">提交</button>
+  <button class="sub" type="commit" bindtap="create" >提交</button>
 </view>
 
 <!--/form-->

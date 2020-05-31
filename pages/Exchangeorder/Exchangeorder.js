@@ -1,4 +1,5 @@
 // pages/Exchangeorder/Exchangeorder.js
+var app = getApp();
 Page({
 
   /**

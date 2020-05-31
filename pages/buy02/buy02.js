@@ -1,4 +1,5 @@
 // pages/index-new/index-new.js
+var app = getApp();
 Page({
 
     /**

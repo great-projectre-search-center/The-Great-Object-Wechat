@@ -1,4 +1,5 @@
 // pages/infokefu/infokefu.js
+var app = getApp();
 Page({
 
   /**

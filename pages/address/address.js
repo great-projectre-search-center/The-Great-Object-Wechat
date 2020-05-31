@@ -1,3 +1,4 @@
+var app = getApp();
 var area = require('../../utils/area.js');
 var areaInfo = []; //所有省市区县数据
 var provinces = []; //省

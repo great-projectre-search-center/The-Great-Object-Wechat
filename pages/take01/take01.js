@@ -1,4 +1,4 @@
-
+var app = getApp();
 Page({
 
   
@@ -7,6 +7,7 @@ Page({
      * 页面的初始数据
      */ 
     data: {
+  
       addressId:0,
       biaoti:"",
       arraycompany: ['京东快递', '顺丰快递','中通快递', '申通快递', '韵达快递','圆通快递','天天快递','邮政','百世快递'],
@@ -21,8 +22,9 @@ Page({
       time: '12:01',
     
       checked: true,
-      openid:""
-      // openid: app.globalData.openid,
+      //openid: "888",
+      
+       openid: app.globalData.openid,
      
       
       
@@ -36,17 +38,17 @@ Page({
         creater_Id:this.openid,
         creater_Name:this.username,
         creater_Tel:this.phone,
-        creater_Longtitude:"",
-        creater_Latitude:"",
-        accepter_Id:"",
+        creater_Longtitude:"1", //后期需要修改
+        creater_Latitude:"1",  //后期需要修改
+        accepter_Id:"",    //为空
         create_Date:Date.now,
-        accept_Date:"",
+        accept_Date:"",   //为空
         public_field1:this.arraycompany[this.index],
         public_field2:this.danhao,
         estimated_Worth:50*(this.value+1),
-        remark:beizhu,
-        aid:"",
-        reward:10,
+        remark: this.beizhu,
+        aid: "",  //为空
+        reward:10,  //后期需要修改
         status:0,
         created_User:this.openid,
       }
@@ -88,6 +90,7 @@ Page({
   },
   //选择预估价值的点击事件
   bindValueChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       value: e.detail.value
     })
@@ -103,6 +106,8 @@ Page({
       biaoti: e.detail
     })
     console.log(e.detail)
+    console.log(app.globalData.openid)
+    console.log(app.globalData.baseurl)
   },
   danhaoInput: function (e) {  //输入单号
     this.setData({

@@ -1,4 +1,5 @@
 // pages/orderDetail01/orderDetail01.js
+var app = getApp();
 Page({
 
   /**

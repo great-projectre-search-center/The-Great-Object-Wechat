@@ -1,7 +1,8 @@
 // pages/otherfood/otherfood.js
+
 import Dialog from '../../miniprogram_npm/vant-weapp/dialog/index';
 import Toast from '../../miniprogram_npm/vant-weapp/toast/index'
-
+var app = getApp();
 Page({
 
   /**

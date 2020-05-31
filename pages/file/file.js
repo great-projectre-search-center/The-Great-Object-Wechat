@@ -1,4 +1,5 @@
 // pages/file/file.js
+var app = getApp();
 Page({
 
     /**

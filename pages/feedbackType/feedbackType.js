@@ -1,4 +1,5 @@
 // pages/myfeedback/myfeedback.js
+var app = getApp();
 Page({
 
   /**
