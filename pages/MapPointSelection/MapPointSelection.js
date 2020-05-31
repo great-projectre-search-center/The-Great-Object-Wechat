@@ -527,7 +527,7 @@ Page({
     let prevPage = pages[pages.length - 2];
     console.log(this.data.centerData)//打印所以信息，后期再调整
     prevPage.setData({
-      storeAddress: this.data.centerData.title
+      storeAddress: this.data.centerData.latitude+","+this.data.centerData.longitude,
     })
     wx.navigateBack({
       delta: 1
