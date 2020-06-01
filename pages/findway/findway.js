@@ -1,6 +1,12 @@
 //'LQXBZ-ZSFWG-AGDQ3-IXFEB-ULEOV-QHBH7';  //使用在腾讯位置服务申请的key
 //'帮跑跑-findway';   //调用插件的app的名称
 
+
+/**
+ * 在提交订单是否需要距离计算来进行积分生成
+ * 如果有 相应函数在这
+ */
+
 var app = getApp();
 var QQMapWX = require('../../libs/qqmap-wx-jssdk.js');
 var qqmapsdk;

@@ -125,18 +125,18 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-        //获取地址ID然后保存到this.data.addressId
+      //获取地址ID然后保存到this.data.addressId
       let pages = getCurrentPages();
       let currPage = pages[pages.length - 1];
-      if (currPage.data.addresschose) {
+      if (currPage.data.addresschoseId) {
           this.setData({  
               //将携带的参数赋值
               addressId: currPage.data.addresschoseId,
               //addressBack: true
         });
-      console.log(this.data.addressId, '地址ID')
- 
-    }
+        console.log('送达位置 : '+this.data.addressId)
+        console.log('代理点位置 : '+this.data.storeAddress)
+      }
     },
 
     /**

@@ -11,7 +11,13 @@
 然后addressList的具体格式还不清楚
 
 */
+
+
 var app = getApp();
+var QQMapWX = require('../../libs/qqmap-wx-jssdk.js');
+var qqmapsdk;
+
+
 Page({
 
   /**
@@ -20,7 +26,7 @@ Page({
   data: {
     nameAndphone1:"李彬"+" "+'176033607032',
     adder1:'河北省 秦皇岛市 海港区 河北大街',
-    addresschoseId:0,
+    addresschoseId:'',
     //演示
     addressList: [
       {
@@ -42,21 +48,47 @@ Page({
   },
 
   returnAdder:function(e){
+    var t= "";
+    qqmapsdk.geocoder({
+      address: e.currentTarget.id, //地址参数
+      success: function (res) {
+        t = res.result.location.lat + "," + res.result.location.lng
+        //console.log("t位置:"+t);
 
+        
+        var pages = getCurrentPages();   //当前页面
+        var prevPage = pages[pages.length - 2];   //上一页面
+        prevPage.setData({
+               //直接给上一个页面赋值
+              addresschoseId: t,//e.currentTarget.id
+        });
+    
+        wx.navigateBack({
+             delta: 1
+        })
+
+
+      },
+      fail: function (error) {
+        console.error(error);
+      }
+    })
+
+    /*
     var pages = getCurrentPages();   //当前页面
     var prevPage = pages[pages.length - 2];   //上一页面
     prevPage.setData({
            //直接给上一个页面赋值
-          addresschoseId: e.currentTarget,
+          addresschoseId: t,//e.currentTarget.id
     });
  
     wx.navigateBack({
          delta: 1
     })
-
+    */
 
     //得到索引，然后返回
-    console.log(addresschoseId)
+    //console.log(addresschoseId)
     //转跳页面把值带过去
 
   },
@@ -65,6 +97,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    qqmapsdk = new QQMapWX({
+      key: 'LQXBZ-ZSFWG-AGDQ3-IXFEB-ULEOV-QHBH7'
+    });
+
     //展示所有地址
     var that = this
     const app = getApp();

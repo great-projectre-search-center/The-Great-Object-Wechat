@@ -8,7 +8,7 @@ Page({
      */ 
     data: {
   
-      addressId:0,
+      addressId:'',//送达位置坐标
       biaoti:"",
       arraycompany: ['京东快递', '顺丰快递','中通快递', '申通快递', '韵达快递','圆通快递','天天快递','邮政','百世快递'],
       index: 0,
@@ -178,15 +178,15 @@ Page({
       //获取地址ID然后保存到this.data.addressId
       let pages = getCurrentPages();
       let currPage = pages[pages.length - 1];
-      if (currPage.data.addresschose) {
+      if (currPage.data.addresschoseId) {
           this.setData({  
               //将携带的参数赋值
               addressId: currPage.data.addresschoseId,
               //addressBack: true
         });
-      console.log(this.data.addressId, '地址ID')
- 
-    }
+        console.log('送达位置 : '+this.data.addressId)
+        console.log('代理点位置 : '+this.data.storeAddress)
+      }
 
     },
 
