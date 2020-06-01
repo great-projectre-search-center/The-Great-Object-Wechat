@@ -49,9 +49,17 @@ Page({
       Authorization:wx.getStorageSync('token')
     },
     success:function(res){
-      that.setData({
-        list_orders:that.data.list_orders.concat(res.data)
-      })
+      if(pageIndex==1){
+        that.setData({
+          list_orders:res.data  
+        })
+      }
+      else{
+        that.setData({
+          list_orders:that.data.list_orders.concat(res.data)       
+        })
+      }
+
     },
   })
  },
@@ -63,7 +71,7 @@ Page({
     wx.request({
       url: app.globalData.baseurl+'/order/accept',
       data:{
-        orderId:e.currentTarget.dataset.oid+'L',
+        orderId:""+e.currentTarget.dataset.oid,
         accepterId:app.globalData.openid
       },
       method:'POST',
@@ -161,7 +169,7 @@ Page({
           console.log("donot have user info")
         }
       },
-
+      
     })
 
     var that = this
@@ -182,7 +190,7 @@ Page({
         }
       })
     }
-
+    this.list(1)
   },
 
   /**

@@ -6,64 +6,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    //imageURL:"../../icons/swiper01.jpg",
     baseurl:"",
     userInfo:{},
     hasUserInfo:false,
-    order1:[
-      {
-        oid:"0",
-        title:"去一个快递谢谢",
-        catalog:"帮我取",
-        creater_Id:"1",
-        creater_Name:"2",
-        creater_Tel:"3",
-        creater_Longitude:"4",
-        reward:"+"+"5",
-        accepter_id:"000",
-      }
-    ],
-    order2:[
-      {
-        oid:"0",
-        title:"去一个快递谢谢",
-        catalog:"帮我取",
-        creater_Id:"1",
-        creater_Name:"2",
-        creater_Tel:"3",
-        creater_Longitude:"4",
-        reward:"+"+"5",
-        accepter_id:"0",
-      }
-    ],
-    order3:[
-      {
-        oid:"0",
-        title:"去一个快递谢谢",
-        catalog:"帮我取",
-        creater_Id:"1",
-        creater_Name:"2",
-        creater_Tel:"3",
-        creater_Longitude:"4",
-        reward:"+"+"5",
-        accepter_id:"0",
-      }
-    ],
-    order4:[
-      {
-        oid:"0",
-        title:"去一个快递谢谢",
-        catalog:"帮我取",
-        creater_Id:"1",
-        creater_Name:"2",
-        creater_Tel:"3",
-        creater_Longitude:"4",
-        reward:"+"+"5",
-        accepter_id:"0",
-      }
-    ],
-    
-    
+    openid:"",
+    order1:[],
+    order2:[],
+    order3:[],
+    order4:[],
     nums1: '1',
     nums2: '1',
     nums3: '1',
@@ -72,14 +22,98 @@ Page({
 
 
   },
+  //取消订单
+  cancel:function(e){
+    var that=this
+    wx.request({
+      url: app.globalData.baseurl+'/order/cancel',
+      data:{
+        id:""+e.currentTarget.dataset.oid,
+      },
+      method:'POST',
+      header:{
+        Authorization:wx.getStorageSync('token')
+      },
+      success:function(res){
+        if(res.data.isOk===true){
+          wx.showToast({
+            title: '取消成功',
+            icon: 'success',
+            duration: 2000,
+          })
+        }else {
+          wx.showToast({
+            title: '取消失败',
+            duration: 2000
+          })
+        }
+      },
+    })
+  },
+  //确认订单
+  confirm:function(e){
+    var that=this
+    wx.request({
+      url: app.globalData.baseurl+'/order/receive',
+      data:{
+        id:""+e.currentTarget.dataset.oid,
+      },
+      method:'POST',
+      header:{
+        Authorization:wx.getStorageSync('token')
+      },
+      success:function(res){
+        if(res.data.isOk===true){
+          wx.showToast({
+            title: '确认成功',
+            icon: 'success',
+            duration: 2000,
+          })
+        }else {
+          wx.showToast({
+            title: '确认失败',
+            duration: 2000
+          })
+        }
+      },
+    })
+  },
+  //删除订单
+  delete:function(e){
+    var that=this
+    wx.request({
+      url: app.globalData.baseurl+'/order/delete',
+      data:{
+        id:""+e.currentTarget.dataset.oid,
+      },
+      method:'DELETE',
+      header:{
+        Authorization:wx.getStorageSync('token')
+      },
+      success:function(res){
+        if(res.data.isOk===true){
+          wx.showToast({
+            title: '删除成功',
+            icon: 'success',
+            duration: 2000,
+          })
+        }else {
+          wx.showToast({
+            title: '删除失败',
+            duration: 2000
+          })
+        }
+      },
+    })
+  },
   //根据id分页查询全部订单信息
-  list_status:function(){
+  list_status:function(pageIndex){
     var that=this
     wx.request({
       url: app.globalData.baseurl+'/order/list_status',
       data:{
         id:app.globalData.openid,
-        pageIndex:1,
+        pageIndex:pageIndex,
         pageSize:10
       },
       method:'GET',
@@ -87,19 +121,59 @@ Page({
         Authorization:wx.getStorageSync('token')
       },
       success:function(res){
-          order=order.concat(res.data)
+        if(pageIndex==1){
+          that.setData({
+            order1:res.data  
+            
+          })
+        }
+        else{
+          that.setData({
+            order1:that.data.order1.concat(res.data)       
+          })
+        }
       },
     })
   },
-  // 根据订单状态和id分页查询全部订单信息
-  list_idstatus:function(){
+  // 根据id分页查询全部未接单信息
+  list_idstatus2:function(pageIndex){
+    var that=this
+    wx.request({
+      url: app.globalData.baseurl+'/order/list_idstatus',
+      data:{
+        id:app.globalData.openid,
+        status:0,
+        pageIndex:pageIndex,
+        pageSize:10
+      },
+      method:'GET',
+      header:{
+        Authorization:wx.getStorageSync('token')
+      },
+      success:function(res){
+        if(pageIndex==1){
+          that.setData({
+            order2:res.data  
+            
+          })
+        }
+        else{
+          that.setData({
+            order2:that.data2.order.concat(res.data)       
+          })
+        }
+      },
+    })
+  },
+  // 根据id分页查询全部已接单信息
+  list_idstatus3:function(pageIndex){
     var that=this
     wx.request({
       url: app.globalData.baseurl+'/order/list_idstatus',
       data:{
         id:app.globalData.openid,
         status:1,
-        pageIndex:1,
+        pageIndex:pageIndex,
         pageSize:10
       },
       method:'GET',
@@ -107,19 +181,29 @@ Page({
         Authorization:wx.getStorageSync('token')
       },
       success:function(res){
-          order=order.concat(res.data)
+        if(pageIndex==1){
+          that.setData({
+            order3:res.data  
+            
+          })
+        }
+        else{
+          that.setData({
+            order3:that.data.order3.concat(res.data)       
+          })
+        }
       },
     })
   },
-  // 修改状态为已接收
-  list_idstatus:function(){
+  // 根据id分页查询全部已收货信息
+  list_idstatus4:function(pageIndex){
     var that=this
     wx.request({
       url: app.globalData.baseurl+'/order/list_idstatus',
       data:{
         id:app.globalData.openid,
-        status:1,
-        pageIndex:1,
+        status:5,
+        pageIndex:pageIndex,
         pageSize:10
       },
       method:'GET',
@@ -127,7 +211,17 @@ Page({
         Authorization:wx.getStorageSync('token')
       },
       success:function(res){
-          order=order.concat(res.data)
+        if(pageIndex==1){
+          that.setData({
+            order4:res.data  
+            
+          })
+        }
+        else{
+          that.setData({
+            order4:that.data.order4.concat(res.data)       
+          })
+        }
       },
     })
   },
@@ -137,7 +231,8 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      baseurl: app.globalData.baseurl
+      baseurl: app.globalData.baseurl,
+      openid:app.globalData.openid
     })
 
     var that = this
@@ -157,6 +252,10 @@ Page({
         }
       })
     }
+    this.list_status(1)
+    this.list_idstatus2(1)
+    this.list_idstatus3(1)
+    this.list_idstatus4(1)
   },
 
 
@@ -171,6 +270,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.list_status(1)
+    this.list_idstatus2(1)
+    this.list_idstatus3(1)
+    this.list_idstatus4(1)
     //判断用户是否授权
     wx.getSetting({
       success: (res) => {   //如果已经授权成功
@@ -228,6 +331,10 @@ Page({
         }
       })
     }
+    this.list_status(1)
+    this.list_idstatus2(1)
+    this.list_idstatus3(1)
+    this.list_idstatus4(1)
   },
 
   /**
@@ -255,7 +362,10 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    this.list(this.data.order1.length/10+1)
+    this.list(this.data.order2.length/10+1)
+    this.list(this.data.order3.length/10+1)
+    this.list(this.data.order4.length/10+1)
   },
 
   /**

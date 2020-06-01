@@ -9,6 +9,7 @@ Page({
     data: {
   
       addressId:'',//送达位置坐标
+      storeAddress:'',
       biaoti:"",
       arraycompany: ['京东快递', '顺丰快递','中通快递', '申通快递', '韵达快递','圆通快递','天天快递','邮政','百世快递'],
       index: 0,
@@ -38,8 +39,8 @@ Page({
         creater_Id:this.data.openid,
         creater_Name:this.data.username,
         creater_Tel:this.data.phone,
-        creater_Longtitude:"1", //后期需要修改
-        creater_Latitude:"1",  //后期需要修改
+        creater_Longtitude:this.data.addressId.split(',')[0], //后期需要修改
+        creater_Latitude:this.data.addressId.split(',')[1],  //后期需要修改
         accepter_Id:"1",    //为空
         create_Date:new Date(),
         accept_Date:"",   //为空
