@@ -33,37 +33,39 @@ Page({
     create:function(e){
       var that=this
       var order={
-        title:this.biaoti,
+        title:this.data.biaoti,
         catalog:"帮我取",
-        creater_Id:this.openid,
-        creater_Name:this.username,
-        creater_Tel:this.phone,
+        creater_Id:this.data.openid,
+        creater_Name:this.data.username,
+        creater_Tel:this.data.phone,
         creater_Longtitude:"1", //后期需要修改
         creater_Latitude:"1",  //后期需要修改
-        accepter_Id:"",    //为空
-        create_Date:Date.now,
+        accepter_Id:"1",    //为空
+        create_Date:new Date(),
         accept_Date:"",   //为空
-        public_field1:this.arraycompany[this.index],
-        public_field2:this.danhao,
-        estimated_Worth:50*(this.value+1),
-        remark: this.beizhu,
+        public_field1:this.data.arraycompany[1],
+        public_field2:this.data.danhao,
+        estimated_Worth:50*(this.data.value+1),
+        remark: this.data.beizhu,
         aid: "",  //为空
         reward:10,  //后期需要修改
         status:0,
-        created_User:this.openid,
+        created_User:this.data.openid,
       }
       console.log(order)
       wx.request({
         url: app.globalData.baseurl+'/order/edit',
-        data:{
-          order:that.order
-        },
+        data:
+          // order:{sdf:"sadf"}
+          order
+          // :that.order
+        ,
         method:'POST',
         header:{
           Authorization:wx.getStorageSync('token')
         },
         success:function(res){
-          if(res.data.isOk==true){
+          if(res.data.isOk===true){
             wx.showToast({
               title: '创建订单成功',
               icon: 'success',
@@ -106,8 +108,6 @@ Page({
       biaoti: e.detail
     })
     console.log(e.detail)
-    console.log(app.globalData.openid)
-    console.log(app.globalData.baseurl)
   },
   danhaoInput: function (e) {  //输入单号
     this.setData({

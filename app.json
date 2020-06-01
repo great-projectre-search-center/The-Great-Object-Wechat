@@ -53,7 +53,8 @@
     "navigationBarBackgroundColor": "#4b8bf4",
     "navigationBarTitleText": "帮跑跑",
     "navigationBarTextStyle": "white",
-    "enablePullDownRefresh": true
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance":50
   },
   "tabBar": {
     "color": "#0e110c",

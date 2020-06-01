@@ -12,18 +12,7 @@ Page({
     interval: 3000,
     duration: 500,
     circular: true, 
-    list_orders:[
-      {
-      reward:5,
-      catalog:"帮我买",
-      title:"买咖啡"
-      },
-      {
-        reward:2,
-        catalog:"帮我取",
-        title:"拿快递"
-        },
-  ],
+    list_orders:[],
     imageList: [
       {
         url_item:"../delivery/delivery",
@@ -47,12 +36,12 @@ Page({
   /*
     列出所有未接收订单
   */
- list:function(){
+ list:function(pageIndex){
   var that=this
   wx.request({
     url: app.globalData.baseurl+'/order/list_status0',
     data:{
-      pageIndex:0,
+      pageIndex:pageIndex,
       pageSize:10
     },
     method:'GET',
@@ -134,6 +123,7 @@ Page({
         }
       })
     }
+    this.list(1)
   },
 
   /**
@@ -220,7 +210,8 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+      var size=this.list_orders.length
+      this.list(this.data.list_orders.length+1)
   },
 
   /**
