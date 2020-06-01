@@ -50,7 +50,7 @@ Page({
     },
     success:function(res){
       that.setData({
-        list_orders:res.data
+        list_orders:that.data.list_orders.concat(res.data)
       })
     },
   })
@@ -63,7 +63,7 @@ Page({
     wx.request({
       url: app.globalData.baseurl+'/order/accept',
       data:{
-        orderId:e.currentTarget.dataset.oid,
+        orderId:e.currentTarget.dataset.oid+'L',
         accepterId:app.globalData.openid
       },
       method:'POST',
@@ -71,7 +71,7 @@ Page({
         Authorization:wx.getStorageSync('token')
       },
       success:function(res){
-        if(res.data.isOk==true){
+        if(res.data.isOk===true){
           wx.showToast({
             title: '接单成功',
             icon: 'success',
@@ -210,8 +210,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-      var size=this.list_orders.length
-      this.list(this.data.list_orders.length+1)
+      this.list(this.data.list_orders.length/10+1)
   },
 
   /**

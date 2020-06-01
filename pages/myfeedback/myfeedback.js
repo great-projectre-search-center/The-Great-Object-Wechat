@@ -17,8 +17,8 @@ Page({
   feedback:function(){
     var that=this
     wx.request({
-      url: app/globalData.baseurl+'/feedback',
-      method:"Post",
+      url: app.globalData.baseurl+'/feedback',
+      method:"POST",
       success:function(res){
         wx.showToast({
           title: '反馈成功',

@@ -87,5 +87,5 @@
 
 
 <view class="mybutton">
-  <van-button type="info" size="large" round>提交</van-button>
+  <van-button type="info" size="large" bindtap="feedback" round>提交</van-button>
 </view>

@@ -65,13 +65,14 @@ Page({
           Authorization:wx.getStorageSync('token')
         },
         success:function(res){
-          if(res.data.isOk===true){
+          console.log(res.data.isOk)
+          if(res.data.isOk){
             wx.showToast({
               title: '创建订单成功',
               icon: 'success',
               duration: 2000,
             })
-          }else {
+          }else if(res.data.isOk!==true){
             wx.showToast({
               title: '添加失败',
               duration: 2000
