@@ -150,7 +150,7 @@ Page({
         } else {
           //选点
           wx.navigateTo({
-            url: '../../pages/MapPointSelection/MapPointSelection'
+            url: '../../pages/MapPointSelection02/MapPointSelection02'
           })
         }
       }

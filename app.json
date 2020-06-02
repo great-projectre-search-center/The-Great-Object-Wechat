@@ -7,6 +7,7 @@
     "pages/AddressSelection/AddressSelection",
     "pages/address/address",
     "pages/MapPointSelection/MapPointSelection",
+    "pages/MapPointSelection02/MapPointSelection02",
     "pages/myscore/myscore",
     "pages/Exchangeorder/Exchangeorder",
     "pages/findway/findway",
