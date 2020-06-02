@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    userInfo:"",
     activeName:'0',
     messages:["***帮您寄送了一件快递","###帮您打印了一份材料","您帮&&&送了一份午饭","@@@送您鲜花"],
     index:'0',
@@ -36,7 +37,7 @@ Page({
   getsystemnotification:function(){
     var that=this
     wx.request({
-      url: app.globalData.baseurl+'/notification/'+app.globalData.openid+'/systemnotification',
+      url: app.globalData.baseurl+'/notification/'+app.globalData.openid+'/getsystemnotification',
       data:{
         
       },
@@ -84,6 +85,8 @@ Page({
         }
       })
     }
+    this.getnotification()
+    this.getsystemnotification()
   },
 
   
@@ -141,7 +144,8 @@ Page({
         }
       })
     }
-
+    this.getnotification()
+    this.getsystemnotification()
   },
 
   /**

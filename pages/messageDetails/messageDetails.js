@@ -83,6 +83,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var textHead=options.textHead
+    var fromopenid=options.fromopenid
+    var textDetail=options.textDetail
     this.setData({
       baseurl: app.globalData.baseurl
     })

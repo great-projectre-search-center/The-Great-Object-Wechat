@@ -20,7 +20,8 @@
             </view>
             <view wx:else>
               <van-card
-                num="{{item.reward}}"
+                num="1"
+                price="{{item.reward}}"
                 desc="{{item.catalog}}"
                 title="{{item.title}}"   
                 >
@@ -69,7 +70,8 @@
             </view>
             <view wx:else>
               <van-card
-                num="{{item.reward}}"
+                num="1"
+                price="{{item.reward}}"
                 desc="{{item.catalog}}"
                 title="{{item.title}}"   
                 >
@@ -113,7 +115,8 @@
             </view>
             <view wx:else>
               <van-card
-                num="{{item.reward}}"
+                num="1"
+                price="{{item.reward}}"
                 desc="{{item.catalog}}"
                 title="{{item.title}}"   
                 >
@@ -167,14 +170,10 @@
           </view>
           <!--按钮-->
           <view slot="footer" class="mybutton">
-          
             <van-button size="small" round bindtap="delete" data-oid="{{item.oid}}">删除订单</van-button>
-          
           </view>
         </view>
       </view>
-
-
     </view>
   </van-tab>
 </van-tabs>
