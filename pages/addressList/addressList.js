@@ -29,6 +29,86 @@ Page({
 
   //===========================================
   deleteAddress: function(e) {
+    
+    const app = getApp();
+    // console.log("======地址删除======");
+    // console.log('aid:'+this.data.addressList[0].aid);
+    // console.log('uid: '+app.globalData.openid);
+    // console.log('username: '+this.data.addressList[0].consignee);
+    // console.log("======地址删除======");
+    //删除后台
+    //console.log("删除后台地址")
+
+
+    var that = this
+    if(this.data.addressList[0]){
+      wx.request({
+        url: app.globalData.baseurl+ '/address/'+this.data.addressList[0].aid+'/delete',
+        data: {
+          aid:this.data.addressList.aid,
+          uid: app.globalData.openid,
+          username:this.data.addressList.consignee
+        },
+        method: "DELETE",
+        header: {
+          Authorization: wx.getStorageSync("token"),
+          'content-type': 'application/json' // 默认值
+        },
+        success: function(res) {
+          if(res.data.isOk==true){
+            wx.showToast({
+              title: '删除成功',
+              icon: 'success',
+              duration: 2000,
+            })
+          }else {
+            wx.showToast({
+              title: '删除失败',
+              icon: 'fail',
+              duration: 2000
+            })
+          }
+        }
+    })
+    }else{
+      console.log("======地址删除======");
+      console.log('aid:'+this.data.addressList.aid);
+      console.log(this.data.addressList);
+      console.log('uid: '+app.globalData.openid);
+      console.log('username: '+this.data.addressList[0].consignee);
+      console.log("======地址删除======");
+      wx.request({
+        url: app.globalData.baseurl+ '/address/'+this.data.addressList.aid+'/delete',
+        data: {
+          aid:this.data.addressList.aid,
+          uid: app.globalData.openid,
+          username:this.data.addressList.consignee
+        },
+        method: "DELETE",
+        header: {
+          Authorization: wx.getStorageSync("token"),
+          'content-type': 'application/json' // 默认值
+        },
+        success: function(res) {
+          if(res.data.isOk==true){
+            wx.showToast({
+              title: '删除成功',
+              icon: 'success',
+              duration: 2000,
+            })
+          }else {
+            wx.showToast({
+              title: '删除失败',
+              icon: 'fail',
+              duration: 2000
+            })
+          }
+        }
+    })
+    }
+
+
+
     console.log('addressList'+this.data.addressList);
     //删除本地缓存
     //console.log("删除本地地址")
@@ -45,44 +125,7 @@ Page({
       })
       wx.setStorageSync('addressList', []);
     }
-    const app = getApp();
-    console.log("======地址删除======");
-    console.log('aid:'+this.data.addressList[0]);
-    console.log(this.data.addressList);
-    console.log('uid: '+app.globalData.openid);
-    console.log('username: '+this.data.addressList.consignee);
-    console.log("======地址删除======");
-    //删除后台
-    //console.log("删除后台地址")
-    var that = this
-    wx.request({
-      url: "https://xcx.zxcwxy999.xyz/" + '/address/'+this.data.addressList[0]+'/delete',// 暂存疑问 address/{aid}/delete 
-      data: {
-        aid:this.data.addressList[0],
-        uid: app.globalData.openid,
-        username:this.data.addressList.consignee
-      },
-      method: "DELETE",
-      header: {
-        Authorization: wx.getStorageSync("token"),
-        'content-type': 'application/json' // 默认值
-      },
-      success: function(res) {
-        if(res.data.isOk==true){
-          wx.showToast({
-            title: '删除成功',
-            icon: 'success',
-            duration: 2000,
-          })
-        }else {
-          wx.showToast({
-            title: '删除失败',
-            icon: 'fail',
-            duration: 2000
-          })
-        }
-      }
-  })
+
 },
 
   //===========================================

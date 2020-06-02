@@ -7,9 +7,9 @@
     bind:click="returnAdder"
   /> -->
 
-  <view class="cel" bindtap="returnAdder" wx:for='{{addressList}}' id='{{item.address}}'>
-    <view>{{item.value}} {{item.phone}}</view>
-    <view>{{item.address}}</view>
+  <view class="cel" bindtap="returnAdder" wx:for='{{addressList}}' id='{{item.province_Name}}{{item.city_Name}}{{item.area_Name}}{{item.address}}'>
+    <view>{{item.name}} {{item.phone}}</view>
+    <view>{{item.province_Name}}{{item.city_Name}}{{item.area_Name}}{{item.address}}</view>
   </view>
 
   

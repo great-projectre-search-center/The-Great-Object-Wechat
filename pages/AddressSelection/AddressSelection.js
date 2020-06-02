@@ -28,23 +28,7 @@ Page({
     adder1:'河北省 秦皇岛市 海港区 河北大街',
     addresschoseId:'',
     //演示
-    addressList: [
-      {
-            id: 11,
-            value: '张三',
-            phone:'176033670333',
-            address:'河北省 秦皇岛市 海港区 河北大街'
-      }, {
-            id: 12,
-            value: '李四',
-            phone:'176033670333',
-            address:'河北省 秦皇岛市 海港区 河北大街'
-      }, {
-            id: 13,
-            value: '王五',phone:'176033670333',
-            address:'河北省 秦皇岛市 海港区 河北大街'
-      }
-    ]
+    addressList: []
   },
 
   returnAdder:function(e){
@@ -106,15 +90,17 @@ Page({
     var that = this
     const app = getApp();
     wx.request({
-      url: "https://xcx.zxcwxy999.xyz/"+'/address',
+      url: app.globalData.baseurl+'/address',
       data: {
-        uid : app.globalData.openid
+        uid:app.globalData.openid 
+        //uid:'oV9m45ZWd78bxVNruy06vOmQCvX0',
       },
       method: "GET",
       header: {
         'content-type': 'application/json' // 默认值
       },
       success: function(res) {
+        console.log(res)
         that.setData({
             addressList:res.data
           })

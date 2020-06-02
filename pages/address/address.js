@@ -216,6 +216,7 @@ Page({
     var cityName = e.detail.value.cityName;
     var countyName = e.detail.value.countyName;
     var address = e.detail.value.address;
+    var aid = Math.round(Math.random()*100);
 
     console.log(transportDay + "," + provinceName + "," + cityName + "," + countyName + "," + address); //输出该文本 
     
@@ -224,20 +225,27 @@ Page({
 
     const app = getApp();
     console.log("======地址新增======");
-    console.log('address: '+provinceName+'|'+cityName + '|' + countyName + '|' + address);
+    console.log('address: '+provinceName+'|'+cityName + '|' + countyName + '|' + address+'|'+mobile);
     console.log('uid: '+app.globalData.openid);
     console.log('username: '+consignee);
     console.log("======地址新增======");
 
     //添加地址
     wx.request({
-      url: "https://xcx.zxcwxy999.xyz/"+'/address/addNew', 
+      url: app.globalData.baseurl+'/address/addNew', 
       method:'POST',
       data: {
-        address:cityName + ',' + countyName + ',' + address,//Address 是个啥类型
+        aid:aid,
         uid:app.globalData.openid,
-        username:consignee
+        username:consignee,
+        name:consignee,
+        phone:mobile,
+        province_Name:provinceName,
+        city_Name:cityName,
+        area_Name:countyName,
+        address:address
       },
+      
       header: {
         'content-type': 'application/json' // 默认值
       },
@@ -255,7 +263,8 @@ Page({
       consignee: consignee,
       mobile: mobile,
       address: provinceName + cityName + countyName + address,
-      transportDay: transportDay
+      transportDay: transportDay,
+      aid:aid
     }
     arr.push(addressList);
     wx.setStorageSync('addressList', arr);
