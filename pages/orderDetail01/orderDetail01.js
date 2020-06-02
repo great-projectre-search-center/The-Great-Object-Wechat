@@ -4,16 +4,34 @@ Page({
 
   /**
    * 页面的初始数据
+   * 数据传到这一页
    */
   data: {
-
+    address:"",
+    name:"",
+    order_number:"",
+    time:"",
+    sorce:"",
+    contactMe:"",
+    detime:"",
+    id:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      id:options.id,
+      address:options.address,
+      name:options.name,
+      order_number:options.order_number,
+      time:options.time,
+      sorce:options.sorce,
+      contactMe:options.contactMe,
+      detime:options.detime,
+    })
+    console.log(options)
   },
 
   /**

@@ -5,11 +5,13 @@
         <!--订单框-->
         <view class="myborder">
           <!--订单1-->
-          <view class="mycard">
-            <navigator url="../orderDetail01/orderDetail01">
-              <view wx:if="{{item.accepter_Id==openid}}">
+          <view class="mycard" >
+            <!-- <navigator url="../orderDetail01/orderDetail01?id={{id}}&address={{address}}&name={{name}}&order_number={{order_number}}&time={{time}}&sorce={{sorce}}&contactMe={{contactMe}}&detime={{detime}}"> -->
+              <view wx:if="{{item.accepter_Id==openid}}" >
                 
               <van-card
+                id="{{item.create_Date}}#{{item.reward}}#{{item.oid}}#{{item.creater_Latitude}}#{{item.creater_Longtitude}}"
+                bindtap="wxnavigator"
                 num="1"
                 price="{{item.reward}}"
                 tag="我的接单"
@@ -20,6 +22,8 @@
             </view>
             <view wx:else>
               <van-card
+              id="{{item.create_Date}}#{{item.reward}}#{{item.oid}}#{{item.creater_Latitude}}#{{item.creater_Longtitude}}"
+                bindtap="wxnavigator"
                 num="1"
                 price="{{item.reward}}"
                 desc="{{item.catalog}}"
@@ -27,7 +31,7 @@
                 >
               </van-card>
             </view>
-            </navigator>
+            <!-- </navigator> -->
           </view>
           <!--按钮-->
           <view wx:if="{{item.status==0}}" slot="footer" class="mybutton">        
@@ -57,9 +61,11 @@
         <view class="myborder">
           <!--订单1-->
           <view class="mycard">
-            <navigator url="../orderDetail01/orderDetail01">
+            <!-- <navigator url="../orderDetail01/orderDetail01"> -->
               <view wx:if="{{item.accepter_Id==openid}}">
               <van-card
+              id="{{item.create_Date}}#{{item.reward}}#{{item.oid}}#{{item.creater_Latitude}}#{{item.creater_Longtitude}}"
+                bindtap="wxnavigator"
                 num="1"
                 price="{{item.reward}}"
                 tag="我的接单"
@@ -70,6 +76,8 @@
             </view>
             <view wx:else>
               <van-card
+              id="{{item.create_Date}}#{{item.reward}}#{{item.oid}}#{{item.creater_Latitude}}#{{item.creater_Longtitude}}"
+                bindtap="wxnavigator"
                 num="1"
                 price="{{item.reward}}"
                 desc="{{item.catalog}}"
@@ -77,7 +85,7 @@
                 >
               </van-card>
             </view>
-            </navigator>
+            <!-- </navigator> -->
           </view>
           <!--按钮-->
           <view slot="footer" class="mybutton">
@@ -102,9 +110,11 @@
         <view class="myborder">
           <!--订单1-->
           <view class="mycard">
-            <navigator url="../orderDetail01/orderDetail01">
+            <!-- <navigator url="../orderDetail01/orderDetail01"> -->
               <view wx:if="{{item.accepter_Id==openid}}">
               <van-card
+              id="{{item.create_Date}}#{{item.reward}}#{{item.oid}}#{{item.creater_Latitude}}#{{item.creater_Longtitude}}"
+                bindtap="wxnavigator"
                 num="1"
                 price="{{item.reward}}"
                 tag="我的接单"
@@ -115,6 +125,8 @@
             </view>
             <view wx:else>
               <van-card
+              id="{{item.create_Date}}#{{item.reward}}#{{item.oid}}#{{item.creater_Latitude}}#{{item.creater_Longtitude}}"
+              bindtap="wxnavigator"
                 num="1"
                 price="{{item.reward}}"
                 desc="{{item.catalog}}"
@@ -122,7 +134,7 @@
                 >
               </van-card>
             </view>
-            </navigator>
+            <!-- </navigator> -->
           </view>
           <!--按钮-->
           <view slot="footer" class="mybutton">
@@ -147,9 +159,11 @@
         <view class="myborder">
           <!--订单1-->
           <view class="mycard">
-            <navigator url="../orderDetail01/orderDetail01">
+            <!-- <navigator url="../orderDetail01/orderDetail01"> -->
               <view wx:if="{{item.accepter_Id==openid}}">
               <van-card
+              id="{{item.create_Date}}#{{item.reward}}#{{item.oid}}#{{item.creater_Latitude}}#{{item.creater_Longtitude}}"
+                bindtap="wxnavigator"
                 num="1"
                 price="{{item.reward}}"
                 tag="我的接单"
@@ -160,13 +174,15 @@
             </view>
             <view wx:else>
               <van-card
+              id="{{item.create_Date}}#{{item.reward}}#{{item.oid}}#{{item.creater_Latitude}}#{{item.creater_Longtitude}}"
+                bindtap="wxnavigator"
                 num="{{item.reward}}"
                 desc="{{item.catalog}}"
                 title="{{item.title}}"   
                 >
               </van-card>
             </view>
-            </navigator>
+            <!-- </navigator> -->
           </view>
           <!--按钮-->
           <view slot="footer" class="mybutton">
