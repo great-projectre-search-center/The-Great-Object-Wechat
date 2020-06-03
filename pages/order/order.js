@@ -1,4 +1,12 @@
 // pages/file/file.js
+// 引入SDK核心类
+var QQMapWX = require('../../libs/qqmap-wx-jssdk.js');
+ 
+// 实例化API核心类
+var qqmapsdk = new QQMapWX({
+    key: 'LQXBZ-ZSFWG-AGDQ3-IXFEB-ULEOV-QHBH7' 
+});  
+
 var app = getApp();
 Page({
 
@@ -10,17 +18,75 @@ Page({
     userInfo:{},
     hasUserInfo:false,
     openid:"",
-    order1:[],
-    order2:[],
-    order3:[],
-    order4:[],
+    order1:[],//全部
+    order2:[],//未接
+    order3:[],//已接
+    order4:[],//已收货
     nums1: '1',
     nums2: '1',
     nums3: '1',
     active: '0',
-    swipeable: 'true'
+    swipeable: 'true',
+
+    id:"测试",
+    address:"地点",
+    name:"姓名",
+    order_number:"订单编号",
+    time:"下单时间",
+    sorce:"积分",
+    contactMe:"联系我",
+    detime:"截止时间",
+    creater_Latitude:0,
+    creater_Longitude:0
+
+  },
+  wxnavigator:function(e){
+    
+    qqmapsdk.reverseGeocoder({
+       //Object格式
+        location: {
+          latitude:this.data.creater_Latitude,
+          longitude: this.data.creater_Longitude
+        },
+      /**
+       *
+       //String格式
+        location: '39.984060,116.307520',
+      */
+      //location: e.detail.value.reverseGeo || '', //获取表单传入的位置坐标,不填默认当前位置,示例为string格式
+      get_poi: 0, //是否返回周边POI列表：1.返回；0不返回(默认),非必须参数
+      success: function(res) {//成功后的回调
+        console.log(res);
+        
 
 
+
+      },
+      fail: function(error) {
+        console.error(error);
+      },
+      complete: function(res) {
+        console.log(res);
+      }
+    })
+
+    //=========================
+    console.log("zhe")
+    console.log(this.data.order1)
+    console.log(e)
+    console.log(e.target.id)
+    var s = e.target.id;
+    var ss = s.split("#")
+    console.log(ss)
+    this.setData({
+      time:ss[0],
+      sorce:ss[1],
+      order_number:ss[2]
+
+    })
+    wx.navigateTo({
+      url: '../orderDetail01/orderDetail01?id='+this.data.id+'&address='+this.data.address+'&name='+this.data.name+'&order_number='+this.data.order_number+'&time='+this.data.time+'&sorce='+this.data.sorce+'&contactMe='+this.data.contactMe+'&detime='+this.data.detime
+    })
   },
   //取消订单
   cancel:function(e){
@@ -121,6 +187,7 @@ Page({
         Authorization:wx.getStorageSync('token')
       },
       success:function(res){
+        console.log(res)
         if(pageIndex==1){
           that.setData({
             order1:res.data  
@@ -256,6 +323,19 @@ Page({
     this.list_idstatus2(1)
     this.list_idstatus3(1)
     this.list_idstatus4(1)
+
+//=============== 进行赋值 ===================
+    var s = e.target.id;
+    var ss = s.split("#")
+    console.log(ss)
+    this.setData({
+      time:ss[0],
+      sorce:ss[1],
+      order_number:ss[2],
+      creater_Latitude:ss[3],//lat
+      creater_Longitude:ss[4]//long
+    })
+    
   },
 
 

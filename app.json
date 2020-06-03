@@ -2,6 +2,7 @@
   "pages": [
     
     "pages/index/index",
+    "pages/indextest/indextest",
     "pages/clickSwiper/clickSwiper",
     "pages/messageDetails/messageDetails",
     "pages/AddressSelection/AddressSelection",
