@@ -444,6 +444,14 @@ Page({
     })
     console.log("====================")
     console.log(this.data.time)
+    console.log(s)
+    console.log(s)
+    console.log("order1")
+    console.log(this.data.order1)
+    console.log("order2")
+    console.log(this.data.order2)
+    console.log("order3")
+    console.log(this.data.order)
     console.log("====================")
 
 
@@ -484,7 +492,7 @@ Page({
     })
 
     //=========================
-    console.log("zhe")
+    console.log("order1")
     console.log(this.data.order1)
     console.log(e)
     console.log(e.target.id)
@@ -498,7 +506,7 @@ Page({
       creater_Latitude:ss[3],//lat
       creater_Longitude:ss[4],//long
       detime:ss[5],//
-      contactMess:[6],//
+      contactMe:ss[6],//
 
     })
     console.log(this.data.time)
