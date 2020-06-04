@@ -39,7 +39,7 @@ Page({
         creater_Id:this.data.openid,
         creater_Name:this.data.username,
         creater_Tel:this.data.phone,
-        creater_Longtitude:this.data.addressId.split(',')[0], //后期需要修改
+        creater_Longitude:this.data.addressId.split(',')[0], //后期需要修改
         creater_Latitude:this.data.addressId.split(',')[1],  //后期需要修改
         accepter_Id:"1",    //为空
         create_Date:new Date(),
@@ -81,6 +81,8 @@ Page({
           }
         },
       })
+      var tt = this.data.addressId.split(',')[0];
+      console.log('这个'+tt)
     },
 
 

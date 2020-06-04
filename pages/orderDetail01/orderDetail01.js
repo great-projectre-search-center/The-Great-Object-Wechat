@@ -7,7 +7,7 @@ Page({
    * 数据传到这一页
    */
   data: {
-    address:"",
+    NameAdress:"",
     name:"",
     order_number:"",
     time:"",
@@ -21,10 +21,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    for (var i = 0; i < 5; i++) { 
+      this.onShow()
+   }
+    console.log(options)
     this.setData({
-      id:options.id,
-      address:options.address,
+      
       name:options.name,
+      NameAdress:options.address,
       order_number:options.order_number,
       time:options.time,
       sorce:options.sorce,
@@ -38,14 +42,13 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**
@@ -66,7 +69,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    this.onShow()
   },
 
   /**
