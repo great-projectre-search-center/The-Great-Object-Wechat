@@ -40,36 +40,104 @@ Page({
     creater_Longitude:"0"
 
   },
+
   //取消订单
   cancel:function(e){
+    console.log(e.currentTarget.dataset.oid+"")
     var that=this
-    wx.request({
-      url: app.globalData.baseurl+'/order/cancel',
-      data:{
-        id:""+e.currentTarget.dataset.oid,
-      },
-      method:'POST',
-      header:{
-        Authorization:wx.getStorageSync('token')
-      },
-      success:function(res){
-        if(res.data.isOk===true){
-          wx.showToast({
-            title: '取消成功',
-            icon: 'success',
-            duration: 2000,
+
+
+    // //再次确认
+    // wx.showModal({
+    //   title: '提示',
+    //   content: '是否确认取消订单',
+    //   success: function (res) {
+    //     if (res.confirm) {//确定
+    //       console.log('用户点击确定')
+
+          
+    //     } else {//取消
+
+    //       console.log('用户点击取消')
+    //     }
+    //   }
+    // })
+
+
+    //再次确认
+    wx.showModal({
+      title: '提示',
+      content: '是否确认取消订单',
+      success: function (res) {
+        if (res.confirm) {//确定
+          console.log('确定取消')
+          wx.request({
+            url: app.globalData.baseurl+'/order/cancel',
+            data:{
+              id:""+e.currentTarget.dataset.oid,
+            },
+            method:'POST',
+            header:{
+              Authorization:wx.getStorageSync('token')
+            },
+            success:function(res){
+              console.log("requset取消成功")
+              console.log(res)
+              if(res.data.isOk===true){
+      
+                wx.showToast({
+                  title: '取消成功',
+                  icon: 'success',
+                  duration: 2000,
+                })
+              }else {
+                wx.showToast({
+                  title: '取消失败',
+                  duration: 2000
+                })
+              }
+            },
           })
-        }else {
-          wx.showToast({
-            title: '取消失败',
-            duration: 2000
-          })
+          
+        } else {//取消
+
+          console.log('用户点击取消')
         }
-      },
+      }
     })
+
+
+    // wx.request({
+    //   url: app.globalData.baseurl+'/order/cancel',
+    //   data:{
+    //     id:""+e.currentTarget.dataset.oid,
+    //   },
+    //   method:'POST',
+    //   header:{
+    //     Authorization:wx.getStorageSync('token')
+    //   },
+    //   success:function(res){
+    //     console.log("requset取消成功")
+    //     console.log(res)
+    //     if(res.data.isOk===true){
+
+    //       wx.showToast({
+    //         title: '取消成功',
+    //         icon: 'success',
+    //         duration: 2000,
+    //       })
+    //     }else {
+    //       wx.showToast({
+    //         title: '取消失败',
+    //         duration: 2000
+    //       })
+    //     }
+    //   },
+    // })
   },
   //确认订单
   confirm:function(e){
+    console.log(e)
     var that=this
     wx.request({
       url: app.globalData.baseurl+'/order/receive',
@@ -81,6 +149,7 @@ Page({
         Authorization:wx.getStorageSync('token')
       },
       success:function(res){
+        console.log("requset确认成功")
         if(res.data.isOk===true){
           wx.showToast({
             title: '确认成功',
@@ -98,6 +167,7 @@ Page({
   },
   //删除订单
   delete:function(e){
+    console.log(e)
     var that=this
     wx.request({
       url: app.globalData.baseurl+'/order/delete',
@@ -109,7 +179,9 @@ Page({
         Authorization:wx.getStorageSync('token')
       },
       success:function(res){
-        if(res.data.isOk===true){
+        var aa = res.data
+        console.log("requset删除成功")
+        if(aa.isOk===true){
           wx.showToast({
             title: '删除成功',
             icon: 'success',
