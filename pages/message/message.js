@@ -28,8 +28,10 @@ Page({
         Authorization:wx.getStorageSync('token')
       },
       success:function(res){
+        console.log('messages')
+        console.log(res.data)
           that.setData({
-            messages:res.data
+            messages:res.data//
           })
       },
     })

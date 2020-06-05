@@ -7,14 +7,16 @@
 
 
 
-<!-- 内容 -->
+<!-- 内容 wx-for -->
 <view class="body">
+  <view>{{textHead}}</view>
   <view>{{textDetail}}</view>
+  <view>{{time}}</view>
 </view>
 
 
 <!-- 底部 -->
 <view style="position:fixed;bottom:0;width:100%;">
-    <button class="btn">回复</button>
+    <button class="btn" bindtap="getnotification">回复</button>
     <button class="btn">删除</button>
 </view>

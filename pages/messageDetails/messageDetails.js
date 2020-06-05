@@ -7,6 +7,7 @@ Page({
   data: {
     message:{},
     sendmessage:{},
+
   },
   ltap: function (e) {
     this.setData({
@@ -42,6 +43,10 @@ Page({
           })
       },
     })
+
+    console.log(that.data)
+    console.log("===========++++++++++++++++++++++")
+    
   },
   /**
    * 发送一条通知
@@ -83,6 +88,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+
+
+    //传值
     var textHead=options.textHead
     var fromopenid=options.fromopenid
     var textDetail=options.textDetail
@@ -107,6 +116,29 @@ Page({
         }
       })
     }
+
+    
+    wx.request({
+      url: app.globalData.baseurl+'/notification/'+app.globalData.openid+'/getnotification/'+notificationid,
+      data:{
+        
+      },
+      method:'GET',
+      header:{
+        Authorization:wx.getStorageSync('token')
+      },
+      success:function(res){
+          that.setData({
+            textHead:res.data.title,
+            textDetail:res.data.message,
+            time:res.data.createTime
+          })
+      },
+    })
+
+    console.log(that.data)
+    console.log("===========++++++++++++++++++++++")
+
   },
 
   

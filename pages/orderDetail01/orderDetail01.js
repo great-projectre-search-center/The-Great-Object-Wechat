@@ -14,34 +14,36 @@ Page({
     sorce:"",
     contactMe:"",
     detime:"",
-    id:""
+    id:"",
+    address:"",
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    for (var i = 0; i < 5; i++) { 
-      this.onShow()
-   }
-    console.log(options)
+
+    var op =  options
+    console.log(op.address)
     this.setData({
       
-      name:options.name,
-      NameAdress:options.address,
-      order_number:options.order_number,
-      time:options.time,
-      sorce:options.sorce,
-      contactMe:options.contactMe,
-      detime:options.detime,
+      //name:options.name,
+      NameAdress:op.address,
+      order_number:op.order_number,
+      time:op.time,
+      sorce:op.sorce,
+      contactMe:op.contactMe,
+      detime:op.detime,
     })
-    console.log(options)
+    //console.log(options)
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    this.onLoad()
   },
 
   /**
