@@ -7,6 +7,10 @@ Page({
   data: {
     message:{},
     sendmessage:{},
+    baseurl: "",
+    textHead:"",
+    fromopenid:"",
+    textDetail:""
 
   },
   ltap: function (e) {
@@ -21,6 +25,10 @@ Page({
     param[string] = 'none';
     this.setData(param);
   },
+  conlog:function(){
+    console.log(this.data)
+  }
+  ,
   /**
    * 获取一条通知
    */
@@ -96,8 +104,12 @@ Page({
     var fromopenid=options.fromopenid
     var textDetail=options.textDetail
     this.setData({
-      baseurl: app.globalData.baseurl
+      //baseurl: baseurl,
+      textHead:textHead,
+      fromopenid:fromopenid,
+      textDetail:textDetail
     })
+    console.log(this.data)
 
     var that = this
     if (wx.getStorageSync("hasuserinfo") == true) {   //本地缓存中已经授权成功

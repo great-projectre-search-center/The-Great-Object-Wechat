@@ -33,6 +33,7 @@ Page({
     },
     create:function(e){
       var that=this
+      var index = that.data.index
       var order={
         title:this.data.biaoti,
         catalog:"帮我取",
@@ -44,7 +45,7 @@ Page({
         accepter_Id:"1",    //为空
         create_Date:new Date(),
         accept_Date:"",   //为空
-        public_field1:this.data.arraycompany[0],
+        public_field1:this.data.arraycompany[index],//快递公式
         public_field2:this.data.danhao,
         estimated_Worth:50*(this.data.value+1),
         remark: this.data.beizhu,
@@ -73,6 +74,12 @@ Page({
               icon: 'success',
               //duration: 2000,
             })
+
+            //此时的逻辑应该是转跳页面
+            wx.switchTab({
+              url: '../../pages/index/index'
+            })
+            
           }else if(aa.isOK!==true){
 
             wx.showToast({
@@ -82,8 +89,7 @@ Page({
           }
         },
       })
-      var tt = this.data.addressId.split(',')[0];
-      console.log('这个'+tt)
+      
     },
 
 
