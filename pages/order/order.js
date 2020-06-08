@@ -162,6 +162,40 @@ Page({
               Authorization:wx.getStorageSync('token')
             },
             success:function(res){
+
+              //此时应当添加积分
+              /*
+              private String open_Id; //用户的id
+              private Date date;//时间
+              private String matter;//事情
+              private int changed;//变化
+              private int reward;//剩余积分
+              */
+
+             var reward={
+              open_Id:"", //用户的id
+              date:"",//时间
+              matter:"",//事情
+              changed:"",//变化
+              reward:100,//剩余积分
+              
+            }
+
+              wx.request({
+                url: app.globalData.baseurl+'/change',
+                data:{
+                  reward:reward,
+                },
+                method:'POST',
+                header:{
+                  Authorization:wx.getStorageSync('token')
+                },
+                success:function(res){
+                  console.log("积分相关")
+                  console.log(res)
+
+                },
+              })
               var aa = res.data
               console.log("requset确认成功")
               console.log(aa)

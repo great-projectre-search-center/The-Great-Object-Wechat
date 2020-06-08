@@ -17,17 +17,20 @@ Page({
   getlast:function(){
     var that=this
     wx.request({
+      //app.globalData.openid
       url: app.globalData.baseurl+'/reward/'+app.globalData.openid+'/getlast',
       method:'GET',
       header:{
         Authorization:wx.getStorageSync('token')
       },
       success:function(res){
+        console.log(res)
           that.setData({
             soc:res.data.reward
           })
       }
     })
+    console.log(wx.getStorageSync('token'))
   },
   geshihua:function(data){
     alert(data)

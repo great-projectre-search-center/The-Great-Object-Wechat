@@ -80,8 +80,8 @@ Page({
       },
       success:function(res){
         var aa = res.data
-        console.log(aa)
-        if(aa.isOK == true){
+        console.log(aa.isOK.created_Time)
+        if(aa.isOK.created_Time){
           wx.showToast({
             title: '接单成功',
             icon: 'success',
@@ -89,7 +89,7 @@ Page({
           })
         }else {
           wx.showToast({
-            title: '接单成功',//此处返回值也为nil
+            title: '接单失败',//此处返回值也为nil
             duration: 2000
           })
         }
