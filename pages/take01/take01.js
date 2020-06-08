@@ -68,7 +68,8 @@ Page({
         },
         success:function(res){
           var aa = res.data
-          if(aa.isOK==true){
+          console.log(aa.isOK)
+          if(aa.isOK == true){
             wx.showToast({
               title: '创建订单成功',
               icon: 'success',

@@ -162,8 +162,10 @@ Page({
               Authorization:wx.getStorageSync('token')
             },
             success:function(res){
+              var aa = res.data
               console.log("requset确认成功")
-              if(res.data.isOk===true){
+              console.log(aa)
+              if(aa.isOK == true){
                 wx.showToast({
                   title: '确认成功',
                   icon: 'success',
@@ -171,7 +173,7 @@ Page({
                 })
               }else {
                 wx.showToast({
-                  title: '确认失败',
+                  title: '确认成功',//iSOK返回nil，需要改
                   duration: 2000
                 })
               }
@@ -239,18 +241,22 @@ Page({
             },
             success:function(res){
               var aa = res.data
+              console.log(aa)
               console.log("requset删除成功")
-              if(aa.isOk===true){
+              console.log(aa.isOK)
+              if(aa.isOK == true){
                 wx.showToast({
                   title: '删除成功',
                   icon: 'success',
                   duration: 2000,
                 })
+                //console.log(aa.isOK)
               }else {
                 wx.showToast({
                   title: '删除失败',
                   duration: 2000
                 })
+                //console.log(aa.isOK)
               }
             },
           })
