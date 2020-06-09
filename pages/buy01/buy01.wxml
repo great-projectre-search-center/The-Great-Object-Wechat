@@ -15,8 +15,8 @@
         
       />
       <van-field
-      bindinput="danhaoInput"
-      value="{{ danhao }}"
+      bindinput="arraycompanyInput"
+      value="{{ arraycompany }}"
       label="商家名称："
       placeholder="填写您购买的商家名称"
       bind:click-icon="onClickIcon"
@@ -106,7 +106,7 @@
   
 
 <view class="sub">
-  <button class="sub" type="commit" bindtap="sub">提交</button>
+  <button class="sub" type="commit" bindtap="create">提交</button>
 </view>
 
 <!--/form-->

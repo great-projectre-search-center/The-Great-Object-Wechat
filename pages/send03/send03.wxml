@@ -14,16 +14,14 @@
         bind:click-icon="onClickIcon"
         
       />
-      <view class="border01">
-        <view class="section">
-          <picker bindchange="bindDeliveryChange" value="{{index}}" range="{{arraycompany}}">
-            <view class="picker">
-            物品类型
-            </view>
-            <view class="xuanze">{{arraycompany[index]}}</view>
-          </picker>
-        </view>
-      </view>
+      <van-field
+      bindinput="arraycompanyInput"
+      value="{{ areraycompany }}"
+      label="物品类型："
+      placeholder="填写物品类型"
+      bind:click-icon="onClickIcon"
+      
+    />
     </van-cell-group>
   </view>
   
@@ -109,7 +107,7 @@
   
 
 <view class="sub">
-  <button class="sub" type="commit" bindtap="sub">提交</button>
+  <button class="sub" type="commit" bindtap="create">提交</button>
 </view>
 
 <!--/form-->

@@ -16,8 +16,8 @@
       />
 
       <van-field
-        bindinput="biaotiInput"
-        value="{{ biaoti }}"
+        bindinput="arraycompanyInput"
+        value="{{ arraycompany }}"
         label="物品类型："
         placeholder="填写所需物品类型"
         bind:click-icon="onClickIcon"
@@ -93,7 +93,7 @@
 
   <van-cell
     is-link
-    title="代理点位置"
+    title="商家位置"
     link-type="navigateTo"
     url="/pages/MapPointSelection/MapPointSelection"
     
@@ -118,7 +118,7 @@
   
 
 <view class="sub">
-  <button class="sub" type="commit" bindtap="sub">提交</button>
+  <button class="sub" type="commit" bindtap="create">提交</button>
 </view>
 
 <!--/form-->

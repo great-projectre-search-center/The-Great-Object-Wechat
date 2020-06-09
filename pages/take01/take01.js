@@ -36,12 +36,16 @@ Page({
       var index = that.data.index
       var order={
         title:this.data.biaoti,
-        catalog:"帮我取",
+        catalog:"取快递",
         creater_Id:this.data.openid,
         creater_Name:this.data.username,
         creater_Tel:this.data.phone,
+
         creater_Longitude:this.data.addressId.split(',')[0], //后期需要修改
         creater_Latitude:this.data.addressId.split(',')[1],  //后期需要修改
+        shops_Longtitude:this.data.storeAddress.split(',')[0], //后期需要修改
+        shops_Latitude:this.data.storeAddress.split(',')[1],  //后期需要修改
+
         accepter_Id:"1",    //为空
         create_Date:new Date(),
         accept_Date:"",   //为空
@@ -73,12 +77,7 @@ Page({
             wx.showToast({
               title: '创建订单成功',
               icon: 'success',
-              //duration: 2000,
-            })
-
-            //此时的逻辑应该是转跳页面
-            wx.switchTab({
-              url: '../../pages/index/index'
+              duration: 2000,
             })
             
           }else if(aa.isOK!==true){
@@ -88,6 +87,11 @@ Page({
               duration: 2000
             })
           }
+          setTimeout(function () {
+            wx.reLaunch({
+              url: '../../pages/index/index',
+            })
+          }, 2000)
         },
       })
       

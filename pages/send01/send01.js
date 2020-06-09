@@ -6,16 +6,85 @@ Page({
      * 页面的初始数据
      */ 
     data: {
-      arraycompany: ['京东快递', '顺丰快递','中通快递', '申通快递', '韵达快递','圆通快递','天天快递','邮政','百世快递'],
+      addressId:"",
+      storeAddress:"",
+      biaoti:"",
+      arraycompany: "",
       index: 0,
       arrayvalue: ['1-50', '51-100', '101-150', '151-200', '201-300', '301-500', '>500'],
       value: 0,
       date: '2016-09-01',
       time: '12:01',
-    
+      openid:"",
       checked: true,
       phone:'',
-      username:''
+      username:'',
+      danhao:"",
+      
+    },
+    create:function(e){
+      var that=this
+      var index = that.data.index
+      var order={
+        title:this.data.biaoti,
+        catalog:"送文件",
+        creater_Id:this.data.openid,
+        creater_Name:this.data.username,
+        creater_Tel:this.data.phone,
+
+        creater_Longitude:this.data.addressId.split(',')[0], //后期需要修改
+        creater_Latitude:this.data.addressId.split(',')[1],  //后期需要修改
+        shops_Longtitude:this.data.storeAddress.split(',')[0], //后期需要修改
+        shops_Latitude:this.data.storeAddress.split(',')[1],  //后期需要修改
+
+        accepter_Id:"1",    //为空
+        create_Date:new Date(),
+        accept_Date:"",   //为空
+        public_field1:"",
+        public_field2:"",
+        estimated_Worth:50*(this.data.value+1),
+        remark: this.data.beizhu,
+        aid: "",  //为空
+        reward:10,  //后期需要修改
+        status:0,
+        created_User:this.data.openid,
+      }
+      console.log(order)
+      wx.request({
+        url: app.globalData.baseurl+'/order/edit',
+        data:
+          // order:{sdf:"sadf"}
+          order
+          // :that.order
+        ,
+        method:'POST',
+        header:{
+          Authorization:wx.getStorageSync('token')
+        },
+        success:function(res){
+          var aa = res.data
+          console.log(aa.isOK)
+          if(aa.isOK == true){
+            wx.showToast({
+              title: '创建订单成功',
+              icon: 'success',
+              duration: 2000,
+            })
+            
+          }else if(aa.isOK!==true){
+
+            wx.showToast({
+              title: '添加失败',
+              duration: 2000
+            })
+          }
+          setTimeout(function () {
+            wx.reLaunch({
+              url: '../../pages/index/index',
+            })
+          }, 2000)
+        },
+      })
       
     },
   //选择快递公司的点击事件
@@ -88,30 +157,15 @@ Page({
       }
     })
   },
-  sub: function (e) {
-    console.log("请求")
-    wx.request({
-      url: 'test.php',
-      data: {
-        username: 'username',
-        phone: 'phone',
-        type1:'',
-        type2: ''
-      },
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success(res) {
-        console.log(res.data)
-      }
-    })
-  },
+
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-      
+      this.setData({
+        openid:app.globalData.openid
+      })
     },
 
     /**
