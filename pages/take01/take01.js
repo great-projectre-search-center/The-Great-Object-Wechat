@@ -33,18 +33,19 @@ Page({
     },
     create:function(e){
       var that=this
+      var index = that.data.index
       var order={
         title:this.data.biaoti,
         catalog:"帮我取",
         creater_Id:this.data.openid,
         creater_Name:this.data.username,
         creater_Tel:this.data.phone,
-        creater_Longtitude:this.data.addressId.split(',')[0], //后期需要修改
+        creater_Longitude:this.data.addressId.split(',')[0], //后期需要修改
         creater_Latitude:this.data.addressId.split(',')[1],  //后期需要修改
         accepter_Id:"1",    //为空
         create_Date:new Date(),
         accept_Date:"",   //为空
-        public_field1:this.data.arraycompany[1],
+        public_field1:this.data.arraycompany[index],//快递公式
         public_field2:this.data.danhao,
         estimated_Worth:50*(this.data.value+1),
         remark: this.data.beizhu,
@@ -66,14 +67,22 @@ Page({
           Authorization:wx.getStorageSync('token')
         },
         success:function(res){
-          console.log(res.data.isOk)
-          if(res.data.isOk){
+          var aa = res.data
+          console.log(aa.isOK)
+          if(aa.isOK == true){
             wx.showToast({
               title: '创建订单成功',
               icon: 'success',
-              duration: 2000,
+              //duration: 2000,
             })
-          }else if(res.data.isOk!==true){
+
+            //此时的逻辑应该是转跳页面
+            wx.switchTab({
+              url: '../../pages/index/index'
+            })
+            
+          }else if(aa.isOK!==true){
+
             wx.showToast({
               title: '添加失败',
               duration: 2000
@@ -81,13 +90,14 @@ Page({
           }
         },
       })
+      
     },
 
 
 
   //选择快递公司的点击事件
   bindDeliveryChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
+    console.log('picker发送选择改变，携带值为', e.detail.value)//
     this.setData({
       index: e.detail.value
     })

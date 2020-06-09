@@ -1,7 +1,7 @@
 <view class="border01">
   <view class="detail01">
     <van-cell-group>
-      <van-cell icon="location" title="配送地址 " value="{{name}}" label="{{adress}}" border="{{ false }}" />
+      <van-cell icon="location" title="配送地址 " value="{{NameAdress}}" label="{{adress}}" border="{{ false }}" />
     </van-cell-group>
   </view>
 </view>

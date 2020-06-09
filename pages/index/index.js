@@ -79,7 +79,9 @@ Page({
         Authorization:wx.getStorageSync('token')
       },
       success:function(res){
-        if(res.data.isOk===true){
+        var aa = res.data
+        console.log(aa.isOK.created_Time)
+        if(aa.isOK.created_Time){
           wx.showToast({
             title: '接单成功',
             icon: 'success',
@@ -87,12 +89,13 @@ Page({
           })
         }else {
           wx.showToast({
-            title: '接单失败',
+            title: '接单失败',//此处返回值也为nil
             duration: 2000
           })
         }
       },
     })
+    that.onLoad()
   },
 
   //点击弹出框

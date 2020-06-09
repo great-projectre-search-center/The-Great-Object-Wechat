@@ -7,45 +7,50 @@ Page({
    * 数据传到这一页
    */
   data: {
-    address:"",
+    NameAdress:"",
     name:"",
     order_number:"",
     time:"",
     sorce:"",
     contactMe:"",
     detime:"",
-    id:""
+    id:"",
+    address:"",
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    var op =  options
+    console.log(op.address)
     this.setData({
-      id:options.id,
-      address:options.address,
-      name:options.name,
-      order_number:options.order_number,
-      time:options.time,
-      sorce:options.sorce,
-      contactMe:options.contactMe,
-      detime:options.detime,
+      
+      //name:options.name,
+      NameAdress:op.address,
+      order_number:op.order_number,
+      time:op.time,
+      sorce:op.sorce,
+      contactMe:op.contactMe,
+      detime:op.detime,
     })
-    console.log(options)
+    //console.log(options)
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    this.onLoad()
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**
@@ -66,7 +71,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    this.onShow()
   },
 
   /**

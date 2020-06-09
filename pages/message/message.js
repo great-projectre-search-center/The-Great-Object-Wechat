@@ -2,7 +2,7 @@
 var app = getApp();
 Page({
   /**
-   * 页面的初始数据
+   * 页面的初始数据/
    */
   data: {
     userInfo:"",
@@ -28,8 +28,10 @@ Page({
         Authorization:wx.getStorageSync('token')
       },
       success:function(res){
+        console.log('messages')
+        console.log(res.data)
           that.setData({
-            messages:res.data
+            messages:res.data//
           })
       },
     })

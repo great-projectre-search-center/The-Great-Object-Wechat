@@ -7,14 +7,19 @@
 
 
 
-<!-- 内容 -->
+<!-- 内容 wx-for -->
 <view class="body">
-  <view>{{textDetail}}</view>
+  <view>{{textHead}}</view>
+</view>
+
+<!-- 消息 -->
+<view class="body">
+  <view>{{textHead}}</view>
 </view>
 
 
 <!-- 底部 -->
 <view style="position:fixed;bottom:0;width:100%;">
-    <button class="btn">回复</button>
+    <button class="btn" bindtap="conlog">回复</button>
     <button class="btn">删除</button>
 </view>

@@ -28,149 +28,309 @@ Page({
     active: '0',
     swipeable: 'true',
 
-    id:"测试",
-    address:"地点",
-    name:"姓名",
-    order_number:"订单编号",
-    time:"下单时间",
-    sorce:"积分",
-    contactMe:"联系我",
-    detime:"截止时间",
-    creater_Latitude:0,
-    creater_Longitude:0
+    id:"",
+    address:"",
+    name:"",
+    order_number:"",
+    time:"",
+    sorce:"",
+    contactMe:"",
+    detime:"",
+    creater_Latitude:"0",
+    creater_Longitude:"0"
 
   },
-  wxnavigator:function(e){
-    
-    qqmapsdk.reverseGeocoder({
-       //Object格式
-        location: {
-          latitude:this.data.creater_Latitude,
-          longitude: this.data.creater_Longitude
-        },
-      /**
-       *
-       //String格式
-        location: '39.984060,116.307520',
-      */
-      //location: e.detail.value.reverseGeo || '', //获取表单传入的位置坐标,不填默认当前位置,示例为string格式
-      get_poi: 0, //是否返回周边POI列表：1.返回；0不返回(默认),非必须参数
-      success: function(res) {//成功后的回调
-        console.log(res);
-        
+
+  //取消订单
+  cancel:function(e){
+    console.log(e.currentTarget.dataset.oid+"")
+    var that=this
 
 
+    // //再次确认
+    // wx.showModal({
+    //   title: '提示',
+    //   content: '是否确认取消订单',
+    //   success: function (res) {
+    //     if (res.confirm) {//确定
+    //       console.log('用户点击确定')
 
-      },
-      fail: function(error) {
-        console.error(error);
-      },
-      complete: function(res) {
-        console.log(res);
+          
+    //     } else {//取消
+
+    //       console.log('用户点击取消')
+    //     }
+    //   }
+    // })
+
+    // 确认以后应当立刻onload()
+
+
+    //再次确认
+    wx.showModal({
+      title: '提示',
+      content: '是否确认取消订单',
+      success: function (res) {
+        if (res.confirm) {//确定
+          console.log('确定取消')
+          wx.request({
+            url: app.globalData.baseurl+'/order/cancel',
+            data:{
+              id:""+e.currentTarget.dataset.oid,
+            },
+            method:'POST',
+            header:{
+              Authorization:wx.getStorageSync('token')
+            },
+            success:function(res){
+              console.log("requset取消成功")
+              console.log(res)
+              if(res.data.isOk===true){
+      
+                wx.showToast({
+                  title: '取消成功',
+                  icon: 'success',
+                  duration: 2000,
+                })
+              }else {
+                wx.showToast({
+                  title: '取消失败',
+                  duration: 2000
+                })
+              }
+            },
+          })
+
+          that.onLoad()
+          
+        } else {//取消
+
+          console.log('用户点击取消')
+        }
       }
     })
 
-    //=========================
-    console.log("zhe")
-    console.log(this.data.order1)
-    console.log(e)
-    console.log(e.target.id)
-    var s = e.target.id;
-    var ss = s.split("#")
-    console.log(ss)
-    this.setData({
-      time:ss[0],
-      sorce:ss[1],
-      order_number:ss[2]
 
-    })
-    wx.navigateTo({
-      url: '../orderDetail01/orderDetail01?id='+this.data.id+'&address='+this.data.address+'&name='+this.data.name+'&order_number='+this.data.order_number+'&time='+this.data.time+'&sorce='+this.data.sorce+'&contactMe='+this.data.contactMe+'&detime='+this.data.detime
-    })
-  },
-  //取消订单
-  cancel:function(e){
-    var that=this
-    wx.request({
-      url: app.globalData.baseurl+'/order/cancel',
-      data:{
-        id:""+e.currentTarget.dataset.oid,
-      },
-      method:'POST',
-      header:{
-        Authorization:wx.getStorageSync('token')
-      },
-      success:function(res){
-        if(res.data.isOk===true){
-          wx.showToast({
-            title: '取消成功',
-            icon: 'success',
-            duration: 2000,
-          })
-        }else {
-          wx.showToast({
-            title: '取消失败',
-            duration: 2000
-          })
-        }
-      },
-    })
+    // wx.request({
+    //   url: app.globalData.baseurl+'/order/cancel',
+    //   data:{
+    //     id:""+e.currentTarget.dataset.oid,
+    //   },
+    //   method:'POST',
+    //   header:{
+    //     Authorization:wx.getStorageSync('token')
+    //   },
+    //   success:function(res){
+    //     console.log("requset取消成功")
+    //     console.log(res)
+    //     if(res.data.isOk===true){
+
+    //       wx.showToast({
+    //         title: '取消成功',
+    //         icon: 'success',
+    //         duration: 2000,
+    //       })
+    //     }else {
+    //       wx.showToast({
+    //         title: '取消失败',
+    //         duration: 2000
+    //       })
+    //     }
+    //   },
+    // })
   },
   //确认订单
   confirm:function(e){
+    console.log(e)
     var that=this
-    wx.request({
-      url: app.globalData.baseurl+'/order/receive',
-      data:{
-        id:""+e.currentTarget.dataset.oid,
-      },
-      method:'POST',
-      header:{
-        Authorization:wx.getStorageSync('token')
-      },
-      success:function(res){
-        if(res.data.isOk===true){
-          wx.showToast({
-            title: '确认成功',
-            icon: 'success',
-            duration: 2000,
+
+    //再次确认
+    wx.showModal({
+      title: '提示',
+      content: '是否确认订单',
+      success: function (res) {
+        if (res.confirm) {//确定
+          console.log('用户点击确定')
+
+          wx.request({
+            url: app.globalData.baseurl+'/order/receive',
+            data:{
+              id:""+e.currentTarget.dataset.oid,
+            },
+            method:'POST',
+            header:{
+              Authorization:wx.getStorageSync('token')
+            },
+            success:function(res){
+
+              //此时应当添加积分
+              /*
+              private String open_Id; //用户的id
+              private Date date;//时间
+              private String matter;//事情
+              private int changed;//变化
+              private int reward;//剩余积分
+              */
+
+             var reward={
+              open_Id:"", //用户的id
+              date:"",//时间
+              matter:"",//事情
+              changed:"",//变化
+              reward:100,//剩余积分
+              
+            }
+
+              wx.request({
+                url: app.globalData.baseurl+'/change',
+                data:{
+                  reward:reward,
+                },
+                method:'POST',
+                header:{
+                  Authorization:wx.getStorageSync('token')
+                },
+                success:function(res){
+                  console.log("积分相关")
+                  console.log(res)
+
+                },
+              })
+              var aa = res.data
+              console.log("requset确认成功")
+              console.log(aa)
+              if(aa.isOK == true){
+                wx.showToast({
+                  title: '确认成功',
+                  icon: 'success',
+                  duration: 2000,
+                })
+              }else {
+                wx.showToast({
+                  title: '确认成功',//iSOK返回nil，需要改
+                  duration: 2000
+                })
+              }
+            },
           })
-        }else {
-          wx.showToast({
-            title: '确认失败',
-            duration: 2000
-          })
+
+          that.onLoad()
+          
+        } else {//取消
+
+          console.log('用户点击取消')
         }
-      },
+      }
     })
+    
+
+    
+    // wx.request({
+    //   url: app.globalData.baseurl+'/order/receive',
+    //   data:{
+    //     id:""+e.currentTarget.dataset.oid,
+    //   },
+    //   method:'POST',
+    //   header:{
+    //     Authorization:wx.getStorageSync('token')
+    //   },
+    //   success:function(res){
+    //     console.log("requset确认成功")
+    //     if(res.data.isOk===true){
+    //       wx.showToast({
+    //         title: '确认成功',
+    //         icon: 'success',
+    //         duration: 2000,
+    //       })
+    //     }else {
+    //       wx.showToast({
+    //         title: '确认失败',
+    //         duration: 2000
+    //       })
+    //     }
+    //   },
+    // })
   },
   //删除订单
   delete:function(e){
+    console.log(e)
     var that=this
-    wx.request({
-      url: app.globalData.baseurl+'/order/delete',
-      data:{
-        id:""+e.currentTarget.dataset.oid,
-      },
-      method:'DELETE',
-      header:{
-        Authorization:wx.getStorageSync('token')
-      },
-      success:function(res){
-        if(res.data.isOk===true){
-          wx.showToast({
-            title: '删除成功',
-            icon: 'success',
-            duration: 2000,
+
+  //再次确认
+    wx.showModal({
+      title: '提示',
+      content: '是否确认取消订单',
+      success: function (res) {
+        if (res.confirm) {//确定
+          console.log('用户点击确定')
+
+          wx.request({
+            url: app.globalData.baseurl+'/order/delete',
+            data:{
+              id:""+e.currentTarget.dataset.oid,
+            },
+            method:'DELETE',
+            header:{
+              Authorization:wx.getStorageSync('token')
+            },
+            success:function(res){
+              var aa = res.data
+              console.log(aa)
+              console.log("requset删除成功")
+              console.log(aa.isOK)
+              if(aa.isOK == true){
+                wx.showToast({
+                  title: '删除成功',
+                  icon: 'success',
+                  duration: 2000,
+                })
+                //console.log(aa.isOK)
+              }else {
+                wx.showToast({
+                  title: '删除失败',
+                  duration: 2000
+                })
+                //console.log(aa.isOK)
+              }
+            },
           })
-        }else {
-          wx.showToast({
-            title: '删除失败',
-            duration: 2000
-          })
+
+          that.onLoad()
+          
+        } else {//取消
+
+          console.log('用户点击取消')
         }
-      },
-    })
+      }
+    })    
+
+
+    // wx.request({
+    //   url: app.globalData.baseurl+'/order/delete',
+    //   data:{
+    //     id:""+e.currentTarget.dataset.oid,
+    //   },
+    //   method:'DELETE',
+    //   header:{
+    //     Authorization:wx.getStorageSync('token')
+    //   },
+    //   success:function(res){
+    //     var aa = res.data
+    //     console.log("requset删除成功")
+    //     if(aa.isOk===true){
+    //       wx.showToast({
+    //         title: '删除成功',
+    //         icon: 'success',
+    //         duration: 2000,
+    //       })
+    //     }else {
+    //       wx.showToast({
+    //         title: '删除失败',
+    //         duration: 2000
+    //       })
+    //     }
+    //   },
+    // })
   },
   //根据id分页查询全部订单信息
   list_status:function(pageIndex){
@@ -297,6 +457,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+
+    
     this.setData({
       baseurl: app.globalData.baseurl,
       openid:app.globalData.openid
@@ -324,18 +487,20 @@ Page({
     this.list_idstatus3(1)
     this.list_idstatus4(1)
 
-//=============== 进行赋值 ===================
-    var s = e.target.id;
-    var ss = s.split("#")
-    console.log(ss)
-    this.setData({
-      time:ss[0],
-      sorce:ss[1],
-      order_number:ss[2],
-      creater_Latitude:ss[3],//lat
-      creater_Longitude:ss[4]//long
-    })
-    
+// //=============== 进行赋值 ===================
+//     var s = e.target.id;
+//     var ss = s.split("#")
+//     console.log(ss)
+//     this.setData({
+//       time:ss[0],
+//       sorce:ss[1],
+//       order_number:ss[2],
+//       creater_Latitude:ss[3],//lat
+//       creater_Longitude:ss[4]//long
+//     })
+//     console.log("====================")
+//     console.log(this.data.time)
+//     console.log("====================")
   },
 
 
@@ -415,6 +580,23 @@ Page({
     this.list_idstatus2(1)
     this.list_idstatus3(1)
     this.list_idstatus4(1)
+
+
+    //=============== 进行赋值 ===================
+    var s = e.target.id;
+    console.log("++++++++++++++"+s)
+    var ss = s.split("#")
+    console.log(ss)
+    this.setData({
+      time:ss[0],
+      sorce:ss[1],
+      order_number:ss[2],
+      creater_Latitude:ss[3],//lat
+      creater_Longitude:ss[4],//long
+      detime:ss[5],//
+      contactMess:[6],//
+    })
+    console.log(this.data)
   },
 
   /**
@@ -453,5 +635,91 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  wxnavigator:function(e){
+    var that = this
+    var s = e.target.id;
+    var ss = s.split("#")
+    console.log(ss)
+    this.setData({
+      time:ss[0],
+      sorce:ss[1],
+      order_number:ss[2],
+      creater_Latitude:ss[3],//lat
+      creater_Longitude:ss[4],//long
+      detime:ss[5],//
+      contactMess:[6],//
+    })
+    console.log("====================")
+    console.log(this.data.time)
+    console.log(s)
+    console.log(s)
+    console.log("order1")
+    console.log(this.data.order1)
+    console.log("order2")
+    console.log(this.data.order2)
+    console.log("order3")
+    console.log(this.data.order)
+    console.log("====================")
+
+
+    console.log("====================")
+    console.log(this.data.creater_Longitude)
+    console.log(this.data.time)
+    console.log(this.data.order_number)
+    
+    console.log("====================")
+    var that = this
+    qqmapsdk.reverseGeocoder({
+       //Object格式
+        // location: {
+        //   latitude:this.data.creater_Latitude,
+        //   longitude: this.data.creater_Longitude
+        // },
+      
+       //String格式
+       //location: '39.984060,116.307520',
+      location: this.data.creater_Longitude+','+this.data.creater_Latitude,
+      get_poi: 0, //是否返回周边POI列表：1.返回；0不返回(默认),非必须参数
+      success: function(res) {//成功后的回调
+        console.log(res.result.address+res.result.formatted_addresses.recommend);
+        console.log("成功");
+        that.setData({
+          address:res.result.address+res.result.formatted_addresses.recommend,
+        })
+        
+      },
+      fail: function(error) {
+        console.error(error);
+        console.log("失败");
+      },
+      complete: function(res) {
+        console.log(res);
+        console.log("结束");
+      }
+    })
+
+    //=========================
+    console.log("order1")
+    console.log(this.data.order1)
+    console.log(e)
+    console.log(e.target.id)
+    var s = e.target.id;
+    var ss = s.split("#")
+    console.log(ss)
+    this.setData({
+      time:ss[0],
+      sorce:ss[1],
+      order_number:ss[2],
+      creater_Latitude:ss[3],//lat
+      creater_Longitude:ss[4],//long
+      detime:ss[5],//
+      contactMe:ss[6],//
+
+    })
+    console.log(this.data.time)
+    wx.navigateTo({
+      url: '../orderDetail01/orderDetail01?id='+this.data.id+'&address='+this.data.address+'&name='+this.data.name+'&order_number='+this.data.order_number+'&time='+this.data.time+'&sorce='+this.data.sorce+'&contactMe='+this.data.contactMe+'&detime='+this.data.detime
+    })
   }
 })
