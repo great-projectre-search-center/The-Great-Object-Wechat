@@ -1,5 +1,6 @@
-// pages/index-new/index-new.js
 var app = getApp();
+var QQMapWX = require('../../libs/qqmap-wx-jssdk.js');
+var qqmapsdk;
 Page({
 
     /**
@@ -21,10 +22,31 @@ Page({
       phone:'',
       username:'',
       danhao:"",
+      reward_t:0,
       
     },
     create:function(e){
-      var that=this
+      
+      var that = this
+
+      /* 获取积分start */
+      //调用接口计算距离
+      qqmapsdk.calculateDistance({
+        from: String(this.data.addressId), 
+        to: String(this.data.storeAddress), 
+        success: function (res) {//成功后的回调
+          console.log("距离"+res.result.elements[0].distance);
+          var tt = res.result.elements[0].distance
+          that.setData({//res.result.elements[0].distance/167
+            reward_t:parseInt((tt/167)*5)
+          })
+          console.log(that.data.reward_t)
+        },
+        fail: function (error) {
+          console.error(error);
+        }
+      });
+
       var index = that.data.index
       var order={
         title:this.data.biaoti,
@@ -46,7 +68,7 @@ Page({
         estimated_Worth:10+5*(this.data.value),
         remark: this.data.beizhu,
         aid: "",  //为空
-        reward:10,  //后期需要修改
+        reward:this.data.reward_t,
         status:0,
         created_User:this.data.openid,
       }
@@ -180,6 +202,9 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
+      qqmapsdk = new QQMapWX({
+        key: 'LQXBZ-ZSFWG-AGDQ3-IXFEB-ULEOV-QHBH7'
+      });
       //获取地址ID然后保存到this.data.addressId
       let pages = getCurrentPages();
       let currPage = pages[pages.length - 1];

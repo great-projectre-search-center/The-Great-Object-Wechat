@@ -1,0 +1,8 @@
+<!--form表单-->
+<form bindsubmit="formSubmit">
+    <input style="border:1px solid #000;" name="geocoder"></input>
+    <input style="border:1px solid #000;" name="geocoder1"></input>
+    <!--提交表单数据-->
+    <button form-type="submit">计算距离</button>
+</form>
+
