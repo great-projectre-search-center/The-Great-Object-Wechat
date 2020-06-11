@@ -29,22 +29,22 @@ Page({
       var that = this
 
       /* 获取积分start */
-      //调用接口计算距离
-      qqmapsdk.calculateDistance({
-        from: String(this.data.addressId), 
-        to: String(this.data.storeAddress), 
-        success: function (res) {//成功后的回调
-          console.log("距离"+res.result.elements[0].distance);
-          var tt = res.result.elements[0].distance
-          that.setData({//res.result.elements[0].distance/167
-            reward_t:parseInt((tt/167)*5)
-          })
-          console.log(that.data.reward_t)
-        },
-        fail: function (error) {
-          console.error(error);
-        }
-      });
+      // //调用接口计算距离
+      // qqmapsdk.calculateDistance({
+      //   from: String(this.data.addressId), 
+      //   to: String(this.data.storeAddress), 
+      //   success: function (res) {//成功后的回调
+      //     console.log("距离"+res.result.elements[0].distance);
+      //     var tt = res.result.elements[0].distance
+      //     that.setData({//res.result.elements[0].distance/167
+      //       reward_t:parseInt((tt/167)*5)
+      //     })
+      //     console.log(that.data.reward_t)
+      //   },
+      //   fail: function (error) {
+      //     console.error(error);
+      //   }
+      // });
 
       var index = that.data.index
       var order={
@@ -222,6 +222,24 @@ Page({
         console.log('送达位置 : '+this.data.addressId)
         console.log('代理点位置 : '+this.data.storeAddress)
       }
+      
+      var that = this
+      //调用接口计算距离
+      qqmapsdk.calculateDistance({
+        from: String(this.data.addressId), 
+        to: String(this.data.storeAddress), 
+        success: function (res) {//成功后的回调
+          console.log("距离"+res.result.elements[0].distance);
+          var tt = res.result.elements[0].distance
+          that.setData({//res.result.elements[0].distance/167
+            reward_t:parseInt((tt/167)*5)
+          })
+          console.log("看这"+that.data.reward_t)
+        },
+        fail: function (error) {
+          console.error(error);
+        }
+      });
     },
 
     /**
