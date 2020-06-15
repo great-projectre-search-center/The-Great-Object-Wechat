@@ -85,6 +85,12 @@ Page({
               //Authorization:wx.getStorageSync('token')
             },
             success:function(res){
+
+
+
+              
+
+
               console.log("requset取消成功")
               console.log(res)
               if(res.data.isOk===true){
@@ -103,6 +109,31 @@ Page({
               }
             },
           })
+
+          //积分变动
+          // var myDate = new Date();
+          // var reward={
+          //   rid:"",
+          //   date:myDate,
+          //   open_Id:this.data.openid,
+          //   matter:"兑换礼品",
+          //   changed:e.currentTarget.id,
+          //   reward:100-10//正确的积分
+          // }
+          // console.log(reward)
+          // //兑换积分变更
+          // wx.request({
+          //   url: app.globalData.baseurl+'/reward/change',
+          //   data:reward
+          //   ,
+          //   method:'POST',
+          //   header:{
+          //     Authorization:wx.getStorageSync('token')
+          //   },
+          //   success:function(res){
+          //     console.log(res)
+          //   }
+          // })
 
           that.onLoad()
           
@@ -142,10 +173,29 @@ Page({
     //   },
     // })
   },
+
+
   //确认订单
   confirm:function(e){
+    console.log("获取")
     console.log(e)
     var that=this
+
+
+    var myDate = new Date();
+    var sss = Number(e.currentTarget.id);
+    console.log("====")
+    console.log(app.globalData.greward)
+    console.log(app.globalData.greward+sss)
+    var reward={
+            rid:"",
+            date:myDate,
+            open_Id:this.data.openid,
+            matter:"帮忙",
+            changed:sss,
+            reward:app.globalData.greward+sss//全局变量
+    }
+    console.log(reward)
 
     //再次确认
     wx.showModal({
@@ -154,6 +204,21 @@ Page({
       success: function (res) {
         if (res.confirm) {//确定
           console.log('用户点击确定')
+
+          //兑换积分变更
+          wx.request({
+            url: app.globalData.baseurl+'/reward/change',
+            data:reward
+            ,
+            method:'POST',
+            header:{
+              Authorization:wx.getStorageSync('token')
+            },
+            success:function(res){
+              console.log(res)
+            }
+          })
+
 
           wx.request({
             url: app.globalData.baseurl+'/order/receive',
@@ -175,30 +240,7 @@ Page({
               private int reward;//剩余积分
               */
 
-             var reward={
-              open_Id:"", //用户的id
-              date:"",//时间
-              matter:"",//事情
-              changed:"",//变化
-              reward:100,//剩余积分
-              
-            }
-
-              wx.request({
-                url: app.globalData.baseurl+'/change',
-                data:{
-                  reward:reward,
-                },
-                method:'POST',
-                header:{
-                  Authorization:wx.getStorageSync('token')
-                },
-                success:function(res){
-                  console.log("积分相关")
-                  console.log(res)
-
-                },
-              })
+             
               var aa = res.data
               console.log("requset确认成功")
               console.log(aa)
@@ -518,6 +560,25 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+
+
+    //获取积分
+    wx.request({
+      //app.globalData.openid
+      url: app.globalData.baseurl+'/reward/'+app.globalData.openid+'/getlast',
+      method:'GET',
+      header:{
+        Authorization:wx.getStorageSync('token')
+      },
+      success:function(res){
+        //
+        console.log(res.data)
+        console.log("当前积分"+res.data.reward)
+        app.globalData.greward=res.data.reward
+      }
+    })
+
+
     this.list_status(1)
     this.list_idstatus2(1)
     this.list_idstatus3(1)
@@ -600,6 +661,7 @@ Page({
       contactMess:[6],//
     })
     console.log(this.data)
+
   },
 
   /**

@@ -4,6 +4,9 @@ App({
     hasuserinfo: "",
     openid: "",
     userInfo: null,
+    greward:0,//全局积分变量
+
+
     // baseurl: "http://127.0.0.1:8080" //change this
     //  baseurl: "http://192.168.123.83:8080"
      

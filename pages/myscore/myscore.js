@@ -24,10 +24,13 @@ Page({
         Authorization:wx.getStorageSync('token')
       },
       success:function(res){
-        console.log(res)
+        //
+        console.log(res.data)
+        console.log("当前积分"+res.data.reward)
           that.setData({
             soc:res.data.reward
           })
+          app.globalData.greward=res.data.reward
       }
     })
     console.log(wx.getStorageSync('token'))

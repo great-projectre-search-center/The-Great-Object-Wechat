@@ -38,7 +38,7 @@
             <van-button size="small" round bindtap="cancel" data-oid="{{item.oid}}">取消订单</van-button>
           </view>
           <view wx:elif="{{item.status==1}}" slot="footer" class="mybutton">        
-            <van-button size="small" round bindtap="confirm" data-oid="{{item.oid}}">确认订单</van-button>
+            <van-button size="small" round bindtap="confirm" data-oid="{{item.oid}}"id="{{item.reward}}">确认订单</van-button>
           </view>
           <view wx:elif="{{item.status==3}}" slot="footer" class="mybutton">        
             <van-button size="small" round bindtap="delete" data-oid="{{item.oid}}">删除订单</van-button>
@@ -139,7 +139,7 @@
           <!--按钮-->
           <view slot="footer" class="mybutton">
           
-          <van-button size="small" round bindtap="confirm" data-oid="{{item.oid}}">确认订单</van-button>
+          <van-button size="small" round bindtap="confirm" data-oid="{{item.oid}}"id="{{item.reward}}">确认订单</van-button>
           
           </view>
         </view>
