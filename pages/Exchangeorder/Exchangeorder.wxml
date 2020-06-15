@@ -29,6 +29,16 @@
       required
       border="{{ true }}"
     />
+
+    <van-field
+      bindinput="phoneInput"
+      value="{{ phone }}"
+      type="number"
+      label="详细地址"
+      placeholder="请输入您的详细地址"
+      required
+      border="{{ true }}"
+    />
   </van-cell-group>
 </view>
 <view class="sub">

@@ -73,6 +73,8 @@ Page({
       success: function (res) {
         if (res.confirm) {//确定
           console.log('确定取消')
+          console.log(e.currentTarget.dataset.oid)
+
           wx.request({
             url: app.globalData.baseurl+'/order/cancel',
             data:{
@@ -80,7 +82,7 @@ Page({
             },
             method:'POST',
             header:{
-              Authorization:wx.getStorageSync('token')
+              //Authorization:wx.getStorageSync('token')
             },
             success:function(res){
               console.log("requset取消成功")
@@ -93,6 +95,7 @@ Page({
                   duration: 2000,
                 })
               }else {
+                console.log(wx.getStorageSync('token'))
                 wx.showToast({
                   title: '取消失败',
                   duration: 2000

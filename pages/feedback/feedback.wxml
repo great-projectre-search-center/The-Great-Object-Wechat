@@ -29,14 +29,14 @@
 
     <van-cell
     is-link
-    title="反馈2"
+    title="订单创建失败"
     link-type="navigateTo"
     url="/pages/myfeedback/myfeedback"
   />
 
     <van-cell
     is-link
-    title="反馈3"
+    title="无法收货"
     link-type="navigateTo"
     url="/pages/myfeedback/myfeedback"
   />

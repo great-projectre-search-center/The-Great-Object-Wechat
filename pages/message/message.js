@@ -18,6 +18,7 @@ Page({
   },
   getnotification:function(){
     var that=this
+    console.log(app.globalData.openid)
     wx.request({
       url: app.globalData.baseurl+'/notification/'+app.globalData.openid+'/getnotification',
       data:{

@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    addList: ['火星', '地球', '清华', '北大'],
+    addList: ['学校', '家', '公司', '其他'],
     addIndex: 0,
   },
 
@@ -17,37 +17,21 @@ Page({
   },
 
   sub: function(e) {
-    wx.request({
-      url: 'https://www.baidu.com/',
-      data: {
-        //name: 'name',
-        //phone: 'phone',
-        //add:'',
-      },
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success(res) {
-        console.log(res)
-        //弹窗通知
-        wx.showModal({
-          title: '您的地址我们已经收到！',
-          content: '具体快递情况我们会以信息的形式通知您',
-          success: function(res) {
-            if (res.confirm) {
-              //确定要跳转页面
-              wx.navigateBack({
-                delta: 1
-              })
-            } else {
-              //不确定也要跳转页面,哈哈
-              wx.navigateBack({
-                delta: 1
-              })
-            }
-          }
-        })
-
+    wx.showModal({
+      title: '您的地址我们已经收到！',
+      content: '具体快递情况我们会以信息的形式通知您',
+      success: function(res) {
+        if (res.confirm) {
+          //确定要跳转页面
+          wx.navigateBack({
+            delta: 1
+          })
+        } else {
+          //不确定也要跳转页面,哈哈
+          wx.navigateBack({
+            delta: 1
+          })
+        }
       }
     })
   },
