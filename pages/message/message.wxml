@@ -10,7 +10,7 @@
     </van-tab>
     <van-tab  wx:else title="个人消息" info="{{messages.length}}">
       <van-grid column-num="1" gutter="{{10}}">
-        <van-grid-item icon="{{icons[num]}}" text="{{item.title}}" wx:for="{{ messages }}" url="/pages/messageDetails/messageDetails?fromopenid={{item.from_Open_Id}}&textHead={{item.title}}&textDetail={{item.message}}"/>
+        <van-grid-item icon="{{icons[num]}}" text="{{item.title}}" wx:for="{{ messages }}" url="/pages/messageDetails/messageDetails?fromopenid={{item.from_Open_Id}}&textHead={{item.title}}&textDetail={{item.msg}}"/>
       </van-grid>
     </van-tab>
   </view>

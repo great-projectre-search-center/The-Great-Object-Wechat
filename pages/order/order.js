@@ -205,19 +205,19 @@ Page({
         if (res.confirm) {//确定
           console.log('用户点击确定')
 
-          //兑换积分变更
-          wx.request({
-            url: app.globalData.baseurl+'/reward/change',
-            data:reward
-            ,
-            method:'POST',
-            header:{
-              Authorization:wx.getStorageSync('token')
-            },
-            success:function(res){
-              console.log(res)
-            }
-          })
+          // //兑换积分变更
+          // wx.request({
+          //   url: app.globalData.baseurl+'/reward/change',
+          //   data:reward
+          //   ,
+          //   method:'POST',
+          //   header:{
+          //     Authorization:wx.getStorageSync('token')
+          //   },
+          //   success:function(res){
+          //     console.log(res)
+          //   }
+          // })
 
 
           wx.request({
