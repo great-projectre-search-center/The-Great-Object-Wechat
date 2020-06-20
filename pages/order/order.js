@@ -864,7 +864,7 @@ Page({
 
     console.log(this.data.time)
     wx.navigateTo({
-      url: '../orderDetail01/orderDetail01?name='+this.data.name+'&tell='+this.data.tell+'&address1='+this.data.address2+'&address2='+this.data.address2+'&reward='+this.data.reward+'&oid='+this.data.oid+'&time='+this.data.time+'&some='+this.data.some
+      url: '../orderDetail01/orderDetail01?name='+this.data.name+'&tell='+this.data.tell+'&address1='+this.data.address1+'&address2='+this.data.address2+'&reward='+this.data.reward+'&oid='+this.data.oid+'&time='+this.data.time+'&some='+this.data.some
     })
   }
 })
