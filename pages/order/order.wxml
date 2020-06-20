@@ -10,7 +10,7 @@
               <view wx:if="{{item.accepter_Id==openid}}" >
                 
               <van-card
-                id="{{item.create_Date}}#{{item.reward}}#{{item.oid}}#{{item.creater_Latitude}}#{{item.creater_Longitude}}#{{item.modified_Time}}#{{item.creater_Tel}}"
+                id="{{item.creater_Name}}#{{item.creater_Tel}}#{{item.shops_Latitude}}#{{item.shops_Longtitude}}#{{item.creater_Latitude}}#{{item.creater_Longitude}}#{{item.reward}}#{{item.oid}}#{{item.created_Time}}#{{item.title}} {{item.public_field1}} {{item.public_field2}} {{item.remark}}"
                 bindtap="wxnavigator"
                 num="1"
                 price="{{item.reward}}"
@@ -22,7 +22,7 @@
             </view>
             <view wx:else>
               <van-card
-              id="{{item.create_Date}}#{{item.reward}}#{{item.oid}}#{{item.creater_Latitude}}#{{item.creater_Longitude}}#{{item.modified_Time}}#{{item.creater_Tel}}"
+              id="{{item.creater_Name}}#{{item.creater_Tel}}#{{item.shops_Latitude}}#{{item.shops_Longtitude}}#{{item.creater_Latitude}}#{{item.creater_Longitude}}#{{item.reward}}#{{item.oid}}#{{item.created_Time}}#{{item.title}} {{item.public_field1}} {{item.public_field2}} {{item.remark}}"
                 bindtap="wxnavigator"
                 num="1"
                 price="{{item.reward}}"
@@ -76,7 +76,7 @@
             <!-- <navigator url="../orderDetail01/orderDetail01"> -->
               <view wx:if="{{item.accepter_Id==openid}}">
               <van-card
-              id="{{item.create_Date}}#{{item.reward}}#{{item.oid}}#{{item.creater_Latitude}}#{{item.creater_Longitude}}#{{item.modified_Time}}#{{item.creater_Tel}}"
+              id="{{item.creater_Name}}#{{item.creater_Tel}}#{{item.shops_Latitude}}#{{item.shops_Longtitude}}#{{item.creater_Latitude}}#{{item.creater_Longitude}}#{{item.reward}}#{{item.oid}}#{{item.created_Time}}#{{item.title}} {{item.public_field1}} {{item.public_field2}} {{item.remark}}"
                 bindtap="wxnavigator"
                 num="1"
                 price="{{item.reward}}"
@@ -88,7 +88,7 @@
             </view>
             <view wx:else>
               <van-card
-              id="{{item.create_Date}}#{{item.reward}}#{{item.oid}}#{{item.creater_Latitude}}#{{item.creater_Longitude}}#{{item.modified_Time}}#{{item.creater_Tel}}"
+              id="{{item.creater_Name}}#{{item.creater_Tel}}#{{item.shops_Latitude}}#{{item.shops_Longtitude}}#{{item.creater_Latitude}}#{{item.creater_Longitude}}#{{item.reward}}#{{item.oid}}#{{item.created_Time}}#{{item.title}} {{item.public_field1}} {{item.public_field2}} {{item.remark}}"
                 bindtap="wxnavigator"
                 num="1"
                 price="{{item.reward}}"
@@ -123,7 +123,7 @@
             <!-- <navigator url="../orderDetail01/orderDetail01"> -->
               <view wx:if="{{item.accepter_Id==openid}}">
               <van-card
-              id="{{item.create_Date}}#{{item.reward}}#{{item.oid}}#{{item.creater_Latitude}}#{{item.creater_Longitude}}#{{item.modified_Time}}#{{item.creater_Tel}}"
+              id="{{item.creater_Name}}#{{item.creater_Tel}}#{{item.shops_Latitude}}#{{item.shops_Longtitude}}#{{item.creater_Latitude}}#{{item.creater_Longitude}}#{{item.reward}}#{{item.oid}}#{{item.created_Time}}#{{item.title}} {{item.public_field1}} {{item.public_field2}} {{item.remark}}"
                 bindtap="wxnavigator"
                 num="1"
                 price="{{item.reward}}"
@@ -135,7 +135,7 @@
             </view>
             <view wx:else>
               <van-card
-              id="{{item.create_Date}}#{{item.reward}}#{{item.oid}}#{{item.creater_Latitude}}#{{item.creater_Longitude}}#{{item.modified_Time}}#{{item.creater_Tel}}"
+              id="{{item.creater_Name}}#{{item.creater_Tel}}#{{item.shops_Latitude}}#{{item.shops_Longtitude}}#{{item.creater_Latitude}}#{{item.creater_Longitude}}#{{item.reward}}#{{item.oid}}#{{item.created_Time}}#{{item.title}} {{item.public_field1}} {{item.public_field2}} {{item.remark}}"
               bindtap="wxnavigator"
                 num="1"
                 price="{{item.reward}}"
@@ -172,7 +172,7 @@
             <!-- <navigator url="../orderDetail01/orderDetail01"> -->
               <view wx:if="{{item.accepter_Id==openid}}">
               <van-card
-              id="{{item.create_Date}}#{{item.reward}}#{{item.oid}}#{{item.creater_Latitude}}#{{item.creater_Longitude}}#{{item.modified_Time}}#{{item.creater_Tel}}"
+              id="{{item.creater_Name}}#{{item.creater_Tel}}#{{item.shops_Latitude}}#{{item.shops_Longtitude}}#{{item.creater_Latitude}}#{{item.creater_Longitude}}#{{item.reward}}#{{item.oid}}#{{item.created_Time}}#{{item.title}} {{item.public_field1}} {{item.public_field2}} {{item.remark}}"
                 bindtap="wxnavigator"
                 num="1"
                 price="{{item.reward}}"
@@ -184,7 +184,7 @@
             </view>
             <view wx:else>
               <van-card
-              id="{{item.create_Date}}#{{item.reward}}#{{item.oid}}#{{item.creater_Latitude}}#{{item.creater_Longitude}}#{{item.modified_Time}}#{{item.creater_Tel}}"
+              id="{{item.creater_Name}}#{{item.creater_Tel}}#{{item.shops_Latitude}}#{{item.shops_Longtitude}}#{{item.creater_Latitude}}#{{item.creater_Longitude}}#{{item.reward}}#{{item.oid}}#{{item.created_Time}}#{{item.title}} {{item.public_field1}} {{item.public_field2}} {{item.remark}}"
                 bindtap="wxnavigator"
                 num="{{item.reward}}"
                 desc="{{item.catalog}}"

@@ -28,17 +28,19 @@ Page({
     active: '0',
     swipeable: 'true',
 
-    id:"",
-    address:"",
-    name:"",
-    order_number:"",
-    time:"",
-    sorce:"",
-    contactMe:"",
-    detime:"",
-    creater_Latitude:"0",
-    creater_Longitude:"0"
-
+    
+    address1:"重新进入可查看地点",
+    address2:"重新进入可查看地点",
+    name:"",// 收件人
+    tell:"",// 联系方式
+    s_lat:"0",// shops_Latitude
+    s_lon:"0",// shops_Longtitude
+    c_lat:"0",// creater_Latitude
+    c_lon:"0",// creater_Longitude
+    reward:0,// 积分
+    oid:"",// 订单号
+    time:"",// 时间
+    some:""// 详情
   },
 
   //取消订单
@@ -562,6 +564,54 @@ Page({
   onShow: function () {
 
 
+
+  //   //add1
+  //   qqmapsdk.reverseGeocoder({
+       
+  //     location: this.data.c_lon+','+this.data.c_lat,
+  //     get_poi: 0, //是否返回周边POI列表：1.返回；0不返回(默认),非必须参数
+  //     success: function(res) {//成功后的回调
+  //       console.log(res.result.address+res.result.formatted_addresses.recommend);
+  //       console.log("成功");
+  //       that.setData({
+  //         address1:res.result.address+res.result.formatted_addresses.recommend,
+  //       })
+        
+  //     },
+  //     fail: function(error) {
+  //       console.error(error);
+  //       console.log("失败");
+  //     },
+  //     complete: function(res) {
+  //       console.log(res);
+  //       console.log("结束");
+  //     }
+  //   }),
+  //   //add2
+  //   qqmapsdk.reverseGeocoder({
+      
+  //     location: this.data.s_lon+','+this.data.s_lat,
+  //    get_poi: 0, //是否返回周边POI列表：1.返回；0不返回(默认),非必须参数
+  //    success: function(res) {//成功后的回调
+  //      console.log(res.result.address+res.result.formatted_addresses.recommend);
+  //      console.log("成功");
+  //      that.setData({
+  //        address2:res.result.address+res.result.formatted_addresses.recommend,
+  //      })
+       
+  //    },
+  //    fail: function(error) {
+  //      console.error(error);
+  //      console.log("失败");
+  //    },
+  //    complete: function(res) {
+  //      console.log(res);
+  //      console.log("结束");
+  //    }
+  //  })
+
+
+
     //获取积分
     wx.request({
       //app.globalData.openid
@@ -647,20 +697,23 @@ Page({
 
 
     //=============== 进行赋值 ===================
-    var s = e.target.id;
-    console.log("++++++++++++++"+s)
-    var ss = s.split("#")
-    console.log(ss)
-    this.setData({
-      time:ss[0],
-      sorce:ss[1],
-      order_number:ss[2],
-      creater_Latitude:ss[3],//lat
-      creater_Longitude:ss[4],//long
-      detime:ss[5],//
-      contactMess:[6],//
-    })
-    console.log(this.data)
+    // var s = e.target.id;
+    // console.log("++++++++++++++"+s)
+    // var ss = s.split("#")
+    // console.log(ss)
+    // this.setData({
+    //   name:ss[0],// 收件人
+    //   tell:ss[1],// 联系方式
+    //   s_lat:ss[2],// shops_Latitude
+    //   s_lon:ss[3],// shops_Longtitude
+    //   c_lat:ss[4],// creater_Latitude
+    //   c_lon:ss[5],// creater_Longitude
+    //   reward:ss[6],// 积分
+    //   oid:ss[7],// 订单号
+    //   time:ss[8],// 时间
+    //   some:ss[9],// 详情
+    // })
+    // console.log(this.data)
 
   },
 
@@ -675,6 +728,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
+    
 
   },
 
@@ -701,6 +755,8 @@ Page({
   onShareAppMessage: function () {
 
   },
+
+
   wxnavigator:function(e){
     var that = this
     var s = e.target.id;
@@ -735,22 +791,41 @@ Page({
     
     console.log("====================")
     var that = this
+    
+
+    //=========================
+    console.log("order1")
+    console.log(this.data.order1)
+    console.log(e)
+    console.log(e.target.id)
+    var s = e.target.id;
+    var ss = s.split("#")
+    console.log(s)
+    console.log(ss)
+    this.setData({
+      name:ss[0],// 收件人
+      tell:ss[1],// 联系方式
+      s_lat:ss[2],// shops_Latitude
+      s_lon:ss[3],// shops_Longtitude
+      c_lat:ss[4],// creater_Latitude
+      c_lon:ss[5],// creater_Longitude
+      reward:ss[6],// 积分
+      oid:ss[7],// 订单号
+      time:ss[8],// 时间
+      some:ss[9],// 详情      
+    })
+
+    
+    //add1
     qqmapsdk.reverseGeocoder({
-       //Object格式
-        // location: {
-        //   latitude:this.data.creater_Latitude,
-        //   longitude: this.data.creater_Longitude
-        // },
-      
-       //String格式
-       //location: '39.984060,116.307520',
-      location: this.data.creater_Longitude+','+this.data.creater_Latitude,
+       
+      location: this.data.c_lon+','+this.data.c_lat,
       get_poi: 0, //是否返回周边POI列表：1.返回；0不返回(默认),非必须参数
       success: function(res) {//成功后的回调
         console.log(res.result.address+res.result.formatted_addresses.recommend);
         console.log("成功");
         that.setData({
-          address:res.result.address+res.result.formatted_addresses.recommend,
+          address1:res.result.address+res.result.formatted_addresses.recommend,
         })
         
       },
@@ -762,29 +837,34 @@ Page({
         console.log(res);
         console.log("结束");
       }
-    })
+    }),
+    //add2
+    qqmapsdk.reverseGeocoder({
+      
+      location: this.data.s_lon+','+this.data.s_lat,
+     get_poi: 0, //是否返回周边POI列表：1.返回；0不返回(默认),非必须参数
+     success: function(res) {//成功后的回调
+       console.log(res.result.address+res.result.formatted_addresses.recommend);
+       console.log("成功");
+       that.setData({
+         address2:res.result.address+res.result.formatted_addresses.recommend,
+       })
+       
+     },
+     fail: function(error) {
+       console.error(error);
+       console.log("失败");
+     },
+     complete: function(res) {
+       console.log(res);
+       console.log("结束");
+     }
+   })
 
-    //=========================
-    console.log("order1")
-    console.log(this.data.order1)
-    console.log(e)
-    console.log(e.target.id)
-    var s = e.target.id;
-    var ss = s.split("#")
-    console.log(ss)
-    this.setData({
-      time:ss[0],
-      sorce:ss[1],
-      order_number:ss[2],
-      creater_Latitude:ss[3],//lat
-      creater_Longitude:ss[4],//long
-      detime:ss[5],//
-      contactMe:ss[6],//
 
-    })
     console.log(this.data.time)
     wx.navigateTo({
-      url: '../orderDetail01/orderDetail01?id='+this.data.id+'&address='+this.data.address+'&name='+this.data.name+'&order_number='+this.data.order_number+'&time='+this.data.time+'&sorce='+this.data.sorce+'&contactMe='+this.data.contactMe+'&detime='+this.data.detime
+      url: '../orderDetail01/orderDetail01?name='+this.data.name+'&tell='+this.data.tell+'&address1='+this.data.address2+'&address2='+this.data.address2+'&reward='+this.data.reward+'&oid='+this.data.oid+'&time='+this.data.time+'&some='+this.data.some
     })
   }
 })

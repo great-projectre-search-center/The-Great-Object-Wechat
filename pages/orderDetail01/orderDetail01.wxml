@@ -1,7 +1,8 @@
 <view class="border01">
   <view class="detail01">
     <van-cell-group>
-      <van-cell icon="location" title="配送地址 " value="{{NameAdress}}" label="{{adress}}" border="{{ false }}" />
+      <van-cell icon="location" title="配送地址 " value="{{address1}}" label="{{adress}}" border="{{ false }}" />
+      <van-cell icon="location" title="代理地址 " value="{{address2}}" label="{{adress}}" border="{{ false }}" />
     </van-cell-group>
   </view>
 </view>
@@ -9,9 +10,9 @@
 <view class="border01">
   <view class="detail01">
     <van-cell-group>
-      <van-cell title="订单编号：" value="{{order_number}}" border="{{ false }}" center="{{true}}" />
-      <van-cell title="下单时间：" value="{{time}}" border="{{ false }}" center="{{true}}" />
-      <van-cell title="积分：" value="{{sorce}}" border="{{ false }}" center="{{true}}" />
+      <van-cell title="收件人姓名：" value="{{name}}" border="{{ false }}" center="{{true}}" />
+      <van-cell title="联系收件人：" value="{{tell}}" border="{{ false }}" center="{{true}}" />
+      <van-cell title="详情：" value="{{some}}" border="{{ false }}" center="{{true}}" />
     </van-cell-group>
   </view>
 </view>
@@ -19,9 +20,9 @@
 <view class="border01">
   <view class="detail01">
     <van-cell-group>
-      <van-cell title="联系收件人：" value="{{contactMe}}" border="{{ false }}" center="{{true}}" />
-      <van-cell title="有效期至：" value="{{detime}}" border="{{ false }}" center="{{true}}" />
-      
+      <van-cell title="订单编号(本平台)：" value="{{oid}}" border="{{ false }}" center="{{true}}" />
+      <van-cell title="下单时间：" value="{{time}}" border="{{ false }}" center="{{true}}" />
+      <van-cell title="积分：" value="{{reward}}" border="{{ false }}" center="{{true}}" />
     </van-cell-group>
   </view>
 </view>

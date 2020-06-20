@@ -7,15 +7,14 @@ Page({
    * 数据传到这一页
    */
   data: {
-    NameAdress:"",
-    name:"",
-    order_number:"",
-    time:"",
-    sorce:"",
-    contactMe:"",
-    detime:"",
-    id:"",
-    address:"",
+    address1:"请重新打开",
+    address2:"请重新打开",
+    name:"",// 收件人
+    tell:"",// 联系方式
+    reward:0,// 积分
+    oid:"",// 订单号
+    time:"",// 时间
+    some:""// 详情
 
   },
 
@@ -25,16 +24,18 @@ Page({
   onLoad: function (options) {
 
     var op =  options
-    console.log(op.address)
+    console.log(op)
     this.setData({
       
-      //name:options.name,
-      NameAdress:op.address,
-      order_number:op.order_number,
-      time:op.time,
-      sorce:op.sorce,
-      contactMe:op.contactMe,
-      detime:op.detime,
+      
+      name:op.name,// 收件人
+      tell:op.tell,// 联系方式
+      reward:op.reward,// 积分
+      oid:op.oid,// 订单号
+      time:op.time,// 时间
+      some:op.some,// 详情
+      address1:op.address1,
+      address2:op.address2,
     })
     //console.log(options)
   },
