@@ -20,24 +20,24 @@
   <view class="text-cell">
     <text>常见问题</text>
   </view>
-  <van-cell
-    is-link
-    title="新手积分"
-    link-type="navigateTo"
-    url="/pages/myfeedback/myfeedback"
-  />
 
-    <van-cell
-    is-link
-    title="订单创建失败"
-    link-type="navigateTo"
-    url="/pages/myfeedback/myfeedback"
-  />
+  <van-collapse value="{{activeName}}" bind:change="onChange" accordion>
 
-    <van-cell
-    is-link
-    title="无法收货"
-    link-type="navigateTo"
-    url="/pages/myfeedback/myfeedback"
-  />
+    <van-collapse-item title="新手积分" name="1">
+      <text class="text01">亲爱的用户您好：
+        平台规定新用户从接过单的初始积分为100.     
+      </text>
+    </van-collapse-item>
+    <van-collapse-item title="订单创建失败" name="2">
+      <text class="text01">亲爱的用户您好：
+        请您检查一下您的设备时候联网以及您是否戴着手套导致触摸屏感应不到。      
+      </text>
+    </van-collapse-item>
+    <van-collapse-item title="无法收货" name="3">
+      <text class="text01">亲爱的用户您好：
+  您都没有下单怎么可能收货呢
+      </text>
+    </van-collapse-item>
+  </van-collapse>
+
 </view>

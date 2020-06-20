@@ -7,10 +7,15 @@ Page({
    */
   data: {
     //radio:"1",
+    activeName: '1'
    
     
   },
-  
+  onChange(event) {
+    this.setData({
+      activeName: event.detail
+    });
+  },
 
   /**
    * 生命周期函数--监听页面加载

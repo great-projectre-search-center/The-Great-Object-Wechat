@@ -474,7 +474,7 @@ Page({
       url: app.globalData.baseurl+'/order/list_idstatus',
       data:{
         id:app.globalData.openid,
-        status:5,
+        status:3,
         pageIndex:pageIndex,
         pageSize:10
       },

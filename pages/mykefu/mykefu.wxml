@@ -14,7 +14,7 @@
   <van-cell-group>
     <van-cell title="微信" value="hedonggongsi" />
     <van-cell title="QQ" value="578571263" />
-    <van-cell title="Email" value="zzzxxxcccwxy999@gmail.com" />
+    <van-cell title="Email" value="578571263@qq.com" />
   </van-cell-group>
 </view>
 <!--<button type="default" bindtap="Tel">微信</button>

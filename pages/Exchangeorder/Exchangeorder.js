@@ -33,40 +33,61 @@ Page({
       open_Id:this.data.openid,
       matter:"兑换礼品",
       changed:-10,
-      reward:100-10//正确的积分
     }
     console.log(reward)
     //兑换积分变更
     wx.request({
-      url: app.globalData.baseurl+'/reward/change',
-      data:reward
-      ,
+      url: app.globalData.baseurl+'/reward/exchange',
+      data:reward,
       method:'POST',
       header:{
         Authorization:wx.getStorageSync('token')
       },
       success:function(res){
+        var aa = res.data
         console.log(res)
-      }
-    })
-
-    wx.showModal({
-      title: '您的地址我们已经收到！',
-      content: '具体快递情况我们会以信息的形式通知您',
-      success: function(res) {
-        if (res.confirm) {
-          //确定要跳转页面
-          wx.navigateBack({
-            delta: 1
+        if(aa.isOK==true){
+          wx.showModal({
+            title: '您的地址我们已经收到！',
+            content: '具体快递情况我们会以信息的形式通知您',
+            success: function(res) {
+              if (res.confirm) {
+                //确定要跳转页面
+                wx.navigateBack({
+                  delta: 1
+                })
+              } else {
+                //不确定也要跳转页面,哈哈
+                wx.navigateBack({
+                  delta: 1
+                })
+              }
+            }
           })
-        } else {
-          //不确定也要跳转页面,哈哈
-          wx.navigateBack({
-            delta: 1
+        }
+        else{
+          wx.showModal({
+            title: '兑换失败',
+            content: '您的积分不足',
+            success: function(res) {
+              if (res.confirm) {
+                //确定要跳转页面
+                wx.navigateBack({
+                  delta: 1
+                })
+              } else {
+                //不确定也要跳转页面,哈哈
+                wx.navigateBack({
+                  delta: 1
+                })
+              }
+            }
           })
         }
       }
     })
+
+    
   },
 
   /**

@@ -8,6 +8,7 @@ Page({
   data: {
     active:0,
     keys:"",
+    openid:"",
     autoplay: true,
     interval: 3000,
     duration: 500,
@@ -41,6 +42,7 @@ Page({
   wx.request({
     url: app.globalData.baseurl+'/order/list_status0',
     data:{
+      openId:app.globalData.openid,
       pageIndex:pageIndex,
       pageSize:10
     },
@@ -113,7 +115,8 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      baseurl: app.globalData.baseurl
+      baseurl: app.globalData.baseurl,
+      openid:app.globalData.openid
     })
 
     var that = this
@@ -193,9 +196,9 @@ Page({
         }
       })
     }
+   console.log(1213215346546454536)
     this.list(1)
-
-
+    console.log(666666666666666666666666666666666)
     
   },
 
