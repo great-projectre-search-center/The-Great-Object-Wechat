@@ -99,7 +99,6 @@
     
   />
 
-  <van-cell title="积分" value="+2" />
 
 </view>
 
