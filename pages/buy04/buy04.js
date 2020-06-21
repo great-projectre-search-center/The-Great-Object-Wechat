@@ -72,6 +72,12 @@ Page({
         created_User:this.data.openid,
       }
       console.log(order)
+      if(order.title==""||order.public_field1==""||order.public_field2==""||order.estimated_Worth==""||order.shops_Longtitude==""||order.shops_Latitude==""||order.creater_Longitude==""||order.creater_Latitude==""){
+        wx.showToast({
+          title: '请补全订单！',
+          icon:"none"
+        })
+      }else{
       wx.request({
         url: app.globalData.baseurl+'/order/edit',
         data:
@@ -107,7 +113,7 @@ Page({
           }, 2000)
         },
       })
-      
+    }
     },
   //选择快递公司的点击事件
   bindDeliveryChange: function (e) {
