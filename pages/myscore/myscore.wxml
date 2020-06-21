@@ -6,17 +6,17 @@
 <van-tabs bind:click="onClick" color="#4b8bf4">
   <van-tab title="积分记录">
     <view wx:for="{{details}}">
-    <van-panel wx:if="{{item.changed>0}}" title="{{typeof(item.date)}}" desc="{{item.matter}}" status="{{'+'+item.changed}}"></van-panel>
-    <van-panel wx:else title="{{item.date}}" desc="{{item.matter}}" status="{{item.changed}}"></van-panel>
+    <van-panel wx:if="{{item.changed>0}}"  desc="{{item.matter}}" status="{{'+'+item.changed}}"></van-panel>
+    <van-panel wx:else desc="{{item.matter}}" status="{{item.changed}}"></van-panel>
    </view>
   </van-tab>
   <van-tab title="兑换商城">
     <van-card
       currency="积分"
-      price="10"
-      desc="小朋友的问号"
-      title="礼品"
-      thumb="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587871265161&di=7a42e798a830befd8a89ab5f339e4d1d&imgtype=0&src=http%3A%2F%2Fimg1.doubanio.com%2Fview%2Fgroup_topic%2Fl%2Fpublic%2Fp154240208.jpg"
+      price="100"
+      desc="校园高速流量 王者不卡顿"
+      title="全网通流量包10G"
+      thumb="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1287192331,1287271902&fm=26&gp=0.jpg"
     >
   <view slot="footer">
     <van-button size="mini" bindtap="lumpadder">兑换</van-button>

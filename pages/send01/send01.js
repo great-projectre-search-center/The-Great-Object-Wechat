@@ -160,7 +160,7 @@ Page({
     console.log(e.detail)
   },
 
-  userInput: function (e) {  //输入收件人
+  userInput: function (e) {  //输入收件人//
     this.setData({
       username: e.detail
     })

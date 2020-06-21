@@ -25,17 +25,20 @@
 
     <van-collapse-item title="新手积分" name="1">
       <text class="text01">亲爱的用户您好：
-        平台规定新用户从接过单的初始积分为100.     
+        平台规定新用户从接过单的初始积分为100.
+        您可以根据平台规则来进行消费和获取积分.  
       </text>
     </van-collapse-item>
     <van-collapse-item title="订单创建失败" name="2">
       <text class="text01">亲爱的用户您好：
-        请您检查一下您的设备时候联网以及您是否戴着手套导致触摸屏感应不到。      
+        请您检查一下您的设备时候联网以及您是否处于导航在线状态.
+        请核实您的订单是否填写完整，有无敏感词汇
       </text>
     </van-collapse-item>
     <van-collapse-item title="无法收货" name="3">
       <text class="text01">亲爱的用户您好：
-  您都没有下单怎么可能收货呢
+        请先确认您的订单是否有人接收，您可在个人通知查看.
+        再次确认是否设备已经连接互联网,如无法解决请联系客服
       </text>
     </van-collapse-item>
   </van-collapse>
