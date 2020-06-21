@@ -27,7 +27,7 @@
   </van-tab>
   <van-tab  wx:else title="系统消息" info="{{systemmessages.length}}">
     <van-grid column-num="1" gutter="{{10}}">
-      <van-grid-item icon="{{icons[num]}}" text="{{item.title}}" wx:for="{{ systemmessages }}" url="/pages/messageDetails/messageDetails"/>
+      <van-grid-item icon="{{icons[num]}}" text="{{item.title}}" wx:for="{{ systemmessages }}" url="/pages/messageDetails/messageDetails?fromopenid='0'&textHead={{item.title}}&textDetail={{item.msg}}"/>
     </van-grid>
   </van-tab>
 </van-tabs>
