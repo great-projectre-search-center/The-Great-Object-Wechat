@@ -1,7 +1,0 @@
-<!--pages/infokefu/infokefu.wxml-->
-<van-divider contentPosition="center" borderColor="#1989fa" fontSize="18" textColor="#1989fa">我们的QQ</van-divider>
-<text>info</text>
-<van-divider contentPosition="center" borderColor="#1989fa" fontSize="18" textColor="#1989fa">我们的微信</van-divider>
-<text>info</text>
-<van-divider contentPosition="center" borderColor="#1989fa" fontSize="18" textColor="#1989fa">我们的邮箱</van-divider>
-<text>info</text>
