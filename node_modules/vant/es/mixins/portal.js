@@ -9,7 +9,8 @@ function getElement(selector) {
 }
 
 export function PortalMixin(_ref) {
-  var afterPortal = _ref.afterPortal;
+  var ref = _ref.ref,
+      afterPortal = _ref.afterPortal;
   return Vue.extend({
     props: {
       getContainer: [String, Function]
@@ -25,6 +26,7 @@ export function PortalMixin(_ref) {
     methods: {
       portal: function portal() {
         var getContainer = this.getContainer;
+        var el = ref ? this.$refs[ref] : this.$el;
         var container;
 
         if (getContainer) {
@@ -33,8 +35,8 @@ export function PortalMixin(_ref) {
           container = this.$parent.$el;
         }
 
-        if (container && container !== this.$el.parentNode) {
-          container.appendChild(this.$el);
+        if (container && container !== el.parentNode) {
+          container.appendChild(el);
         }
 
         if (afterPortal) {

@@ -9,6 +9,7 @@
   color: @tabbar-item-text-color;
   font-size: @tabbar-item-font-size;
   line-height: @tabbar-item-line-height;
+  cursor: pointer;
 
   &__icon {
     position: relative;
@@ -18,19 +19,6 @@
     .van-icon {
       display: block;
       min-width: 1em;
-    }
-
-    &--dot {
-      &::after {
-        position: absolute;
-        top: 0;
-        right: -8px;
-        width: 8px;
-        height: 8px;
-        background-color: @red;
-        border-radius: 100%;
-        content: ' ';
-      }
     }
 
     img {

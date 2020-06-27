@@ -22,23 +22,27 @@
   // allow newline charactor
   white-space: pre-wrap;
   text-align: center;
-  word-break: break-all;
+  word-wrap: break-word;
   background-color: @toast-background-color;
   border-radius: @toast-border-radius;
   transform: translate3d(-50%, -50%, 0);
 
-  // should not add pointer-events: none directly to body tag
-  // that will cause unexpected tap-highlight-color in mobile safari
   &--unclickable {
+    // lock scroll
+    overflow: hidden;
+
+    // should not add pointer-events: none directly to body tag
+    // that will cause unexpected tap-highlight-color in mobile safari
     * {
       pointer-events: none;
     }
   }
 
-  &--text {
+  &--text,
+  &--html {
     width: fit-content;
     min-width: @toast-text-min-width;
-    min-height: unset;
+    min-height: 0;
     padding: @toast-text-padding;
 
     .van-toast__text {
@@ -60,7 +64,8 @@
   }
 
   &__loading {
-    padding: 5px;
+    padding: @padding-base;
+    color: @toast-loading-icon-color;
   }
 
   &__text {

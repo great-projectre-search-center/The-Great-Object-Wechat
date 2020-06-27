@@ -1,5 +1,5 @@
 @import '../style/var';
-@import "../style/mixins/hairline";
+@import '../style/mixins/hairline';
 
 .van-cell {
   position: relative;
@@ -13,10 +13,11 @@
   line-height: @cell-line-height;
   background-color: @cell-background-color;
 
-  &:not(:last-child)::after {
+  &::after {
     .hairline-bottom(@cell-border-color, @padding-md);
   }
 
+  &:last-child::after,
   &--borderless::after {
     display: none;
   }
@@ -39,6 +40,7 @@
     color: @cell-value-color;
     text-align: right;
     vertical-align: middle;
+    word-wrap: break-word;
 
     &--alone {
       color: @text-color;
@@ -64,6 +66,8 @@
   }
 
   &--clickable {
+    cursor: pointer;
+
     &:active {
       background-color: @cell-active-color;
     }

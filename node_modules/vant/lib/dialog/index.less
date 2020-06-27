@@ -12,6 +12,11 @@
   transform: translate3d(-50%, -50%, 0);
   backface-visibility: hidden; // avoid blurry text after scale animation
   transition: @dialog-transition;
+  transition-property: transform, opacity;
+
+  @media (max-width: 321px) {
+    width: @dialog-small-screen-width;
+  }
 
   &__header {
     padding-top: @dialog-header-padding-top;
@@ -34,6 +39,7 @@
     // allow newline charactor
     white-space: pre-wrap;
     text-align: center;
+    word-wrap: break-word;
     -webkit-overflow-scrolling: touch;
 
     &--has-title {

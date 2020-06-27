@@ -7,6 +7,10 @@
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
+
+    &--disabled {
+      opacity: @uploader-disabled-opacity;
+    }
   }
 
   &__input {
@@ -22,6 +26,10 @@
     &-wrapper {
       position: relative;
     }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
   }
 
   &__upload {
@@ -35,7 +43,11 @@
     height: @uploader-size;
     margin: 0 @padding-xs @padding-xs 0;
     background-color: @uploader-upload-background-color;
-    border: 1px dashed @uploader-upload-border-color;
+    border-radius: @uploader-upload-border-radius;
+
+    &:active {
+      background-color: @uploader-upload-active-color;
+    }
 
     &-icon {
       color: @uploader-icon-color;
@@ -52,21 +64,57 @@
   &__preview {
     position: relative;
     margin: 0 @padding-xs @padding-xs 0;
+    cursor: pointer;
 
     &-image {
       display: block;
       width: @uploader-size;
       height: @uploader-size;
+      overflow: hidden;
+      border-radius: @uploader-upload-border-radius;
     }
 
     &-delete {
       position: absolute;
-      right: 0;
-      bottom: 0;
-      padding: 1px;
+      top: -8px;
+      right: -8px;
       color: @uploader-delete-color;
+      font-size: @uploader-delete-icon-size;
       background-color: @uploader-delete-background-color;
+      border-radius: 100%;
     }
+  }
+
+  &__mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: @white;
+    background-color: @uploader-mask-background-color;
+    border-radius: @uploader-upload-border-radius;
+
+    &-icon {
+      font-size: @uploader-mask-icon-size;
+    }
+
+    &-message {
+      margin-top: 6px;
+      padding: 0 @padding-base;
+      font-size: @uploader-mask-message-font-size;
+      line-height: @uploader-mask-message-line-height;
+    }
+  }
+
+  &__loading {
+    width: @uploader-loading-icon-size;
+    height: @uploader-loading-icon-size;
+    color: @uploader-loading-icon-color;
   }
 
   &__file {
@@ -77,6 +125,7 @@
     width: @uploader-size;
     height: @uploader-size;
     background-color: @uploader-file-background-color;
+    border-radius: @uploader-upload-border-radius;
 
     &-icon {
       color: @uploader-file-icon-color;
@@ -86,8 +135,8 @@
     &-name {
       box-sizing: border-box;
       width: 100%;
-      margin-top: @padding-xs;
-      padding: 0 5px;
+      margin-top: @uploader-file-name-margin-top;
+      padding: @uploader-file-name-padding;
       color: @uploader-file-name-text-color;
       font-size: @uploader-file-name-font-size;
       text-align: center;
