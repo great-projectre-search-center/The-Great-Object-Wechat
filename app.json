@@ -3,7 +3,7 @@
     
     "pages/index/index",
     "pages/indextest/indextest",
-    "pages/clickSwiper/clickSwiper",
+
     "pages/messageDetails/messageDetails",
     "pages/AddressSelection/AddressSelection",
     "pages/address/address",
@@ -34,8 +34,7 @@
     "pages/take03/take03",
     "pages/send01/send01",
     "pages/send02/send02",
-    "pages/send03/send03",
-    "pages/test/test"
+    "pages/send03/send03"
   ],
   "window": {
     "backgroundTextStyle": "dark",
