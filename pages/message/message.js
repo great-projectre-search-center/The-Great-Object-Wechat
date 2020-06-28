@@ -2,7 +2,7 @@
 var app = getApp();
 Page({
   /**
-   * 页面的初始数据/
+   *  页面的初始数据/
    */
   data: {
     userInfo:"",
@@ -11,10 +11,10 @@ Page({
     index:'0',
     systemmessages:[],
     icons:["manager","manager-o","user-o","contact"],
-    num:'0'
-
+    num:'0',
+    systemmessagesLength:0,
+    messagesLength:0
     
-
   },
   getnotification:function(){
     var that=this
@@ -34,6 +34,18 @@ Page({
           that.setData({
             messages:res.data//
           })
+          //获取长度
+          var jsonArray = res.data;
+          var tmp = 0
+          for(var i=0;i<jsonArray.length;i++){
+            if(jsonArray[i].read==1){
+              tmp++;
+            }
+          }  
+          that.setData({
+            messagesLength:tmp
+          })
+
       },
     })
   },
@@ -52,7 +64,20 @@ Page({
         that.setData({
           systemmessages:res.data
         })
-          
+        console.log(res.data)
+
+        //获取长度
+        var jsonArray = res.data;
+        var tmp = 0
+        for(var i=0;i<jsonArray.length;i++){
+          if(jsonArray[i].read==1){
+            tmp++;
+          }
+        }  
+        that.setData({
+          systemmessagesLength:tmp
+        })
+
       },
     })
   },

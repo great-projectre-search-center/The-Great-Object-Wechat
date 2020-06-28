@@ -8,7 +8,7 @@
         <text>还没有消息哦</text>
       </view>
     </van-tab>
-    <van-tab  wx:else title="个人消息" info="{{messages.length}}">
+    <van-tab  wx:else title="个人消息" info="{{messagesLength}}">
       <van-grid column-num="1" gutter="{{10}}">
         <van-grid-item icon="{{icons[num]}}" text="{{item.title}}" wx:for="{{ messages }}" url="/pages/messageDetails/messageDetails?fromopenid={{item.from_Open_Id}}&textHead={{item.title}}&textDetail={{item.msg}}"/>
       </van-grid>
@@ -25,7 +25,7 @@
       <text>还没有消息哦</text>
     </view>
   </van-tab>
-  <van-tab  wx:else title="系统消息" info="{{systemmessages.length}}">
+  <van-tab  wx:else title="系统消息" info="{{systemmessagesLength}}">
     <van-grid column-num="1" gutter="{{10}}">
       <van-grid-item icon="{{icons[num]}}" text="{{item.title}}" wx:for="{{ systemmessages }}" url="/pages/messageDetails/messageDetails?fromopenid='0'&textHead={{item.title}}&textDetail={{item.msg}}"/>
     </van-grid>

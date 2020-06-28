@@ -33,7 +33,6 @@
     <van-field
       bindinput="addressInput"
       value="{{ adress }}"
-      type="number"
       label="详细地址"
       placeholder="请输入您的详细地址"
       required
