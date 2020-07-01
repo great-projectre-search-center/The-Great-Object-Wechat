@@ -10,7 +10,8 @@ Page({
     baseurl: "",
     textHead:"",
     fromopenid:"",
-    textDetail:""
+    textDetail:"",
+    notificationid:0
 
   },
   ltap: function (e) {
@@ -95,6 +96,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+
   onLoad: function (options) {
 
 
@@ -103,11 +105,12 @@ Page({
     var textHead=options.textHead
     var fromopenid=options.fromopenid
     var textDetail=options.textDetail
+    var notificationid=options.notificationid
     this.setData({
-      //baseurl: baseurl,
       textHead:textHead,
       fromopenid:fromopenid,
-      textDetail:textDetail
+      textDetail:textDetail,
+      notificationid:notificationid
     })
     console.log(this.data)
 
@@ -129,28 +132,6 @@ Page({
       })
     }
 
-    
-    wx.request({
-      url: app.globalData.baseurl+'/notification/'+app.globalData.openid+'/getnotification/'+notificationid,
-      data:{
-        
-      },
-      method:'GET',
-      header:{
-        Authorization:wx.getStorageSync('token')
-      },
-      success:function(res){
-          that.setData({
-            textHead:res.data.title,
-            textDetail:res.data.message,
-            time:res.data.createTime
-          })
-      },
-    })
-
-    console.log(that.data)
-    console.log("===========++++++++++++++++++++++")
-
   },
 
   
@@ -159,6 +140,20 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+
+    var notificationid = this.data.notificationid
+    wx.request({
+      url: app.globalData.baseurl+'/notification/'+app.globalData.openid+'/getnotification/'+notificationid,
+      data:{
+      },
+      method:'GET',
+      header:{
+        Authorization:wx.getStorageSync('token')
+      },
+      success:function(res){
+          console.log(res)
+      },
+    })
 
   },
 

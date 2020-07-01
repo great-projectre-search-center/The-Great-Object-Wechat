@@ -38,7 +38,7 @@ Page({
           var jsonArray = res.data;
           var tmp = 0
           for(var i=0;i<jsonArray.length;i++){
-            if(jsonArray[i].read==1){
+            if(jsonArray[i].read==0){
               tmp++;
             }
           }  
@@ -70,7 +70,7 @@ Page({
         var jsonArray = res.data;
         var tmp = 0
         for(var i=0;i<jsonArray.length;i++){
-          if(jsonArray[i].read==1){
+          if(jsonArray[i].read==0){
             tmp++;
           }
         }  

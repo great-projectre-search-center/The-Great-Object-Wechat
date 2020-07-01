@@ -10,7 +10,10 @@
     </van-tab>
     <van-tab  wx:else title="个人消息" info="{{messagesLength}}">
       <van-grid column-num="1" gutter="{{10}}">
-        <van-grid-item icon="{{icons[num]}}" text="{{item.title}}" wx:for="{{ messages }}" url="/pages/messageDetails/messageDetails?fromopenid={{item.from_Open_Id}}&textHead={{item.title}}&textDetail={{item.msg}}"/>
+        
+        <van-grid-item wx:if="{{item.read==0}}" icon="https://s1.ax1x.com/2020/06/29/NhnAMQ.png"  text="{{item.title}}" wx:for="{{ messages }}" url="/pages/messageDetails/messageDetails?fromopenid={{item.from_Open_Id}}&textHead={{item.title}}&textDetail={{item.msg}}&notificationid={{item.notificationid}}"/>
+        <van-grid-item wx:if="{{item.read==1}}" icon="https://s1.ax1x.com/2020/06/29/NhZOJO.png" text="{{item.title}}" wx:for="{{ messages }}" url="/pages/messageDetails/messageDetails?fromopenid={{item.from_Open_Id}}&textHead={{item.title}}&textDetail={{item.msg}}&notificationid={{item.notificationid}}"/>
+
       </van-grid>
     </van-tab>
   </view>
@@ -27,7 +30,10 @@
   </van-tab>
   <van-tab  wx:else title="系统消息" info="{{systemmessagesLength}}">
     <van-grid column-num="1" gutter="{{10}}">
-      <van-grid-item icon="{{icons[num]}}" text="{{item.title}}" wx:for="{{ systemmessages }}" url="/pages/messageDetails/messageDetails?fromopenid='0'&textHead={{item.title}}&textDetail={{item.msg}}"/>
+
+      <van-grid-item wx:if="{{item.read==0}}" icon="https://s1.ax1x.com/2020/06/29/NhnAMQ.png" text="{{item.title}}" wx:for="{{ systemmessages }}" url="/pages/messageDetails/messageDetails?fromopenid='0'&textHead={{item.title}}&textDetail={{item.msg}}&notificationid={{item.notificationid}}"/>
+      <van-grid-item wx:if="{{item.read==1}}" icon="https://s1.ax1x.com/2020/06/29/NhZOJO.png" text="{{item.title}}" wx:for="{{ systemmessages }}" url="/pages/messageDetails/messageDetails?fromopenid='0'&textHead={{item.title}}&textDetail={{item.msg}}&notificationid={{item.notificationid}}"/>
+
     </van-grid>
   </van-tab>
 </van-tabs>
