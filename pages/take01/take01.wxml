@@ -1,7 +1,4 @@
-<!--公共头部组件-->
-<view>
-  <MyHead></MyHead>
-</view>
+
  
 
   <view class="mycell">

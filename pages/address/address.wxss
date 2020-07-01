@@ -47,7 +47,7 @@ page{background-color: #efeff4;}
 .section {
  display: flex;
  flex-direction: column;
- padding: 30rpx;
+ padding: 20rpx;
  color: #333;
 }
 .border01{
@@ -55,7 +55,7 @@ page{background-color: #efeff4;}
 }
 .picker{
   float: left;
-  font-size: 28rpx;
+  font-size: 14px;
 }
 .xuanze{
   padding-right: 20rpx;

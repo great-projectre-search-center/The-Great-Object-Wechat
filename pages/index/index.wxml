@@ -60,7 +60,7 @@
         <!-- 食品 -->
         <view class="class01">
           <van-grid-item 
-          icon="class='iconfont icon-FastFood'"
+          icon="class='iconfont icon-shipin'"
           text="食品"
           url="/pages/buy01/buy01"
           />
@@ -68,7 +68,7 @@
         <!-- 饮品 -->
         <view class="class01">
           <van-grid-item 
-          icon="class='iconfont icon-shipinyinliao'"
+          icon="class='iconfont icon-yinpin'"
           text="饮品"
           url="/pages/buy02/buy02"
           />
@@ -76,7 +76,7 @@
         <!-- 文具 -->
         <view class="class01">
           <van-grid-item 
-          icon="class='iconfont icon-wenju'"
+          icon="class='iconfont icon-gongju-wenju-t'"
           text="文具"
           url="/pages/buy03/buy03"
           />
