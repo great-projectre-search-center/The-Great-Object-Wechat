@@ -3,7 +3,6 @@
     
     "pages/index/index",
     "pages/indextest/indextest",
-
     "pages/messageDetails/messageDetails",
     "pages/AddressSelection/AddressSelection",
     "pages/address/address",
