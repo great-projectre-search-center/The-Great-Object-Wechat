@@ -20,7 +20,7 @@
           <!-- 快递 -->
           <view class="class01">
             <van-grid-item
-            icon="class='iconfont icon-kuaidi'"
+            icon="class='iconfont icon-kuaidi1'"
             text="快递"
             url="/pages/take01/take01"
             />
@@ -28,7 +28,7 @@
           <!-- 外卖 -->
           <view class="class01">
             <van-grid-item
-            icon="class='iconfont icon-waimai'"
+            icon="class='iconfont icon-waimai1'"
             text="外卖"
             wx:for="{{ 1 }}"
             wx:key="keys"
@@ -39,7 +39,7 @@
           <!-- 其它 -->
           <view class="class01">
             <van-grid-item
-            icon="class='iconfont icon-bangzhuzhongxin'"
+            icon="class='iconfont icon-qita'"
             text="其它"
             wx:for="{{ 1 }}"
             wx:key="keys"
@@ -84,7 +84,7 @@
         <!-- 其它 -->
         <view class="class01">
           <van-grid-item 
-          icon="class='iconfont icon-bangzhuzhongxin'"
+          icon="class='iconfont icon-qita'"
           text="其它"
           url="/pages/buy04/buy04"
           />
@@ -119,7 +119,7 @@
 
           <!-- 其它 -->
           <van-grid-item 
-            icon="class='iconfont icon-bangzhuzhongxin'"
+            icon="class='iconfont icon-qita'"
             text="其它"
             wx:for="{{ 1 }}"
             wx:key="keys"
